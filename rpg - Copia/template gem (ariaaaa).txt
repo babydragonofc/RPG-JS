@@ -1,0 +1,14 @@
+function criarFuncao(x, y) {
+  let nota = x === 1 && y === 1 ? "// 1\n" : ""; // Adiciona a nota apenas para x = 1 e y = 1
+  return `${nota}function AS${x}x${y}y() {
+    Ax = ${x}; 
+    Ay = ${y};
+  };`;
+}
+
+for (let i = 1; i <= 8; i++) {
+  for (let j = 1; j <= 8; j++) {
+    console.log(criarFuncao(i, j));
+  }
+}
+
