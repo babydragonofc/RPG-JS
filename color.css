@@ -1,0 +1,459 @@
+* {
+
+    cursor: url(cursor/pointer.png) auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body {
+    transition: 1s;
+}
+
+.firstUI {
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.atrUI {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.class {
+/*
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 10px;
+    */
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+
+.game {
+
+    background-color: bisque;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-right: 150px;
+    padding-left: 150px;
+    transition: 1s;
+}
+
+.Startbtn {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.jogo {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Explorar {
+    display: none;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.batle {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+}
+
+.turn {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+}
+
+.vila {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+}
+
+.myTurn {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    
+}
+
+.nomeInimigo {
+    gap: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.Taverna {
+
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+
+}
+
+.hpInimigo {
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    justify-content: center;
+    color: red;
+
+}
+
+.Loja {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+   
+}
+
+.Forja {
+
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+
+}
+
+.inventario {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+}
+
+#btnExplorarVilarejo {
+    display: none;
+}
+
+.Caminhar {
+
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    justify-content: center;
+
+}
+
+#paginaForja1 {
+
+display: flex;
+flex-direction: column;
+
+}
+
+#paginaForja1div {
+
+    display: flex;
+    gap: 5px;
+}
+
+
+
+#paginaForja2 {
+
+    display: none;
+    flex-direction: column;
+    
+}
+
+#paginaForja2div {
+
+    display: none;
+    gap: 5px;
+    
+}
+
+
+#paginaForja3 {
+
+    display: none;
+    flex-direction: column;
+    
+}
+
+#paginaForja3div {
+
+    display: none;
+gap: 5px;
+    
+}
+
+.btnC {
+
+
+background-color: brown;
+border-top: none;
+border-bottom: none;
+border-left: solid 5px rgb(127, 16, 16);
+border-right: solid 5px rgb(127, 16, 16); 
+padding-left: 50px;
+padding-right: 50px;
+transition: 0.3s;
+color: aliceblue;
+font-weight: 700;
+
+}
+
+.btnC:hover {
+
+    cursor: url(cursor/sword.png) auto;
+    
+    background-color: brown;
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 7px rgb(127, 16, 16);
+    border-right: solid 7px rgb(127, 16, 16); 
+    padding-left: 70px;
+    padding-right: 70px;
+    transition: 0.3s;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    }
+
+.Startbtn {
+
+    background-color: rgb(182, 79, 79);
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 7px rgb(127, 16, 16);
+    border-right: solid 7px rgb(127, 16, 16); 
+    padding-left: 70px;
+    padding-right: 70px;
+    transition: 0.3s;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: aliceblue;
+    font-weight: 700;
+
+}
+    
+.Startbtn:hover {
+
+    background-color: rgb(182, 79, 79);
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 7px rgb(127, 16, 16);
+    border-right: solid 7px rgb(127, 16, 16); 
+    padding-left: 200px;
+    padding-right: 200px;
+    transition: 0.3s;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+}
+
+.btn {
+
+cursor: url(/cursor/pointer.png) auto;
+
+background-color: brown;
+
+
+
+border-top: solid 7px rgb(127, 16, 16);
+border-bottom: solid 7px rgb(127, 16, 16);
+border-left: none;
+border-right: none; 
+
+padding: 5px;
+
+transition: 0.3s;
+
+color: rgb(255, 243, 222);
+
+}
+
+.btn:hover {
+
+padding-left: 10px;
+padding-right: 10px;
+
+transition: 0.3s;
+
+background-color: rgb(172, 61, 36);
+font-weight: 600;
+}
+
+.btnVoltar {
+
+    cursor: url(/cursor/pointer.png) auto;
+
+    background-color: rgb(233, 231, 243);
+    
+    
+    
+    border-top: solid 7px rgb(183, 179, 197);
+    border-bottom: solid 7px rgb(183, 179, 197);
+    border-left: none;
+    border-right: none; 
+    
+    padding: 5px;
+    
+    transition: 0.3s;
+    
+    color: rgb(0, 0, 0);
+    
+
+}
+
+.OpenInv {
+
+
+    cursor: url(/cursor/pointer.png) auto;
+
+    background-color: rgb(165, 101, 42);
+    
+    
+    
+    border-top: solid 7px rgb(97, 66, 48);
+    border-bottom: solid 7px rgb(97, 66, 48);
+    border-left: none;
+    border-right: none; 
+    
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    transition: 0.3s;
+    
+    color: rgb(255, 251, 251);
+    
+
+}
+
+.OpenInv:hover {
+
+
+    cursor: url(/cursor/pointer.png) auto;
+
+    background-color: rgb(154, 94, 38);
+    
+    
+    
+    border-top: solid 7px rgb(97, 66, 48);
+    border-bottom: solid 7px rgb(97, 66, 48);
+    border-left: none;
+    border-right: none; 
+    
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transition: 0.3s;
+    
+    color: rgb(255, 251, 251);
+    
+
+}
+
+.btnMap {
+
+    cursor: url(/cursor/pointer.png) auto;
+
+    background-color: rgb(171, 139, 109);
+    
+    
+    
+    border-top: solid 7px rgb(111, 90, 78);
+    border-bottom: solid 7px rgb(111, 90, 78);
+    border-left: none;
+    border-right: none; 
+    
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transition: 0.3s;
+    
+    color: rgb(255, 251, 251);
+    
+
+
+}
+
+.btnMap {
+
+    cursor: url(/cursor/pointer.png) auto;
+
+    background-color: rgb(171, 139, 109);
+    
+    
+    
+    border-top: solid 7px rgb(111, 90, 78);
+    border-bottom: solid 7px rgb(111, 90, 78);
+    border-left: none;
+    border-right: none; 
+    
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transition: 0.3s;
+    
+    color: rgb(255, 251, 251);
+    
+
+}
+
+.btnMap:hover {
+
+    cursor: url(/cursor/pointer.png) auto;
+
+    background-color: rgb(171, 139, 109);
+    
+    
+    
+    border-top: solid 7px rgb(111, 90, 78);
+    border-bottom: solid 7px rgb(111, 90, 78);
+    border-left: none;
+    border-right: none; 
+    
+    padding: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    transition: 0.3s;
+    
+    color: rgb(255, 251, 251);
+    
+
+}
