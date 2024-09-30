@@ -4,6 +4,8 @@ slot3quantidade = 0;
 slot4quantidade = 0;
 slot5quantidade = 0;
 
+var cu;
+
 var slot1Bau; slot1Bau = "~~";
 var slot2Bau; slot2Bau = "~~";
 var slot3Bau; slot3Bau = "~~";
@@ -22,6 +24,9 @@ agiBustPotBau = 0;
  
 var additem;
 var additemuse;
+
+var raridadeArma; raridadeArma = NaN;
+var raridadeArmadura; raridadeArmadura = NaN;
 
 function addItem() {
 
@@ -144,7 +149,10 @@ function addItemM() {
             slot1defBustPot = defBustPot;
             slot1agiBustPot = agiBustPot;
     
-    
+            raridadeSlot1 = raridadeItem;
+
+
+
         }
     
         else
@@ -164,6 +172,7 @@ function addItemM() {
                     slot2defBustPot = defBustPot;
                     slot2agiBustPot = agiBustPot;
             
+                    raridadeSlot2 = raridadeItem;
                 }
             
                 else
@@ -183,6 +192,7 @@ function addItemM() {
                             slot3defBustPot = defBustPot;
                             slot3agiBustPot = agiBustPot;
                     
+                            raridadeSlot3 = raridadeItem;
                         }
                     
                         else
@@ -201,7 +211,8 @@ function addItemM() {
                                     slot3atkBustPot = atkBustPot;
                                     slot3defBustPot = defBustPot;
                                     slot3agiBustPot = agiBustPot;
-                            
+
+                                    raridadeSlot4 = raridadeItem;
                                 }
                             
                                 else
@@ -221,6 +232,7 @@ function addItemM() {
                                             slot5defBustPot = defBustPot;
                                             slot5agiBustPot = agiBustPot;
                                     
+                                            raridadeSlot5 = raridadeItem;
                                         }
                                     
                                         else
@@ -244,6 +256,9 @@ function addItemM() {
         document.getElementById("Slot3").innerHTML = slot3;
         document.getElementById("Slot4").innerHTML = slot4;
         document.getElementById("Slot5").innerHTML = slot5;
+
+        inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
+        
     
         console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
     }
@@ -268,7 +283,11 @@ function addItemP() {
         slot1defBustPot = defBustPot;
         slot1agiBustPot = agiBustPot;
 
+        raridadeSlot1 = raridadeItem;
 
+        let bit = document.getElementById("Slot1");
+        bit.style.backgroundImage = `url(${iconeItem})`;  
+    
     }
 
     else
@@ -286,6 +305,7 @@ function addItemP() {
                 slot2defBustPot = defBustPot;
                 slot2agiBustPot = agiBustPot;
         
+                raridadeSlot2 = raridadeItem;
             }
         
             else
@@ -303,6 +323,7 @@ function addItemP() {
                         slot3defBustPot = defBustPot;
                         slot3agiBustPot = agiBustPot;
                 
+                        raridadeSlot3 = raridadeItem;
                     }
                 
                     else
@@ -320,6 +341,7 @@ function addItemP() {
                                 slot3defBustPot = defBustPot;
                                 slot3agiBustPot = agiBustPot;
                         
+                                raridadeSlot4 = raridadeItem;
                             }
                         
                             else
@@ -337,6 +359,7 @@ function addItemP() {
                                         slot5defBustPot = defBustPot;
                                         slot5agiBustPot = agiBustPot;
                                 
+                                        raridadeSlot5 = raridadeItem;
                                     }
                                 
                                     else
@@ -361,9 +384,229 @@ function addItemP() {
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
 
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
+
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 }
 
+function Ussar() {
+
+    if ( slotSelect == 1 )
+
+        {
+    
+            Ussar1()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+    
+        }
+
+       if ( slotSelect == 2 )
+
+        {
+    
+            Ussar2()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+       if ( slotSelect == 3 )
+
+        {
+    
+            Ussar3()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+       if ( slotSelect == 4 )
+
+        {
+    
+            Ussar4()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+       if ( slotSelect == 5 )
+
+        {
+    
+            Ussar5()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+    
+
+}
+
+function Lixo() {
+
+    if ( slotSelect == 1 )
+
+        {
+    
+            Lixo1()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+       if ( slotSelect == 2 )
+
+        {
+    
+            Lixo2()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+       if ( slotSelect == 3 )
+
+        {
+    
+            Lixo3()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+       if ( slotSelect == 4 )
+
+        {
+    
+            Lixo4()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+       if ( slotSelect == 5 )
+
+        {
+    
+            Lixo5()
+    
+            var bit = document.getElementById("InvInfoUi")
+            bit.style.display = "none";
+        }
+
+    
+
+}
+function Item1() {
+    if (slot1 != "~~") {
+      document.getElementById("itemName").innerHTML = slot1;
+      document.getElementById("itemType").innerHTML = slot1use;
+      document.getElementById("itemRarity").innerHTML = raridadeSlot1;
+
+      slotSelect = 1;
+
+      var bit = document.getElementById("InvInfoUi")
+      bit.style.display = "flex";
+    }
+
+    else 
+    {
+
+        var bit = document.getElementById("InvInfoUi")
+        bit.style.display = "none";
+
+    }
+  }
+  
+  function Item2() {
+
+    if (slot2 != "~~") {
+      document.getElementById("itemName").innerHTML = slot2;
+      document.getElementById("itemType").innerHTML = slot2use;
+      document.getElementById("itemRarity").innerHTML = raridadeSlot2;
+
+      slotSelect = 2;
+
+      var bit = document.getElementById("InvInfoUi")
+      bit.style.display = "flex";
+    }
+    
+    else 
+    {
+
+        var bit = document.getElementById("InvInfoUi")
+        bit.style.display = "none";
+
+    }
+  }
+  
+  function Item3() {
+    if (slot3 != "~~") {
+      document.getElementById("itemName").innerHTML = slot3;
+      document.getElementById("itemType").innerHTML = slot3use;
+      document.getElementById("itemRarity").innerHTML = raridadeSlot3;
+
+      slotSelect = 3;
+
+      var bit = document.getElementById("InvInfoUi")
+      bit.style.display = "flex";
+    }
+    
+    else 
+    {
+
+        var bit = document.getElementById("InvInfoUi")
+        bit.style.display = "none";
+
+    }
+  }
+  
+  function Item4() {
+    if (slot4 != "~~") {
+      document.getElementById("itemName").innerHTML = slot4;
+      document.getElementById("itemType").innerHTML = slot4use;
+      document.getElementById("itemRarity").innerHTML = raridadeSlot4;
+
+      slotSelect = 4;
+
+      var bit = document.getElementById("InvInfoUi")
+      bit.style.display = "flex";
+    }
+    
+    else 
+    {
+
+        var bit = document.getElementById("InvInfoUi")
+        bit.style.display = "none";
+
+    }
+  }
+  
+  function Item5() {
+    if (slot5 != "~~") {
+      document.getElementById("itemName").innerHTML = slot5;
+      document.getElementById("itemType").innerHTML = slot5use;
+      document.getElementById("itemRarity").innerHTML = raridadeSlot5;
+
+      slotSelect = 5;
+
+      var bit = document.getElementById("InvInfoUi")
+      bit.style.display = "flex";
+    }
+    
+    else 
+    {
+
+        var bit = document.getElementById("InvInfoUi")
+        bit.style.display = "none";
+
+    }
+  }
+  
 
 function Ussar1() {
     if( slot1 != "~~")
@@ -402,6 +645,12 @@ function Ussar1() {
                                     agiBustPot = bctIII;
                                     slot1use = "armadura"
                                     slot1 = cu;
+
+                                    raridadeArmaduraSus = raridadeArmadura;
+
+                                    raridadeArmadura = raridadeSlot1
+
+                                    raridadeSlot1 = raridadeArmaduraSus
                                 }
 
                                 else 
@@ -414,6 +663,10 @@ function Ussar1() {
 
                                     slot1use = "NaN";
 
+                                    raridadeArmadura = raridadeSlot1;
+                                    raridadeSlot1 = NaN;
+                                    
+
                                 }
                                 cu = NaN;
                             document.getElementById("armadura").innerHTML = armadura;
@@ -425,8 +678,8 @@ function Ussar1() {
                     if( slot1use == "arma")
                         
                             {
-                                cu = arma;
-                                arma = slot1;
+                                
+                            
                                 
                                 atkBust = bctI;
                                 defBust = bctII;
@@ -436,17 +689,26 @@ function Ussar1() {
                                 defBust = defBustPot;
                                 agiBust = agiBustPot;
 
+
                                 
                                 (arma)
                                 if ( arma != "" )
 
-                                    {
-                                        
+                                    {   
+                                        cu = arma;
+                                        arma = slot1;
                                         atkBustPot = bctI;
                                         defBustPot = bctII;
                                         agiBustPot = bctIII;
                                         slot1use = "arma"
                                         slot1 = cu;
+
+                                        raridadeArmaSus = raridadeArma
+
+                                        raridadeArma = raridadeSlot1
+                                        raridadeSlot1 = raridadeArmaSus
+
+                                    
                                     }
 
                                     else 
@@ -457,7 +719,11 @@ function Ussar1() {
                                         defBustPot = 0;
                                         agiBustPot = 0;
 
+                                        arma = slot1;
+                                        slot1 = "~~"
                                         slot1use = "NaN";
+
+                                        raridadeSlot1 = NaN;
 
                                     }
                                     cu = NaN;
@@ -476,6 +742,7 @@ function Ussar1() {
                                     mana = buffmana + mana;
 
                                     slot1 = "~~";
+                                    raridadeSlot1 = NaN;
                                    
                                     document.getElementById("hp").innerHTML =  hp;
                                     document.getElementById("mana").innerHTML =  mana;
@@ -490,6 +757,7 @@ function Ussar1() {
                                         money = buffmoney + money ;
     
                                         slot1 = "~~";
+                                        raridadeSlot1 = NaN;
                                        
                                         document.getElementById("money").innerHTML =  money;
                                         
@@ -504,6 +772,8 @@ function Ussar1() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use + "| arma : " + arma);
 (slot1use)
@@ -543,6 +813,12 @@ function Ussar2() {
                                     agiBustPot = bctIII;
                                     slot2use = "armadura"
                                     slot2 = cu;
+
+                                    raridadeArmaduraSus = raridadeArmadura;
+
+                                    raridadeArmadura = raridadeSlot2
+
+                                    raridadeSlot2 = raridadeArmaduraSus
                                 }
 
                                 else 
@@ -555,6 +831,10 @@ function Ussar2() {
 
                                     slot2use = "NaN";
 
+                                    raridadeArmadura = raridadeSlot2
+                                    raridadeSlot2 = NaN;
+                                    
+
                                 }
                                 cu = NaN;
                             document.getElementById("armadura").innerHTML = armadura;
@@ -565,9 +845,7 @@ function Ussar2() {
                         
 
                             {
-                                cu = arma;
-                                arma = slot2;
-                                
+
                                 atkBust = bctI;
                                 defBust = bctII;
                                 agiBust = bctIII;
@@ -580,13 +858,21 @@ function Ussar2() {
                                 (arma)
                                 if ( arma != "" )
 
-                                    {
-                                        
+                                    {   
+                                        cu = arma;
+                                        arma = slot2;
                                         atkBustPot = bctI;
                                         defBustPot = bctII;
                                         agiBustPot = bctIII;
                                         slot2use = "arma"
                                         slot2 = cu;
+
+                                        raridadeArmaSus = raridadeArma
+
+                                        raridadeArma = raridadeSlot2
+                                        raridadeSlot2 = raridadeArmaSus
+
+                                    
                                     }
 
                                     else 
@@ -597,7 +883,11 @@ function Ussar2() {
                                         defBustPot = 0;
                                         agiBustPot = 0;
 
+                                        arma = slot2;
+                                        slot2 = "~~"
                                         slot2use = "NaN";
+
+                                        raridadeSlot2 = NaN;
 
                                     }
                                     cu = NaN;
@@ -614,7 +904,8 @@ function Ussar2() {
                                     mana = buffmana + mana;
 
                                     slot2 = "~~";
-                                   
+                                    raridadeSlot2 = NaN;
+
                                     document.getElementById("hp").innerHTML =  hp;
                                     document.getElementById("mana").innerHTML =  mana;
 
@@ -628,7 +919,8 @@ function Ussar2() {
                                         money = buffmoney + money ;
     
                                         slot2 = "~~";
-                                       
+                                        raridadeSlot2= NaN;
+
                                         document.getElementById("money").innerHTML =  money;
                                         
                                     }
@@ -642,6 +934,8 @@ function Ussar2() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -681,6 +975,12 @@ function Ussar3() {
                                     agiBustPot = bctIII;
                                     slot3use = "armadura"
                                     slot3 = cu;
+
+                                    raridadeArmaduraSus = raridadeArmadura;
+
+                                    raridadeArmadura = raridadeSlot3
+
+                                    raridadeSlot3 = raridadeArmaduraSus
                                 }
 
                                 else 
@@ -691,7 +991,11 @@ function Ussar3() {
                                     defBustPot = 0;
                                     agiBustPot = 0;
 
-                                    slot3use = "NaN";
+                                    slot1use = "NaN";
+
+                                    raridadeArmadura = raridadeSlot3
+                                    raridadeSlot3 = NaN;
+                                    
 
                                 }
                                 cu = NaN;
@@ -703,8 +1007,7 @@ function Ussar3() {
                         
 
                             {
-                                cu = arma;
-                                arma = slot3;
+
                                 
                                 atkBust = bctI;
                                 defBust = bctII;
@@ -718,13 +1021,21 @@ function Ussar3() {
                                 (arma)
                                 if ( arma != "" )
 
-                                    {
-                                        
+                                    {   
+                                        cu = arma;
+                                        arma = slot3;
                                         atkBustPot = bctI;
                                         defBustPot = bctII;
                                         agiBustPot = bctIII;
                                         slot3use = "arma"
-                                        slot1 = cu;
+                                        slot3 = cu;
+
+                                        raridadeArmaSus = raridadeArma
+
+                                        raridadeArma = raridadeSlot3
+                                        raridadeSlot3 = raridadeArmaSus
+
+                                    
                                     }
 
                                     else 
@@ -735,7 +1046,11 @@ function Ussar3() {
                                         defBustPot = 0;
                                         agiBustPot = 0;
 
+                                        arma = slot3;
+                                        slot3 = "~~"
                                         slot3use = "NaN";
+
+                                        raridadeSlot3 = NaN;
 
                                     }
                                     cu = NaN;
@@ -752,7 +1067,8 @@ function Ussar3() {
                                     mana = buffmana + mana;
 
                                     slot3 = "~~";
-                                   
+                                    raridadeSlot3 = NaN;
+
                                     document.getElementById("hp").innerHTML =  hp;
                                     document.getElementById("mana").innerHTML =  mana;
 
@@ -766,6 +1082,7 @@ function Ussar3() {
                                         money = buffmoney + money ;
     
                                         slot3 = "~~";
+                                        raridadeSlot3 = NaN;
                                        
                                         document.getElementById("money").innerHTML =  money;
                                         
@@ -780,6 +1097,8 @@ function Ussar3() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -819,6 +1138,12 @@ function Ussar4() {
                                     agiBustPot = bctIII;
                                     slot4use = "armadura"
                                     slot4 = cu;
+
+                                    raridadeArmaduraSus = raridadeArmadura;
+
+                                    raridadeArmadura = raridadeSlot4
+
+                                    raridadeSlot4 = raridadeArmaduraSus
                                 }
 
                                 else 
@@ -831,18 +1156,21 @@ function Ussar4() {
 
                                     slot4use = "NaN";
 
+                                    raridadeArmadura = raridadeSlot4
+                                    raridadeSlot4 = NaN;
+                                    
+
                                 }
                                 cu = NaN;
                             document.getElementById("armadura").innerHTML = armadura;
 
                         }
 
-                    if( slot4use == "arma")
+                        if( slot4use == "arma")
                         
 
                             {
-                                cu = arma;
-                                arma = slot4;
+
                                 
                                 atkBust = bctI;
                                 defBust = bctII;
@@ -856,13 +1184,21 @@ function Ussar4() {
                                 (arma)
                                 if ( arma != "" )
 
-                                    {
-                                        
+                                    {   
+                                        cu = arma;
+                                        arma = slot4;
                                         atkBustPot = bctI;
                                         defBustPot = bctII;
                                         agiBustPot = bctIII;
                                         slot4use = "arma"
                                         slot4 = cu;
+
+                                        raridadeArmaSus = raridadeArma
+
+                                        raridadeArma = raridadeSlot4
+                                        raridadeSlot4 = raridadeArmaSus
+
+                                    
                                     }
 
                                     else 
@@ -873,7 +1209,11 @@ function Ussar4() {
                                         defBustPot = 0;
                                         agiBustPot = 0;
 
-                                        slot4use = "NaN";
+                                        arma = slot4;
+                                        slot4 = "~~"
+                                        slot1use = "NaN";
+
+                                        raridadeSlot4 = NaN;
 
                                     }
                                     cu = NaN;
@@ -890,7 +1230,8 @@ function Ussar4() {
                                     mana = buffmana + mana;
 
                                     slot4 = "~~";
-                                   
+                                    raridadeSlot4 = NaN;
+
                                     document.getElementById("hp").innerHTML =  hp;
                                     document.getElementById("mana").innerHTML =  mana;
 
@@ -904,6 +1245,7 @@ function Ussar4() {
                                         money = buffmoney + money ;
     
                                         slot4 = "~~";
+                                        raridadeSlot4 = NaN;
                                        
                                         document.getElementById("money").innerHTML =  money;
                                         
@@ -918,6 +1260,8 @@ function Ussar4() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -957,6 +1301,12 @@ function Ussar5() {
                                     agiBustPot = bctIII;
                                     slot5use = "armadura"
                                     slot5 = cu;
+
+                                    raridadeArmaduraSus = raridadeArmadura;
+
+                                    raridadeArmadura = raridadeSlot5
+
+                                    raridadeSlot5 = raridadeArmaduraSus
                                 }
 
                                 else 
@@ -969,6 +1319,10 @@ function Ussar5() {
 
                                     slot5use = "NaN";
 
+                                    raridadeArmadura = raridadeSlot5
+                                    raridadeSlot5 = NaN;
+                                    
+
                                 }
                                 cu = NaN;
                             document.getElementById("armadura").innerHTML = armadura;
@@ -979,8 +1333,7 @@ function Ussar5() {
                         
 
                             {
-                                cu = arma;
-                                arma = slot1;
+
                                 
                                 atkBust = bctI;
                                 defBust = bctII;
@@ -991,16 +1344,24 @@ function Ussar5() {
                                 agiBust = agiBustPot;
 
                                 
-                                alert(arma)
+                                
                                 if ( arma != "" )
 
-                                    {
-                                        
+                                    {   
+                                        cu = arma;
+                                        arma = slot5;
                                         atkBustPot = bctI;
                                         defBustPot = bctII;
                                         agiBustPot = bctIII;
-                                        slot5use = "arma"
+                                        slot1use = "arma"
                                         slot5 = cu;
+
+                                        raridadeArmaSus = raridadeArma
+
+                                        raridadeArma = raridadeSlot5
+                                        raridadeSlot5 = raridadeArmaSus
+
+                                    
                                     }
 
                                     else 
@@ -1011,7 +1372,11 @@ function Ussar5() {
                                         defBustPot = 0;
                                         agiBustPot = 0;
 
+                                        arma = slot5;
+                                        slot5 = "~~"
                                         slot5use = "NaN";
+
+                                        raridadeSlot5 = NaN;
 
                                     }
                                     cu = NaN;
@@ -1028,7 +1393,8 @@ function Ussar5() {
                                     mana = buffmana + mana;
 
                                     slot5 = "~~";
-                                   
+                                    raridadeSlot5 = NaN;
+
                                     document.getElementById("hp").innerHTML =  hp;
                                     document.getElementById("mana").innerHTML =  mana;
 
@@ -1042,6 +1408,7 @@ function Ussar5() {
                                         money = buffmoney + money ;
     
                                         slot5 = "~~";
+                                        raridadeSlot5 = NaN;
                                        
                                         document.getElementById("money").innerHTML =  money;
                                         
@@ -1056,6 +1423,8 @@ function Ussar5() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1074,6 +1443,7 @@ function Lixo1() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot1 = NaN;
     
 
     document.getElementById("Slot1").innerHTML = slot1;
@@ -1081,6 +1451,8 @@ function Lixo1() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1102,6 +1474,7 @@ function Lixo1() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot1 = NaN;
 
     slot1atkBustPot = 0;
     slot1agiBustPot = 0;
@@ -1115,6 +1488,8 @@ function Lixo1() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1137,6 +1512,7 @@ function Lixo2() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot2 = NaN;
     
 
     document.getElementById("Slot1").innerHTML = slot1;
@@ -1144,6 +1520,8 @@ function Lixo2() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1165,6 +1543,7 @@ function Lixo2() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot2 = NaN;
 
     slot2atkBustPot = 0;
     slot2agiBustPot = 0;
@@ -1178,6 +1557,8 @@ function Lixo2() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1198,6 +1579,7 @@ function Lixo3() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot3 = NaN;
     
 
     document.getElementById("Slot1").innerHTML = slot1;
@@ -1205,6 +1587,8 @@ function Lixo3() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1226,6 +1610,7 @@ function Lixo3() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot3 = NaN;
 
     slot3atkBustPot = 0;
     slot3agiBustPot = 0;
@@ -1239,6 +1624,8 @@ function Lixo3() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1259,6 +1646,7 @@ function Lixo4() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot4 = NaN;
     
 
     document.getElementById("Slot1").innerHTML = slot1;
@@ -1266,6 +1654,8 @@ function Lixo4() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1287,6 +1677,7 @@ function Lixo4() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot4 = NaN;
 
     slot4atkBustPot = 0;
     slot4agiBustPot = 0;
@@ -1300,6 +1691,8 @@ function Lixo4() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1320,6 +1713,7 @@ function Lixo5() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot5 = NaN;
     
 
     document.getElementById("Slot1").innerHTML = slot1;
@@ -1327,6 +1721,8 @@ function Lixo5() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 
@@ -1348,6 +1744,7 @@ function Lixo5() {
     buffvida = 0;
     buffmoney = 0;
     buffmana = 0;
+    raridadeSlot5 = NaN;
 
     slot5atkBustPot = 0;
     slot5agiBustPot = 0;
@@ -1361,6 +1758,8 @@ function Lixo5() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
 

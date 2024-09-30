@@ -467,8 +467,8 @@ terrainType = "F3P1M"
                                             perto = "vilarejo";
                                             biome = "tundra";
                                             terrainType = "T3P0M"
-
-
+                                            let a = document.getElementById("btnExplorarVilarejo")
+                                            a.style.display = "block"
                                             
                     
                                             let bit = document.getElementById("x5y3")

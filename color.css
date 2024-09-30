@@ -1,6 +1,7 @@
 * {
 
-    cursor: url(cursor/pointer.png) auto;
+
+    cursor: url('/cursor/pointer.png') 1 1 , auto;
     margin-left: 0;
     margin-right: 0;
 }
@@ -40,8 +41,20 @@ body {
     justify-items: center;
     align-items: center;
     flex-direction: column;
-    
     gap: 10px;
+    padding-bottom: 30px;
+
+    max-height: 100px;
+}
+
+.classBtnDiv {
+
+padding-top: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: center;
+
 }
 
 .game {
@@ -230,7 +243,7 @@ font-weight: 700;
 
 .btnC:hover {
 
-    cursor: url(cursor/sword.png) auto;
+    
     
     background-color: brown;
     border-top: none;
@@ -315,7 +328,7 @@ font-weight: 600;
 
 .btnVoltar {
 
-    cursor: url(/cursor/pointer.png) auto;
+    cursor: url(/cursor/BackCursor.png), auto;
 
     background-color: rgb(233, 231, 243);
     
@@ -327,18 +340,28 @@ font-weight: 600;
     border-right: none; 
     
     padding: 5px;
+
     
     transition: 0.3s;
     
+
     color: rgb(0, 0, 0);
     
+
+}
+
+.btnVoltar:hover {
+
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
 
 .OpenInv {
 
 
-    cursor: url(/cursor/pointer.png) auto;
+    cursor: url('/cursor/BagCursor.png'), auto;
+
 
     background-color: rgb(165, 101, 42);
     
@@ -363,7 +386,7 @@ font-weight: 600;
 .OpenInv:hover {
 
 
-    cursor: url(/cursor/pointer.png) auto;
+    
 
     background-color: rgb(154, 94, 38);
     
@@ -387,7 +410,6 @@ font-weight: 600;
 
 .btnMap {
 
-    cursor: url(/cursor/pointer.png) auto;
 
     background-color: rgb(171, 139, 109);
     
@@ -412,7 +434,7 @@ font-weight: 600;
 
 .btnMap {
 
-    cursor: url(/cursor/pointer.png) auto;
+    
 
     background-color: rgb(171, 139, 109);
     
@@ -436,7 +458,7 @@ font-weight: 600;
 
 .btnMap:hover {
 
-    cursor: url(/cursor/pointer.png) auto;
+    
 
     background-color: rgb(171, 139, 109);
     
@@ -455,5 +477,83 @@ font-weight: 600;
     
     color: rgb(255, 251, 251);
     
+
+}
+
+.invBtn {
+
+
+    width: 72px;
+    height: 72px;
+    background-color: rgb(149, 108, 59); 
+    border: none;
+    display: flex; align-items: center; 
+    justify-content: center;
+
+    background: url("Null.png") no-repeat center;
+    background-size: 100% ;
+
+}
+
+
+
+.btnInv {
+
+    background-color: rgb(193, 133, 84);
+
+    border-top: solid 7px rgb(115, 54, 25);
+    border-bottom: solid 7px rgb(115, 54, 25);
+    border-left: none;
+    border-right: none; 
+    
+    
+    transition: 0.3s;
+    
+    width: 50px;
+    height: 40px;
+
+    
+}
+
+.btnInv:hover {
+
+    background-color: rgb(182, 121, 72)
+
+}
+
+.swordCursor {
+
+
+    cursor: url('/cursor/swordCursor.png'), auto;
+
+}
+
+.shieldCursor {
+
+cursor: url('/cursor/shieldCursor.png'), auto;
+
+}
+
+.ChatCursor {
+
+cursor: url('/cursor/ChatCursor.png'), auto;
+
+}
+
+.ColectCursor {
+
+cursor: url('/cursor/colectCursor.png'), auto;
+    
+}
+
+.UseCursor {
+
+cursor: url('/cursor/UseCursor.png'), auto;
+
+}
+
+.TrashCursor {
+
+cursor: url('/cursor/TrashCursor.png'), auto;
 
 }

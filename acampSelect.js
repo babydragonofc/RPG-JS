@@ -529,7 +529,7 @@ function Coletar(){
 if ( SelectAcamp == "pedra1" ) {
 
 Pedra1 = Pedra1 - 1;
-add016I()
+add017I()
 
 
 }
@@ -537,7 +537,7 @@ add016I()
 if ( SelectAcamp == "pedra2" ) {
 
   Pedra2 = Pedra2 - 1;
-add016I()
+add017I()
 
   
   }
@@ -545,7 +545,7 @@ add016I()
 if ( SelectAcamp == "pedra3" ) {
 
 Pedra3 = Pedra3 - 1;
-add016I()
+add017I()
 
 
 }
@@ -553,7 +553,7 @@ add016I()
 if ( SelectAcamp == "pedra4" ) {
 
   Pedra4 = Pedra4 - 1;
-add016I()
+add017I()
 
   
   }
@@ -561,7 +561,7 @@ add016I()
 if ( SelectAcamp == "pedra5" ) {
 
   Pedra5 = Pedra5 - 1;
-add016I()
+add017I()
 
   
   }
@@ -569,7 +569,7 @@ add016I()
 if ( SelectAcamp == "pedra6" ) {
 
   Pedra6 = Pedra6 - 1;
-add016I()
+add017I()
 
   
   }
@@ -577,7 +577,7 @@ add016I()
 if ( SelectAcamp == "pedra7" ) {
 
   Pedra7 = Pedra7 - 1;
-add016I()
+add017I()
 
   
   }
@@ -585,7 +585,7 @@ add016I()
 if ( SelectAcamp == "pedra8" ) {
 
   Pedra8 = Pedra8 - 1;
-add016I()
+add017I()
 
   
   }
@@ -593,7 +593,7 @@ add016I()
 if ( SelectAcamp == "Arvore1" ) {
 
   arvore1 = arvore1 - 1;
-add017I()
+add018I()
 
   
   }
@@ -601,7 +601,7 @@ add017I()
 if ( SelectAcamp == "Arvore2" ) {
 
   arvore2 = arvore2 - 1;
-add017I()
+add018I()
 
   
   }

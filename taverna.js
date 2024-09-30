@@ -8,9 +8,27 @@ var FalaRM;
 var Fala1;
 var Fala2;
 var Fala3;
-
+var ConversaVelhoOcultista;
+ConversaVelhoOcultista = 0;
 
 function Taverna() {
+
+
+
+    if ( ConversaVelhoOcultista ==  2 ) {
+
+    document.getElementById("TavernaMsg").innerHTML = "Um senhor Ocultista te aguarda";
+    
+    var bit = document.getElementById("Falar001Id")
+    bit.style.display = "block"
+
+    let idTav = document.getElementById("SairTavernaId")
+    idTav.style.display = "block"
+    }
+
+    if ( ConversaVelhoOcultista ==  0 ) {
+
+    ConversaVelhoOcultista = 1;
 
     document.getElementById("TavernaMsg").innerHTML = "Um senhor com grande manto, vestes formais simples com um livro de ocultismo, chama você";
 
@@ -19,6 +37,9 @@ function Taverna() {
 
     let idTav = document.getElementById("SairTavernaId")
     idTav.style.display = "block"
+
+
+    }
 }
 
 function Falar001() {
@@ -30,6 +51,10 @@ function Falar001() {
     idTav.style.display = "none"
     var bit = document.getElementById("ContinuarId")
     bit.style.display = "block"
+
+if ( ConversaVelhoOcultista = 1 ) {
+
+    ChatTag = "001"
 
     FalaDefalt = "- Olá jovem! Você parece gostar de um Desafio";
 
@@ -52,6 +77,37 @@ function Falar001() {
     QuantiaItemNecessarioM = 1;
     CordenadasIdaM = NaN;
     inimigoM =  NaN;
+
+
+}
+    if ( ConversaVelhoOcultista ==  2 ) {
+
+    ChatTag = "001"
+
+
+    FalaDefalt = "Olá jovem, você conseguiu oque eu pedi ?";
+
+    Fala1 = "OTIMO! Vou te dar essa pagina do livro";
+    Fala2 = "Você deve ir para algum lugar, e usa-lo, uma fenda se abrira";
+    Fala3 = NaN;
+
+    FalaAM = NaN;
+    FalaRM = NaN;
+
+    FalaMissão = NaN;
+    MaxFala = 2;
+
+    missãoValue = NaN;
+
+    TituloM = NaN;
+    DescriçãoM = NaN;
+    TipoM = NaN;
+    ItemNecessarioM = NaN;
+    QuantiaItemNecessarioM = NaN;
+    CordenadasIdaM = NaN;
+    inimigoM =  NaN;
+    
+    }
 
 
     Falar()
@@ -215,6 +271,13 @@ ChatPage = "AM"
 
 Falar()
 
+if ( ChatTag == "001" )
+{
+
+    ConversaVelhoOcultista = 2;
+
+}
+
 }
 
 function RecusarMissão() {
@@ -284,3 +347,67 @@ function Missão() {
 
 }
 
+function MissãoCheq() {
+
+    if ( missãoInfo[2] = "Item" )
+
+    {
+
+    if (missãoInfo[3] == inventarioTag[0])
+
+        {
+
+            missãoHasComplete = true;
+
+        }
+
+    }
+
+    else if (missãoInfo[3] == inventarioTag[2])
+
+        {
+
+            missãoHasComplete = true;
+
+        }
+
+
+    else if (missãoInfo[3] == inventarioTag[4])
+
+        {
+
+            missãoHasComplete = true;
+
+        }
+
+    else if (missãoInfo[3] == inventarioTag[6])
+
+        {
+
+            missãoHasComplete = true;
+
+        }
+
+    else if (missãoInfo[3] == inventarioTag[8])
+
+        {
+
+            missãoHasComplete = true;
+
+        }
+
+    /*else {
+
+        missãoHasComplete = false;
+
+    }*/
+
+    if ( missãoInfo[3] != inventarioTag[0] && missãoInfo[3] != inventarioTag[2] && missãoInfo[3] != inventarioTag[4] && missãoInfo[3] != inventarioTag[6] && missãoInfo[3] != inventarioTag[8]  )
+    {
+
+        missãoHasComplete = false;
+
+    }
+
+    }
+//         inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]

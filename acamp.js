@@ -5,7 +5,7 @@ var yAcamp; yAcamp = NaN;
 var acampamento;
 acampamento = 0;
 testAcamp = xAcamp + "" + yAcamp;
-function cu() {
+function MontarAlgo() {
 
 console.log("aaaa")
     montarAcamp()

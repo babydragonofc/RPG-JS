@@ -636,6 +636,19 @@ function Correr() {
         console.log("nome:" + nomeInimigo + "| ip:" + ipInimigo + "| xp:" + xpInimigo + "| atk:" + atkInimigo + "| agi:" + agiInimigo + " | hp:" + hpInimigo)
 
     }
+
+    else {
+
+        document.getElementById("ipInimigo").innerHTML = " você não consegue";
+
+        setTimeout(function() {
+            Turno();
+            document.getElementById("ipMsgE").innerHTML = "Você foge do " + nomeInimigo;
+
+          }, 1000);
+
+
+    }
 }
 
 function Ataque(){
@@ -697,10 +710,18 @@ atkF = 0;
 
 function Defender() {
 
-    
-        defAtiva = def;
+    defAtiva = def;
 
-        Turno()
+    document.getElementById("ipMsgE").innerHTML = "a";
+
+
+        setTimeout(function() {
+
+            Turno();
+
+          }, 1000);
+
+
 
     
 }
@@ -719,9 +740,8 @@ function Turno() {
     hp = hp - (atkInimigo - defAtiva)
 
     document.getElementById("hp").innerHTML =  hp;
-
-    //let idGame = document.getElementById("idGame")
-    //idGame.style.BoxShadow = " inset 0px 0px 165px 13px rgba(255,0,0,0.56)";
+    //var idGame = document.getElementById("idGame")
+    //idGame.style.BoxShadow = " inset 0px 0px 165px 13px red";
     //setTimeout(3000,animator());
 
 }
@@ -1319,7 +1339,6 @@ var btn;
 btn = 1;
 
 function openInventory() {
-    alert("a")
     
     /*
 if(slot1 = "~~")
@@ -1502,7 +1521,10 @@ function add001I() {
     buffvida = 10;
     buffmana = 0;
     buffmoney = 0;
+    raridadeItem = "Comum"
 
+    iconeItem = "url('Null.png')";
+    
     addItem()
 
 }
@@ -1517,7 +1539,10 @@ alert("o item não funciona ainda")
     atkBustPot = 0;
     agiBustPot = 2;
     defBustPot = 0;
+    raridadeItem = "Comum"
 
+    iconeItem = "url('Null.png')";
+    
     addItem()
 
 }
@@ -1529,7 +1554,10 @@ function add003I() {
         buffvida = 0;
         buffmana = 0;
         buffmoney = 0;
-    
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
+        
         addItem()
     
     }
@@ -1544,7 +1572,10 @@ function add004I() {
         atkBustPot = 4;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
 
+        iconeItem = "url('Null.png')";
+        
         addItem()
     
     }
@@ -1560,6 +1591,9 @@ function add005I() {
         atkBustPot = 6;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Raro"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1575,6 +1609,9 @@ function add006I() {
         atkBustPot = 10;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Raro"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1590,6 +1627,9 @@ function add007I() {
         atkBustPot = 3;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1607,6 +1647,10 @@ function add009I() {
         atkBustPot = 2;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1622,6 +1666,9 @@ function add010I() {
         atkBustPot = 2;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1637,6 +1684,9 @@ function add011I() {
         atkBustPot = 4;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1652,6 +1702,9 @@ function add012I() {
         atkBustPot = 6;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Raro"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1667,6 +1720,9 @@ function add013I() {
         atkBustPot = 10;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Raro"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1682,6 +1738,9 @@ function add014I() {
         atkBustPot = 4;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
@@ -1697,12 +1756,15 @@ function add015I() {
         atkBustPot = 5;
         agiBustPot = 1;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = 'red potion.png';
         
         addItem()
     
     }
 
-function add015I() {
+function add016I() {
     
         additem = "Faca Magna";
         additemuse = "arma";
@@ -1712,12 +1774,15 @@ function add015I() {
         atkBustPot = 8;
         agiBustPot = 1;
         defBustPot = 0;
+        raridadeItem = "Raro"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
     }
 
-function add016I() {
+function add017I() {
     
         additem = "Pedra";
         additemuse = "material"; //se vc veio mecher no codigo, experimente  colocar o valor dessa variavel para "arma"
@@ -1727,12 +1792,15 @@ function add016I() {
         atkBustPot = 100;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
     }
     
-function add017I() {
+function add018I() {
     
         additem = "Madeira";
         additemuse = "material";
@@ -1741,11 +1809,30 @@ function add017I() {
         atkBustPot = 0;
         agiBustPot = 0;
         defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
         
         addItem()
     
     }  
 
+function add019I() {
+    
+        additem = "Chifre de Orc";
+        additemuse = "material";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Comum"
+
+        iconeItem = "url('Null.png')";
+        
+        addItem()
+    
+    }  
 
 //002I Botas de couro
 
@@ -1766,7 +1853,7 @@ perto = "vilarejo";
 
 }
 
-function cu() {
+function MontarAlgo() {
 
     console.log("aaaa")
     montarAcamp()
