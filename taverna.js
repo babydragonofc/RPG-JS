@@ -13,7 +13,7 @@ ConversaVelhoOcultista = 0;
 
 function Taverna() {
 
-
+alert("a")
 
     if ( ConversaVelhoOcultista ==  2 ) {
 
@@ -24,6 +24,7 @@ function Taverna() {
 
     let idTav = document.getElementById("SairTavernaId")
     idTav.style.display = "block"
+
     }
 
     if ( ConversaVelhoOcultista ==  0 ) {
@@ -44,7 +45,6 @@ function Taverna() {
 
 function Falar001() {
 
-    FalaDefalt = "- 'Olá jovem! Você parece gostar de um Desafio' Falo o homem com um tom curioso";
     let idChat = document.getElementById("Falar001Id")
     idChat.style.display = "none"
     let idTav = document.getElementById("SairTavernaId")
@@ -52,7 +52,7 @@ function Falar001() {
     var bit = document.getElementById("ContinuarId")
     bit.style.display = "block"
 
-if ( ConversaVelhoOcultista = 1 ) {
+if ( ConversaVelhoOcultista == 1 ) {
 
     ChatTag = "001"
 
@@ -70,6 +70,8 @@ if ( ConversaVelhoOcultista = 1 ) {
 
     missãoValue = 1;
 
+    ChatType = "Missão"
+
     TituloM = "Chifre De Orc";
     DescriçãoM = "Leve um chifre de orc para o homem na Taverna";
     TipoM = "Item";
@@ -85,19 +87,21 @@ if ( ConversaVelhoOcultista = 1 ) {
     ChatTag = "001"
 
 
-    FalaDefalt = "Olá jovem, você conseguiu oque eu pedi ?";
+    FalaDefalt = "Olá jovem!";
 
-    Fala1 = "OTIMO! Vou te dar essa pagina do livro";
-    Fala2 = "Você deve ir para algum lugar, e usa-lo, uma fenda se abrira";
-    Fala3 = NaN;
+    Fala1 = "Você conseguiu oque eu pedi?";
+    Fala2 = "OTIMO! Vou te dar essa pagina do livro";
+    Fala3 = "Você deve ir para algum lugar, e usa-lo, uma fenda se abrira";
 
     FalaAM = NaN;
     FalaRM = NaN;
 
-    FalaMissão = NaN;
-    MaxFala = 2;
+    FalaMissão = 1;
+    MaxFala = 3;
 
-    missãoValue = NaN;
+    ChatType = "CompletarMissão"
+
+    missãoValue = 1;
 
     TituloM = NaN;
     DescriçãoM = NaN;
@@ -151,7 +155,14 @@ function Falar() {
         document.getElementById("TavernaMsg").innerHTML = Fala1;
 
         if ( FalaMissão = 1 ) {
+            if ( MaxFala == 1 ) {
 
+                var bit = document.getElementById("SairChatId")
+                bit.style.display = "block"
+                var bit = document.getElementById("ContinuarId")
+                bit.style.display = "none"
+    
+                }
             if ( missão == 0 )
 
             {
@@ -165,7 +176,7 @@ function Falar() {
 
             }
 
-            else 
+            else  if ( ChatType == "Missão" )
 
             {
 
@@ -173,6 +184,26 @@ function Falar() {
 
                 var bit = document.getElementById("SairChatId")
                 bit.style.display = "block"
+
+            }
+
+            else if ( ChatType == "CompletarMissão" )
+
+            {
+
+                if ( FalaMissão == 1 ) 
+
+                {
+
+                    if ( missãoHasComplete )
+                    
+                    {
+
+                        eval( "Missão" + missãoValue + "Complete" + "()");
+
+                    }
+
+                }
 
             }
 
@@ -191,6 +222,14 @@ function Falar() {
 
         if ( FalaMissão = 2 ) {
 
+            if ( MaxFala == 2 ) {
+
+            var bit = document.getElementById("SairChatId")
+            bit.style.display = "block"
+                var bit = document.getElementById("ContinuarId")
+                bit.style.display = "none"
+            }
+
             if ( missão == 0 )
 
             {
@@ -204,7 +243,7 @@ function Falar() {
 
             }
 
-            else 
+            else if ( ChatType == "Missão" )
 
             {
 
@@ -221,7 +260,13 @@ function Falar() {
     if ( ChatPage == 3 ) {
 
         document.getElementById("TavernaMsg").innerHTML = Fala3;
+        if ( MaxFala == 3 ) {
 
+            var bit = document.getElementById("SairChatId")
+            bit.style.display = "block"
+                var bit = document.getElementById("ContinuarId")
+                bit.style.display = "none"
+            }
         if ( FalaMissão = 3 ) {
 
             if ( missão == 0 )
@@ -237,7 +282,7 @@ function Falar() {
 
             }
 
-            else 
+            else if ( ChatType == "Missão" )
 
             {
 
@@ -309,7 +354,7 @@ function SairChat() {
     inimigoM =  NaN;
 
     Missão();
-Taverna()
+Taverna();
 
 }
 
@@ -411,3 +456,11 @@ function MissãoCheq() {
 
     }
 //         inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
+
+function Missão1Complete()
+
+{
+
+alert("FUNCIONOU ZI AHA HA HA")
+
+}

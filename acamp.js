@@ -198,164 +198,76 @@ if(terrainType == "F3P1M")
     
     {
 
-        var bit = document.getElementById("Ax1y1")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax1y2")
-        bit.style.backgroundColor = "rgb(116, 114, 146)";
-        var bit = document.getElementById("Ax1y3")
-        bit.style.backgroundColor = "rgb(65, 124, 23)"
-        var bit = document.getElementById("Ax1y4")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax1y5")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax1y6")
-        bit.style.backgroundColor = "rgb(65, 124, 23)"
-        var bit = document.getElementById("Ax1y7")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax1y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
 
-        var bit = document.getElementById("Ax2y1")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax2y2")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax2y3")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax2y4")
-        bit.style.backgroundColor = "rgb(116, 114, 146)";
-        var bit = document.getElementById("Ax2y5")
-        bit.style.backgroundColor = "rgb(83, 65, 34)"
-        var bit = document.getElementById("Ax2y6")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax2y7")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax2y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
 
-        var bit = document.getElementById("Ax3y1")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax3y2")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax3y3")
-        bit.style.backgroundColor = "rgb(116, 114, 146)";
-        var bit = document.getElementById("Ax3y4")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax3y5")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax3y6")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax3y7")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax3y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
+        const acampBoxes = document.querySelectorAll('.AcampBox');
 
-        var bit = document.getElementById("Ax4y1")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax4y2")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax4y3")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax4y4")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax4y5")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax4y6")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax4y7")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax4y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-
-        var bit = document.getElementById("Ax5y1")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax5y2")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax5y3")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax5y4")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax5y5")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax5y6")
-        bit.style.backgroundColor = "rgb(116, 114, 146)";
-        var bit = document.getElementById("Ax5y7")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax5y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-
-        var bit = document.getElementById("Ax6y1")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax6y2")
-        bit.style.backgroundColor = "rgb(116, 114, 146)";
-        var bit = document.getElementById("Ax6y3")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax6y4")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax6y5")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax6y6")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax6y7")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax6y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-
-        var bit = document.getElementById("Ax7y1")
-        bit.style.backgroundColor = "rgb(83, 65, 34)";
-        var bit = document.getElementById("Ax7y2")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax7y3")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax7y4")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax7y5")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax7y6")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax7y7")
-        bit.style.backgroundColor = "rgb(116, 114, 146)";
-        var bit = document.getElementById("Ax7y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-
-        var bit = document.getElementById("Ax8y1")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax8y2")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax8y3")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax8y4")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax8y5")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax8y6")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax8y7")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-        var bit = document.getElementById("Ax8y8")
-        bit.style.backgroundColor = "rgb(65, 124, 23)";
-
-        /*linha1 = [NaN, NaN, NaN, NaN, NaN, NaN, 'Arvore2', NaN, ]//1
-        linha2 = ['pedra1', NaN, NaN, NaN, NaN, 'pedra5', NaN, NaN, ]//2
-        linha3 = [NaN, NaN, 'pedra3', NaN, NaN, NaN, NaN, NaN, ]//3
-        linha4 = [NaN, 'pedra2', NaN, NaN, 'cabana', NaN, NaN, NaN, ]//4
-        linha5 = [NaN, 'Arvore1', NaN, 'fogueira', NaN, NaN, NaN, NaN, ]//5
-        linha6 = [NaN, NaN, NaN, NaN, 'pedra4', NaN, NaN, NaN, ]//6
-        linha7 = [NaN, NaN, NaN, NaN, NaN, NaN, 'pedra6', NaN, ]//7
-        linha8 = [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, ]//8*/
+        acampBoxes.forEach(acampBox => {
+          acampBox.classList.remove("AcampBox");
+          acampBox.classList.add("verde");
+        });
 
 
 
 
         mapa[0][6] = 'Arvore2' 
+
+        var img = document.querySelector('#Ax1y7')
+        img.classList.add("tree");
+
+
         mapa[1][0] = 'pedra1'
+
+        var img = document.querySelector('#Ax2y1')
+        img.classList.add("rock");
+
+
         mapa[1][5] = 'pedra5'
+
+        var img = document.querySelector('#Ax2y6')
+        img.classList.add("rock");
+
+
         mapa[2][2] = 'pedra3'
+
+        var img = document.querySelector('#Ax3y3')
+        img.classList.add("rock");
+
+
         mapa[3][1] = 'pedra2'
+
+        var img = document.querySelector('#Ax4y2')
+        img.classList.add("rock");
+
+        
         mapa[3][4] = 'cabana'
+
+        var img = document.querySelector('#Ax4y5')
+        img.classList.add("tree");
+
+
         mapa[4][1] = 'Arvore1'
+
+        var img = document.querySelector('#Ax5y2')
+        img.classList.add("tree");
+
+
         mapa[4][3] = 'fogueira'
+
+        var img = document.querySelector('#Ax5y4')
+        img.classList.add("tree");
+
+
         mapa[5][4] = 'pedra4'
+
+        var img = document.querySelector('#Ax6y5')
+        img.classList.add("rock");
+        
+
         mapa[6][6] = 'pedra6'
+
+        var img = document.querySelector('#Ax7y7')
+        img.classList.add("rock");
 
 
 

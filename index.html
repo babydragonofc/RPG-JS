@@ -15,12 +15,26 @@
 
 <body id="body">
     
-    <div style="height: 100%; width: 100%;" id="htmlE"></div>
+    <div style="height: 100%; width: 100% ;" id="htmlE"></div>
 
     <div class="firstUI">
-        <button onclick="infOpen()">Informações</button><p>||| DINHEIRO : </p><p id="money">000</p><p> || HP :</p><p id="hp"> 000 </p><p>|| MANA : </p><p id="mana">000</p><p>|| XP : </p><p id="xp">000</p><p>/</p><p id="xpMax">000</p><p>|||</p><button onclick="a()">10</button> <button onclick="montarAcamp()">vila</button> <button onclick="MissãoCheq()">missão</button>
-    </div>  
+        <div style="display: flex;"> <button onclick="infOpen()">Informações</button> </div>
+        
+        <div style="display: flex; gap: 5px; align-items: center;">
 
+        <img src="ui/PilarMini1.png">
+
+        <p>||| DINHEIRO : </p><p id="money">000</p><p> || HP :</p><p id="hp"> 000 </p><p>|| MANA : </p><p id="mana">000</p><p>|| XP : </p><p id="xp">000</p><p>/</p><p id="xpMax">000</p><p>|||</p>
+
+        <img src="ui/PilarMini2.png"> 
+        
+        </div>
+
+          
+        <div style="display: flex;"> <button onclick="a()">10</button> <button onclick="montarAcamp()">vila</button> <button onclick="MissãoCheq()">missão</button> </div>
+    </div>  
+<br>
+<br>
     <div class="game" id="idGame">
 <div class="GUIASJOGO" id="idGUIASJOGO" >
                 <!-- SELETOR DE CLASSE -->
@@ -557,105 +571,105 @@
         
             <div style="display: flex;">
         
-                <button onclick="AS1x1y()" id="Ax1y1"></button>
-                <button onclick="AS2x1y()" id="Ax2y1"></button>
-                <button onclick="AS3x1y()" id="Ax3y1"></button>
-                <button onclick="AS4x1y()" id="Ax4y1"></button>
-                <button onclick="AS5x1y()" id="Ax5y1"></button>
-                <button onclick="AS6x1y()" id="Ax6y1"></button>
-                <button onclick="AS7x1y()" id="Ax7y1"></button>
-                <button onclick="AS8x1y()" id="Ax8y1"></button>
+                <button onclick="AS1x1y()" id="Ax1y1" class="AcampBox"></button>
+                <button onclick="AS2x1y()" id="Ax2y1" class="AcampBox"></button>
+                <button onclick="AS3x1y()" id="Ax3y1" class="AcampBox"></button>
+                <button onclick="AS4x1y()" id="Ax4y1" class="AcampBox"></button>
+                <button onclick="AS5x1y()" id="Ax5y1" class="AcampBox"></button>
+                <button onclick="AS6x1y()" id="Ax6y1" class="AcampBox"></button>
+                <button onclick="AS7x1y()" id="Ax7y1" class="AcampBox"></button>
+                <button onclick="AS8x1y()" id="Ax8y1" class="AcampBox"></button>
         
             </div>
         
             <div style="display: flex;">
         
-                <button onclick="AS1x2y()" id="Ax1y2"></button>
-                <button onclick="AS2x2y()" id="Ax2y2"></button>
-                <button onclick="AS3x2y()" id="Ax3y2"></button>
-                <button onclick="AS4x2y()" id="Ax4y2"></button>
-                <button onclick="AS5x2y()" id="Ax5y2"></button>
-                <button onclick="AS6x2y()" id="Ax6y2"></button>
-                <button onclick="AS7x2y()" id="Ax7y2"></button>
-                <button onclick="AS8x2y()" id="Ax8y2"></button>
+                <button onclick="AS1x2y()" id="Ax1y2" class="AcampBox"></button>
+                <button onclick="AS2x2y()" id="Ax2y2" class="AcampBox"></button>
+                <button onclick="AS3x2y()" id="Ax3y2" class="AcampBox"></button>
+                <button onclick="AS4x2y()" id="Ax4y2" class="AcampBox"></button>
+                <button onclick="AS5x2y()" id="Ax5y2" class="AcampBox"></button>
+                <button onclick="AS6x2y()" id="Ax6y2" class="AcampBox"></button>
+                <button onclick="AS7x2y()" id="Ax7y2" class="AcampBox"></button>
+                <button onclick="AS8x2y()" id="Ax8y2" class="AcampBox"></button>
         
             </div>
         
             <div style="display: flex;">
         
-                <button onclick="AS1x3y()" id="Ax1y3"></button>
-                <button onclick="AS2x3y()" id="Ax2y3"></button>
-                <button onclick="AS3x3y()" id="Ax3y3"></button>
-                <button onclick="AS4x3y()" id="Ax4y3"></button>
-                <button onclick="AS5x3y()" id="Ax5y3"></button>
-                <button onclick="AS6x3y()" id="Ax6y3"></button>
-                <button onclick="AS7x3y()" id="Ax7y3"></button>
-                <button onclick="AS8x3y()" id="Ax8y3"></button>
+                <button onclick="AS1x3y()" id="Ax1y3" class="AcampBox"></button>
+                <button onclick="AS2x3y()" id="Ax2y3" class="AcampBox"></button>
+                <button onclick="AS3x3y()" id="Ax3y3" class="AcampBox"></button>
+                <button onclick="AS4x3y()" id="Ax4y3" class="AcampBox"></button>
+                <button onclick="AS5x3y()" id="Ax5y3" class="AcampBox"></button>
+                <button onclick="AS6x3y()" id="Ax6y3" class="AcampBox"></button>
+                <button onclick="AS7x3y()" id="Ax7y3" class="AcampBox"></button>
+                <button onclick="AS8x3y()" id="Ax8y3" class="AcampBox"></button>
         
             </div>
         
             <div style="display: flex;">
         
-                <button onclick="AS1x4y()" id="Ax1y4"></button>
-                <button onclick="AS2x4y()" id="Ax2y4"></button>
-                <button onclick="AS3x4y()" id="Ax3y4"></button>
-                <button onclick="AS4x4y()" id="Ax4y4"></button>
-                <button onclick="AS5x4y()" id="Ax5y4"></button>
-                <button onclick="AS6x4y()" id="Ax6y4"></button>
-                <button onclick="AS7x4y()" id="Ax7y4"></button>
-                <button onclick="AS8x4y()" id="Ax8y4"></button>
+                <button onclick="AS1x4y()" id="Ax1y4" class="AcampBox"></button>
+                <button onclick="AS2x4y()" id="Ax2y4" class="AcampBox"></button>
+                <button onclick="AS3x4y()" id="Ax3y4" class="AcampBox"></button>
+                <button onclick="AS4x4y()" id="Ax4y4" class="AcampBox"></button>
+                <button onclick="AS5x4y()" id="Ax5y4" class="AcampBox"></button>
+                <button onclick="AS6x4y()" id="Ax6y4" class="AcampBox"></button>
+                <button onclick="AS7x4y()" id="Ax7y4" class="AcampBox"></button>
+                <button onclick="AS8x4y()" id="Ax8y4" class="AcampBox"></button>
         
             </div>
         
             <div style="display: flex;">
         
-                <button onclick="AS1x5y()" id="Ax1y5"></button>
-                <button onclick="AS2x5y()" id="Ax2y5"></button>
-                <button onclick="AS3x5y()" id="Ax3y5"></button>
-                <button onclick="AS4x5y()" id="Ax4y5"></button>
-                <button onclick="AS5x5y()" id="Ax5y5"></button>
-                <button onclick="AS6x5y()" id="Ax6y5"></button>
-                <button onclick="AS7x5y()" id="Ax7y5"></button>
-                <button onclick="AS8x5y()" id="Ax8y5"></button>
+                <button onclick="AS1x5y()" id="Ax1y5" class="AcampBox"></button>
+                <button onclick="AS2x5y()" id="Ax2y5" class="AcampBox"></button>
+                <button onclick="AS3x5y()" id="Ax3y5" class="AcampBox"></button>
+                <button onclick="AS4x5y()" id="Ax4y5" class="AcampBox"></button>
+                <button onclick="AS5x5y()" id="Ax5y5" class="AcampBox"></button>
+                <button onclick="AS6x5y()" id="Ax6y5" class="AcampBox"></button>
+                <button onclick="AS7x5y()" id="Ax7y5" class="AcampBox"></button>
+                <button onclick="AS8x5y()" id="Ax8y5" class="AcampBox"></button>
         
             </div>
         
             <div style="display: flex;">
         
-                <button onclick="AS1x6y()" id="Ax1y6"></button>
-                <button onclick="AS2x6y()" id="Ax2y6"></button>
-                <button onclick="AS3x6y()" id="Ax3y6"></button>
-                <button onclick="AS4x6y()" id="Ax4y6"></button>
-                <button onclick="AS5x6y()" id="Ax5y6"></button>
-                <button onclick="AS6x6y()" id="Ax6y6"></button>
-                <button onclick="AS7x6y()" id="Ax7y6"></button>
-                <button onclick="AS8x6y()" id="Ax8y6"></button>
+                <button onclick="AS1x6y()" id="Ax1y6" class="AcampBox"></button>
+                <button onclick="AS2x6y()" id="Ax2y6" class="AcampBox"></button>
+                <button onclick="AS3x6y()" id="Ax3y6" class="AcampBox"></button>
+                <button onclick="AS4x6y()" id="Ax4y6" class="AcampBox"></button>
+                <button onclick="AS5x6y()" id="Ax5y6" class="AcampBox"></button>
+                <button onclick="AS6x6y()" id="Ax6y6" class="AcampBox"></button>
+                <button onclick="AS7x6y()" id="Ax7y6" class="AcampBox"></button>
+                <button onclick="AS8x6y()" id="Ax8y6" class="AcampBox"></button>
         
             </div>
         
             <div style="display: flex;">
         
-                <button onclick="AS1x7y()" id="Ax1y7"></button>
-                <button onclick="AS2x7y()" id="Ax2y7"></button>
-                <button onclick="AS3x7y()" id="Ax3y7"></button>
-                <button onclick="AS4x7y()" id="Ax4y7"></button>
-                <button onclick="AS5x7y()" id="Ax5y7"></button>
-                <button onclick="AS6x7y()" id="Ax6y7"></button>
-                <button onclick="AS7x7y()" id="Ax7y7"></button>
-                <button onclick="AS8x7y()" id="Ax8y7"></button>
+                <button onclick="AS1x7y()" id="Ax1y7" class="AcampBox"></button>
+                <button onclick="AS2x7y()" id="Ax2y7" class="AcampBox"></button>
+                <button onclick="AS3x7y()" id="Ax3y7" class="AcampBox"></button>
+                <button onclick="AS4x7y()" id="Ax4y7" class="AcampBox"></button>
+                <button onclick="AS5x7y()" id="Ax5y7" class="AcampBox"></button>
+                <button onclick="AS6x7y()" id="Ax6y7" class="AcampBox"></button>
+                <button onclick="AS7x7y()" id="Ax7y7" class="AcampBox"></button>
+                <button onclick="AS8x7y()" id="Ax8y7" class="AcampBox"></button>
         
             </div>
         
             <div style="display: flex;">
         
-                <button onclick="AS1x8y()" id="Ax1y8"></button>
-                <button onclick="AS2x8y()" id="Ax2y8"></button>
-                <button onclick="AS3x8y()" id="Ax3y8"></button>
-                <button onclick="AS4x8y()" id="Ax4y8"></button>
-                <button onclick="AS5x8y()" id="Ax5y8"></button>
-                <button onclick="AS6x8y()" id="Ax6y8"></button>
-                <button onclick="AS7x8y()" id="Ax7y8"></button>
-                <button onclick="AS8x8y()" id="Ax8y8"></button>
+                <button onclick="AS1x8y()" id="Ax1y8" class="AcampBox"></button>
+                <button onclick="AS2x8y()" id="Ax2y8" class="AcampBox"></button>
+                <button onclick="AS3x8y()" id="Ax3y8" class="AcampBox"></button>
+                <button onclick="AS4x8y()" id="Ax4y8" class="AcampBox"></button>
+                <button onclick="AS5x8y()" id="Ax5y8" class="AcampBox"></button>
+                <button onclick="AS6x8y()" id="Ax6y8" class="AcampBox"></button>
+                <button onclick="AS7x8y()" id="Ax7y8" class="AcampBox"></button>
+                <button onclick="AS8x8y()" id="Ax8y8" class="AcampBox"></button>
         
             </div>
         
@@ -693,7 +707,7 @@
         
             <button onclick="verTamanhoAcamp()">Ver Area</button>
             <button  class="btn ColectCursor"  id="btnColetar" onclick="Coletar()">Coletar</button>
-            <button  class="btn"  id="btnDormir" onclick="Dormir()">Dormir</button>
+            <button  class="btn SleapCursor"  id="btnDormir" onclick="Dormir()">Dormir</button>
 
         </div>
         
@@ -714,7 +728,7 @@
 
 <!--inventario-->
 
-<div class="inventario" id="idinventario" style="background-color: #985316FF; height: 757px; max-height: 757px; justify-content: space-between ; padding: 20px;"> 
+<div class="inventario" id="idinventario" style="background-color: #985316FF; height: 1000px; max-height: 1000px; justify-content: space-between ; padding: 20px;"> 
 
                 
 <div>
@@ -771,7 +785,7 @@
 
 <div>
 
-        <br>
+        
         <br><div><p>Você esta vestindo uma </p> <p id="armadura">roupa simples</p></div>
         <br><div><p>Você esta usando uma </p> <p id="arma"></p></div>
         <br>
