@@ -551,7 +551,7 @@
         
         <div style="display: flex; align-items: center; gap: 20px;">
         
-        <div style="background-color: rgb(83, 65, 34); width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(83, 65, 34); width: 32px; height: 32px;"></div>
         <p>=</p>
         <p>Árvore ||</p>
         
@@ -559,7 +559,7 @@
         
         <div style="display: flex; align-items: center; gap: 20px;">
         
-            <div style="background-color: rgb(116, 114, 146); width: 25px; height: 25px;"></div>
+            <div style="background-color: rgb(116, 114, 146); width: 32px; height: 32px;"></div>
             <p>=</p>
             <p>Pedra  ||</p>
             
@@ -684,7 +684,7 @@
                <p>Cabana</p>
                 <p>=</p>
         
-            <div style="background-color: rgb(222, 223, 251); width: 25px; height: 25px;"></div>
+            <div style="background-color: rgb(222, 223, 251); width: 32px; height: 32px;"></div>
             
             </div>
             
@@ -693,7 +693,7 @@
                 <p>Fogueira</p>        
                 <p>=</p>
         
-                <div style="background-color: rgb(255, 140, 18); width: 25px; height: 25px;"></div>
+                <div style="background-color: rgb(255, 140, 18); width: 32px; height: 32px;"></div>
                 
                 </div>
             
@@ -718,6 +718,7 @@
 
 
 </div>
+
 
 
 </div>
@@ -746,11 +747,11 @@
 
         <div style="display: flex; justify-content: center; gap: 10px; align-items: center; max-height: 64px; margin: 10px; background: url('ui/uiBorder.png') no-repeat center ; background-size: contain; padding: 19px; ">
 
-            <button class="invBtn" ><p id="Slot1" onclick="Item1()">~~</p></button>
-            <button class="invBtn" ><p id="Slot2" onclick="Item2()">~~</p></button>
-            <button class="invBtn" ><p id="Slot3" onclick="Item3()">~~</p></button>
-            <button class="invBtn" ><p id="Slot4" onclick="Item4()">~~</p></button>
-            <button class="invBtn" ><p id="Slot5" onclick="Item5()">~~</p></button>
+            <div><button class="invBtn" onclick="Item1()" id="Slot1btn"></button></div>
+            <div><button class="invBtn" onclick="Item2()" id="Slot2btn"></button></div>
+            <div><button class="invBtn" onclick="Item3()" id="Slot3btn"></button></div>
+            <div><button class="invBtn" onclick="Item4()" id="Slot4btn"></button></div>
+            <div><button class="invBtn" onclick="Item5()" id="Slot5btn"></button></div>
 
 
         </div>
@@ -806,10 +807,6 @@
 
     </div>
 
-
-
-    </div> 
-
     <div id="idInfo"> 
 
                 
@@ -831,7 +828,7 @@
 
             <p style="font-weight: 900;">|| MISSÕES ||</p>
 
-            <div style="display: flex; background-color: rgb(104, 43, 43); height: 10px; border-radius: 5px; margin-left: 25px; margin-right: 25px;"></div>
+            <div style="display: flex; background-color: rgb(104, 43, 43); height: 10px; margin-left: 25px; margin-right: 25px;"></div>
 
             <div style="background-color: rgb(154, 96, 96); border-radius: 25px; padding-bottom: 25px; ">
 
@@ -866,6 +863,10 @@
 
 
 </div>
+
+    </div> 
+
+
 
 <div class="Bau" id="idBau" style="display: none;"> 
 
@@ -941,35 +942,35 @@
 
     </div>
 
-<div style="display: none; flex-direction: column; align-items: center; margin: 30px;" id="mapa">
+<div style="display: flex; flex-direction: column; align-items: center; margin: 30px;" id="mapa">
 
 <div style="display: flex;">
-    <div style="background-color: rgb(143, 34, 34); width: 25px; height: 25px;"></div>
-    <div style="background-color: brown; width: 25px; height: 25px;"></div>
-    <div style="background-color: brown; width: 25px; height: 25px;"></div>
-    <div style="background-color: brown; width: 25px; height: 25px;"></div>
-    <div style="background-color: brown; width: 25px; height: 25px;"></div>
-    <div style="background-color: brown; width: 25px; height: 25px;"></div>
-    <div style="background-color: rgb(143, 34, 34); width: 25px; height: 25px;"></div>
+    <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 10.png);"></div>
+    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
+    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
+    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border\ 6.png);"></div>
+    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
+    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
+    <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 9.png);"></div>
 
 </div>
-<br>
+
     <div style="display: flex;">
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
         <div class="mapBox" id="x1y1"></div>
         <div class="mapBox" id="x2y1"></div>
         <div class="mapBox" id="x3y1">vila</div>
         <div class="mapBox" id="x4y1"></div>
         <div class="mapBox" id="x5y1"></div>
-        <div class="mapBox" style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div class="mapBox" style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
 
 
     </div>
 
     <div style="display: flex;">
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
 
         <div class="mapBox" id="x1y2"></div>
         <div class="mapBox" id="x2y2"></div>
@@ -977,13 +978,13 @@
         <div class="mapBox" id="x4y2"></div>
         <div class="mapBox" id="x5y2"></div>
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
 
     </div>
 
     <div style="display: flex;">
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border\ 7.png);"></div>
 
         <div class="mapBox" id="x1y3"></div>
         <div class="mapBox" id="x2y3"></div>
@@ -991,14 +992,14 @@
         <div class="mapBox" id="x4y3"></div>
         <div class="mapBox" id="x5y3">vila</div>
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border\ 8.png);"></div>
 
 
     </div>
 
     <div style="display: flex;">
         
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
 
         <div class="mapBox" id="x1y4"></div>
         <div class="mapBox" id="x2y4"></div>
@@ -1006,14 +1007,14 @@
         <div class="mapBox" id="x4y4"></div>
         <div class="mapBox" id="x5y4"></div>
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
 
 
     </div>
 
     <div style="display: flex;">
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
 
         <div class="mapBox" id="x1y5">vila</div>
         <div class="mapBox" id="x2y5"></div>
@@ -1021,19 +1022,19 @@
         <div class="mapBox" id="x4y5"></div>
         <div class="mapBox" id="x5y5"></div>
 
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
 
 
     </div>
 
     <div style="display: flex;">
-        <div style="background-color: rgb(143, 34, 34); width: 25px; height: 25px;"></div>
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
-        <div style="background-color: brown; width: 25px; height: 25px;"></div>
-        <div style="background-color: rgb(143, 34, 34); width: 25px; height: 25px;"></div>
+        <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 11.png);"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
+        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
+        <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 12.png);"></div>
     
     </div>
 
@@ -1041,7 +1042,7 @@
 </div>
 
 <button onclick="add015I()">a</button>
-<button onclick="add014I()">b</button>
+<button onclick="add019I()">b</button>
 
 
 

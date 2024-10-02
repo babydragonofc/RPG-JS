@@ -80,6 +80,7 @@ if ( ConversaVelhoOcultista == 1 ) {
     CordenadasIdaM = NaN;
     inimigoM =  NaN;
 
+    itemMissãoGive =  "020";
 
 }
     if ( ConversaVelhoOcultista ==  2 ) {
@@ -133,7 +134,7 @@ function Falar() {
                     bit.style.display = "block"
         
                 missão = missãoValue;            
-                missãoInfo = [TituloM ,DescriçãoM , TipoM, ItemNecessarioM, QuantiaItemNecessarioM, CordenadasIdaM, inimigoM,];
+                missãoInfo = [TituloM ,DescriçãoM , TipoM, ItemNecessarioM, QuantiaItemNecessarioM, CordenadasIdaM, inimigoM, itemMissãoGive];
             }
         
             if ( ChatPage == "RM" ) {
@@ -199,7 +200,7 @@ function Falar() {
                     
                     {
 
-                        eval( "Missão" + missãoValue + "Complete" + "()");
+                        MissãoCompleta(missãoInfo[7])
 
                     }
 
@@ -462,5 +463,29 @@ function Missão1Complete()
 {
 
 alert("FUNCIONOU ZI AHA HA HA")
+
+}
+
+function MissãoCompleta(item) {
+
+    let slots = [slot1, slot2, slot3, slot4, slot5];
+
+if ( slots.includes("~~") )
+{
+
+eval("add" + item + "I()")
+
+missãoInfo = NaN;
+missão = 0;
+
+Missão()
+
+}
+
+else {
+
+alert("libere seu inventario antes");
+
+}
 
 }

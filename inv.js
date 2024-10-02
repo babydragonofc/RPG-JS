@@ -152,7 +152,10 @@ function addItemM() {
             raridadeSlot1 = raridadeItem;
 
 
-
+            let bit = document.getElementById('Slot1btn');
+            bit.style.backgroundImage = `url(${iconeItem})`;
+    
+            iconeItem1 = iconeItem;
         }
     
         else
@@ -173,6 +176,11 @@ function addItemM() {
                     slot2agiBustPot = agiBustPot;
             
                     raridadeSlot2 = raridadeItem;
+
+                    let bit = document.getElementById('Slot2btn');
+                    bit.style.backgroundImage = `url(${iconeItem})`;
+            
+                    iconeItem2 = iconeItem;
                 }
             
                 else
@@ -193,6 +201,11 @@ function addItemM() {
                             slot3agiBustPot = agiBustPot;
                     
                             raridadeSlot3 = raridadeItem;
+
+                            let bit = document.getElementById('Slot3btn');
+                            bit.style.backgroundImage = `url(${iconeItem})`;
+                    
+                            iconeItem3 = iconeItem;
                         }
                     
                         else
@@ -213,6 +226,11 @@ function addItemM() {
                                     slot3agiBustPot = agiBustPot;
 
                                     raridadeSlot4 = raridadeItem;
+
+                                    let bit = document.getElementById('Slot4btn');
+                                    bit.style.backgroundImage = `url(${iconeItem})`;
+                            
+                                    iconeItem4 = iconeItem;
                                 }
                             
                                 else
@@ -233,6 +251,11 @@ function addItemM() {
                                             slot5agiBustPot = agiBustPot;
                                     
                                             raridadeSlot5 = raridadeItem;
+
+                                            let bit = document.getElementById('Slot5btn');
+                                            bit.style.backgroundImage = `url(${iconeItem})`;
+                                    
+                                            iconeItem5 = iconeItem;
                                         }
                                     
                                         else
@@ -285,9 +308,18 @@ function addItemP() {
 
         raridadeSlot1 = raridadeItem;
 
-        let bit = document.getElementById("Slot1");
-        bit.style.backgroundImage = `url(${iconeItem})`;  
-    
+        
+        
+
+        /*eval( 
+            "let bit = document.getElementById('Slot1btn');"+
+            'bit.style.background = "url("' + iconeItem + '")'
+        )*/
+        let bit = document.getElementById('Slot1btn');
+        bit.style.backgroundImage = `url(${iconeItem})`;
+
+        iconeItem1 = iconeItem;
+        
     }
 
     else
@@ -306,6 +338,11 @@ function addItemP() {
                 slot2agiBustPot = agiBustPot;
         
                 raridadeSlot2 = raridadeItem;
+
+                let bit = document.getElementById('Slot2btn');
+                bit.style.backgroundImage = `url(${iconeItem})`;
+
+                iconeItem2 = iconeItem;
             }
         
             else
@@ -324,6 +361,10 @@ function addItemP() {
                         slot3agiBustPot = agiBustPot;
                 
                         raridadeSlot3 = raridadeItem;
+                        let bit = document.getElementById('Slot3btn');
+                        bit.style.backgroundImage = `url(${iconeItem})`;
+
+                        iconeItem3 = iconeItem;
                     }
                 
                     else
@@ -342,6 +383,11 @@ function addItemP() {
                                 slot3agiBustPot = agiBustPot;
                         
                                 raridadeSlot4 = raridadeItem;
+
+                                let bit = document.getElementById('Slot4btn');
+                                bit.style.backgroundImage = `url(${iconeItem})`;
+
+                                iconeItem4 = iconeItem;
                             }
                         
                             else
@@ -360,6 +406,11 @@ function addItemP() {
                                         slot5agiBustPot = agiBustPot;
                                 
                                         raridadeSlot5 = raridadeItem;
+
+                                        let bit = document.getElementById('Slot5btn');
+                                        bit.style.backgroundImage = `url(${iconeItem})`;
+
+                                        iconeItem5 = iconeItem;
                                     }
                                 
                                     else
@@ -1452,6 +1503,10 @@ function Lixo1() {
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
 
+    let inv = document.getElementById('Slot1btn');
+    inv.style.backgroundImage = url("Null.png");
+
+
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
     console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
@@ -1488,6 +1543,9 @@ function Lixo1() {
     document.getElementById("Slot3").innerHTML = slot3;
     document.getElementById("Slot4").innerHTML = slot4;
     document.getElementById("Slot5").innerHTML = slot5;
+
+    let inv = document.getElementById('Slot1btn');
+    inv.style.backgroundImage = 'url("Null.png")';
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 

@@ -1523,7 +1523,7 @@ function add001I() {
     buffmoney = 0;
     raridadeItem = "Comum"
 
-    iconeItem = "url('Null.png')";
+    iconeItem = "red potion.png";
     
     addItem()
 
@@ -1541,7 +1541,7 @@ alert("o item não funciona ainda")
     defBustPot = 0;
     raridadeItem = "Comum"
 
-    iconeItem = "url('Null.png')";
+    iconeItem = "Madeira.png";
     
     addItem()
 
@@ -1556,7 +1556,7 @@ function add003I() {
         buffmoney = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1574,7 +1574,7 @@ function add004I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1593,7 +1593,7 @@ function add005I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1611,7 +1611,7 @@ function add006I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "espadaDoSol.png";
         
         addItem()
     
@@ -1629,7 +1629,7 @@ function add007I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1650,7 +1650,7 @@ function add009I() {
         raridadeItem = "Comum"
 
         
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1668,7 +1668,7 @@ function add010I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "FacaCurta.png";
         
         addItem()
     
@@ -1686,7 +1686,7 @@ function add011I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1704,7 +1704,7 @@ function add012I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1722,7 +1722,7 @@ function add013I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1740,7 +1740,7 @@ function add014I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1758,7 +1758,7 @@ function add015I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = 'red potion.png';
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1776,7 +1776,7 @@ function add016I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
@@ -1794,7 +1794,7 @@ function add017I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Paper.png";
         
         addItem()
     
@@ -1811,13 +1811,13 @@ function add018I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "Madeira.png";
         
         addItem()
     
     }  
 
-function add019I() {
+    function add019I() {
     
         additem = "Chifre de Orc";
         additemuse = "material";
@@ -1828,11 +1828,28 @@ function add019I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "url('Null.png')";
+        iconeItem = "ChifreDeOrc.png";
         
         addItem()
     
-    }  
+}
+
+function add020I() {
+    
+    additem = "Pagina do Livro de ocultismo";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Raro"
+
+   iconeItem = "Paper.png"
+    
+    addItem()
+
+}  
 
 //002I Botas de couro
 
