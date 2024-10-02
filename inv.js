@@ -5,6 +5,13 @@ slot4quantidade = 0;
 slot5quantidade = 0;
 
 var cu;
+slot1List = [ NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN ];
+slot2List = [ NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN ];
+slot3List = [ NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN ];
+slot4List = [ NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN ];
+slot5List = [ NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN ];
+
+InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0] ];
 
 var slot1Bau; slot1Bau = "~~";
 var slot2Bau; slot2Bau = "~~";
@@ -27,10 +34,44 @@ var additemuse;
 
 var raridadeArma; raridadeArma = NaN;
 var raridadeArmadura; raridadeArmadura = NaN;
+/*// Função para encontrar o menor índice com NaN no InvList
+function findFirstNaN(list) {
+    for (let i = 0; i < list.length; i++) {
+      if (isNaN(list[i])) {  // Verificando se é NaN
+        return i;
+      }
+    }
+    return -1;  // Retorna -1 se não encontrar NaN
+  }*/
+  
+
+
 
 function addItem() {
 
 
+ /* // Atualizando o InvList com os primeiros itens de cada slot
+  InvList = [
+    slot1List[0], 
+    slot2List[0], 
+    slot3List[0], 
+    slot4List[0], 
+    slot5List[0]
+  ];
+  
+  // Encontrando o menor índice com NaN
+  var menorIndiceNaN = findFirstNaN(InvList);
+  
+  // Verificando se a lista "InvList" possui algum NaN
+  if (menorIndiceNaN !== -1) {
+    // Se houver NaN, atribui os valores da lista "addList" ao slot correspondente
+    window["slot" + (menorIndiceNaN + 1) + "List"] = addList; 
+  } else {
+    // Se não houver NaN, exibe o alerta
+    alert("Sua mochila está cheia");
+  }
+
+*/
 
 if ( additemuse == "material" ) 
 
@@ -274,12 +315,7 @@ function addItemM() {
     
         }
     
-        document.getElementById("Slot1").innerHTML = slot1;
-        document.getElementById("Slot2").innerHTML = slot2;
-        document.getElementById("Slot3").innerHTML = slot3;
-        document.getElementById("Slot4").innerHTML = slot4;
-        document.getElementById("Slot5").innerHTML = slot5;
-
+        
         inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
         
     
@@ -429,11 +465,7 @@ function addItemP() {
 
     }
 
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -818,11 +850,7 @@ function Ussar1() {
 
         }
     
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -980,11 +1008,7 @@ function Ussar2() {
 
         }
     
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1143,11 +1167,7 @@ function Ussar3() {
 
         }
     
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1306,11 +1326,7 @@ function Ussar4() {
 
         }
     
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1469,11 +1485,7 @@ function Ussar5() {
 
         }
     
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1497,14 +1509,10 @@ function Lixo1() {
     raridadeSlot1 = NaN;
     
 
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     let inv = document.getElementById('Slot1btn');
-    inv.style.backgroundImage = url("Null.png");
+    inv.style.backgroundImage = 'url("Null.png")';
 
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
@@ -1538,11 +1546,7 @@ function Lixo1() {
     
     var bit = document.getElementById("quantiaStand1")
     bit.style.display = "none";
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     let inv = document.getElementById('Slot1btn');
     inv.style.backgroundImage = 'url("Null.png")';
@@ -1573,11 +1577,8 @@ function Lixo2() {
     raridadeSlot2 = NaN;
     
 
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+        let inv = document.getElementById('Slot2btn');
+    inv.style.backgroundImage = 'url("Null.png")';
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1596,6 +1597,9 @@ function Lixo2() {
         
     {
 
+    let inv = document.getElementById('Slot2btn');
+    inv.style.backgroundImage = 'url("Null.png")';
+
     slot2 = "~~"
     slot2use = "NaN"
     buffvida = 0;
@@ -1610,11 +1614,7 @@ function Lixo2() {
     
     var bit = document.getElementById("quantiaStand2")
     bit.style.display = "none";
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1639,12 +1639,9 @@ function Lixo3() {
     buffmana = 0;
     raridadeSlot3 = NaN;
     
-
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    let inv = document.getElementById('Slot3btn');
+    inv.style.backgroundImage = 'url("Null.png")';
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1663,6 +1660,9 @@ function Lixo3() {
         
     {
 
+    let inv = document.getElementById('Slot3btn');
+    inv.style.backgroundImage = 'url("Null.png")';
+
     slot3 = "~~"
     slot3use = "NaN"
     buffvida = 0;
@@ -1677,11 +1677,7 @@ function Lixo3() {
     
     var bit = document.getElementById("quantiaStand3")
     bit.style.display = "none";
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1707,11 +1703,8 @@ function Lixo4() {
     raridadeSlot4 = NaN;
     
 
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+        let inv = document.getElementById('Slot4btn');
+    inv.style.backgroundImage = 'url("Null.png")';
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1730,6 +1723,9 @@ function Lixo4() {
         
     {
 
+    let inv = document.getElementById('Slot4btn');
+    inv.style.backgroundImage = 'url("Null.png")';
+
     slot4 = "~~"
     slot4use = "NaN"
     buffvida = 0;
@@ -1744,11 +1740,7 @@ function Lixo4() {
     
     var bit = document.getElementById("quantiaStand4")
     bit.style.display = "none";
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1773,12 +1765,9 @@ function Lixo5() {
     buffmana = 0;
     raridadeSlot5 = NaN;
     
-
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    let inv = document.getElementById('Slot5btn');
+    inv.style.backgroundImage = 'url("Null.png")';
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 
@@ -1797,6 +1786,9 @@ function Lixo5() {
         
     {
 
+    let inv = document.getElementById('Slot5btn');
+    inv.style.backgroundImage = 'url("Null.png")';
+
     slot5 = "~~"
     slot5use = "NaN"
     buffvida = 0;
@@ -1811,11 +1803,7 @@ function Lixo5() {
     
     var bit = document.getElementById("quantiaStand5")
     bit.style.display = "none";
-    document.getElementById("Slot1").innerHTML = slot1;
-    document.getElementById("Slot2").innerHTML = slot2;
-    document.getElementById("Slot3").innerHTML = slot3;
-    document.getElementById("Slot4").innerHTML = slot4;
-    document.getElementById("Slot5").innerHTML = slot5;
+    
 
     inventarioTag = [slot1, slot1quantidade, slot2, slot2quantidade, slot3, slot3quantidade, slot4, slot4quantidade, slot5, slot5quantidade]
 

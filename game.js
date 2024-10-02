@@ -1525,6 +1525,8 @@ function add001I() {
 
     iconeItem = "red potion.png";
     
+    addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
     addItem()
 
 }
@@ -1543,6 +1545,8 @@ alert("o item não funciona ainda")
 
     iconeItem = "Madeira.png";
     
+    addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
     addItem()
 
 }
@@ -1558,6 +1562,8 @@ function add003I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1576,6 +1582,8 @@ function add004I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1595,6 +1603,8 @@ function add005I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1613,6 +1623,8 @@ function add006I() {
 
         iconeItem = "espadaDoSol.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1631,6 +1643,8 @@ function add007I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1652,6 +1666,8 @@ function add009I() {
         
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1670,6 +1686,8 @@ function add010I() {
 
         iconeItem = "FacaCurta.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1688,6 +1706,8 @@ function add011I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1706,6 +1726,8 @@ function add012I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1724,6 +1746,8 @@ function add013I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1742,6 +1766,8 @@ function add014I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1760,6 +1786,8 @@ function add015I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1778,6 +1806,8 @@ function add016I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1796,6 +1826,8 @@ function add017I() {
 
         iconeItem = "Paper.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }
@@ -1813,6 +1845,8 @@ function add018I() {
 
         iconeItem = "Madeira.png";
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
     }  
@@ -1829,7 +1863,10 @@ function add018I() {
         raridadeItem = "Comum"
 
         iconeItem = "ChifreDeOrc.png";
+
         
+        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+
         addItem()
     
 }
@@ -1847,7 +1884,9 @@ function add020I() {
 
    iconeItem = "Paper.png"
     
-    addItem()
+    addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+ 
+   addItem()
 
 }  
 
