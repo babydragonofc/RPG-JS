@@ -251,7 +251,7 @@ terrainType = "F3P1M"
                         {
                             terrainType = "T4P0M"
                                         colorResete()
-                                       biome = "tundra";
+                                       biome = "Duna";
     
                             let bit = document.getElementById("x2y2")
                             bit.style.boxShadow = "inset 0px 0px 0px 2px red";
@@ -262,7 +262,7 @@ terrainType = "F3P1M"
 
                             {
                                 colorResete()
-                                biome = "tundra";
+                                biome = "Duna";
                                 terrainType = "T4P0M"
         
                                 let bit = document.getElementById("x2y3")
@@ -322,7 +322,7 @@ terrainType = "F3P1M"
     
                             {
                                 colorResete()
-                                biome = "tundra";
+                                biome = "Duna";
                                 terrainType = "T3P0M"
 
         
@@ -335,7 +335,7 @@ terrainType = "F3P1M"
     
                                 {
                                     colorResete()
-                                biome = "tundra";
+                                biome = "Duna";
                                 terrainType = "T3P0M"
             
                                     let bit = document.getElementById("x3y3")
@@ -347,7 +347,7 @@ terrainType = "F3P1M"
     
                                     {
                                         colorResete()
-                                        biome = "tundra";
+                                        biome = "Duna";
                 terrainType = "T3P0M"
                                         let bit = document.getElementById("x3y4")
                                         bit.style.boxShadow = "inset 0px 0px 0px 2px red";
@@ -400,7 +400,7 @@ terrainType = "F3P1M"
         
                                     {
                                         colorResete()
-                                        biome = "tundra";
+                                        biome = "Duna";
                 terrainType = "T3P0M"
                                         let bit = document.getElementById("x4y3")
                                         bit.style.boxShadow = "inset 0px 0px 0px 2px red";
@@ -411,7 +411,7 @@ terrainType = "F3P1M"
         
                                         {
                                             colorResete()
-                                            biome = "tundra";
+                                            biome = "Duna";
                     terrainType = "T3P0M"
                                             let bit = document.getElementById("x4y4")
                                             bit.style.boxShadow = "inset 0px 0px 0px 2px red";
@@ -465,7 +465,7 @@ terrainType = "F3P1M"
 
                                             colorResete()
                                             perto = "vilarejo";
-                                            biome = "tundra";
+                                            biome = "Duna";
                                             terrainType = "T3P0M"
                                             let a = document.getElementById("btnExplorarVilarejo")
                                             a.style.display = "block"
@@ -520,7 +520,7 @@ terrainType = "F3P1M"
                         
                                 }
                         
-                                if ( biome == "tundra" ) 
+                                if ( biome == "Duna" ) 
                                 
                                 {
                         

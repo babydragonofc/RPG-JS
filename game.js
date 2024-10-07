@@ -11,6 +11,8 @@ var agi; var agiBust; var agiBustPot;
 var classe = 0;
 var dias;
 dias = 0;
+document.getElementById("valorDias").innerHTML = dias;
+
 arma = "";
 
 var slot1atkBustPot ; var bctI;
@@ -68,7 +70,9 @@ var slot3; var slot3use;
 var slot4; var slot4use;
 var slot5; var slot5use;
 
-
+atk = 0;
+def = 0;
+agi = 0;
 
 manaMax = 50;
 hpMax = 100;
@@ -81,11 +85,7 @@ xp = 0;
 
 money = 0;
 
-slot1 = "~~"; slot1use = "NaN";
-slot2 = "~~"; slot2use = "NaN";
-slot3 = "~~"; slot3use = "NaN";
-slot4 = "~~"; slot4use = "NaN";
-slot5 = "~~"; slot5use = "NaN";
+var Ulocate;
 
 document.getElementById("hp").innerHTML =  hp;
 document.getElementById("money").innerHTML =  money;
@@ -145,24 +145,24 @@ function Start() {
 
 
 
+
+
+    if ( classe != 0 )
+
+        {
 Energia = 100;
 document.getElementById("valorEnergia").innerHTML = Energia;
-
 
 document.getElementById("ipFOR").innerHTML = "0" + atk ;
 document.getElementById("ipDEF").innerHTML = "0" + def ;
 document.getElementById("ipAGI").innerHTML = "0" + agi ;
 
-    if ( classe != 0 )
-
-        {
            Time()
+
+
+
             
-        let idClass = document.getElementById("idClass")
-        idClass.style.display = "none"
-        
-        let idJogo = document.getElementById("idJogo")
-        idJogo.style.display = "flex"
+        Pagina('idClass','idJogo','Jogo')
         idJogo.style.paddingTop = "25px"
         idJogo.style.paddingBottom = "25px"
 
@@ -225,7 +225,7 @@ document.getElementById("ipAGI").innerHTML = "0" + agi ;
         if ( roll == 2 ) 
         
         {
-            biomeStart = "Tundra"
+            biomeStart = "Duna"
 
             let idGame = document.getElementById("idGame")
             idGame.style.backgroundColor = "antiquewhite"
@@ -329,7 +329,7 @@ alert(x + "" + y)
 
                         {
     
-                            biome = "tundra";
+                            biome = "Duna";
     
                         }
 
@@ -337,7 +337,7 @@ alert(x + "" + y)
 
                             {
         
-                                biome = "tundra";
+                                biome = "Duna";
         
                             }
 
@@ -375,7 +375,7 @@ alert(x + "" + y)
     
                             {
         
-                                biome = "tundra";
+                                biome = "Duna";
         
                             }
     
@@ -383,7 +383,7 @@ alert(x + "" + y)
     
                                 {
             
-                                    biome = "tundra";
+                                    biome = "Duna";
             
                                 }
     
@@ -391,7 +391,7 @@ alert(x + "" + y)
     
                                     {
                 
-                                        biome = "tundra";
+                                        biome = "Duna";
                 
                                     }
     
@@ -429,7 +429,7 @@ alert(x + "" + y)
         
                                     {
                 
-                                        biome = "tundra";
+                                        biome = "Duna";
                 
                                     }
         
@@ -437,7 +437,7 @@ alert(x + "" + y)
         
                                         {
                     
-                                            biome = "tundra";
+                                            biome = "Duna";
                     
                                         }
         
@@ -475,7 +475,7 @@ alert(x + "" + y)
             
                                         {
                     
-                                            biome = "tundra";
+                                            biome = "Duna";
                     
                                         }
             
@@ -503,11 +503,12 @@ alert(x + "" + y)
 
         document.getElementById("ipMsg").innerHTML = "Você acorda numa " + biome + ", você carrega uma " + armaStart + ".";
         
+        
         if(classe == "Guerreiro")
 
             {
                 
-                add007I(),Ussar1(),Lixo1();
+                add007I(),UssarItem(1),LixoItem(1);
                 
             }
 
@@ -515,7 +516,7 @@ alert(x + "" + y)
             
             {
 
-                add009I(),Ussar1(),Lixo1();
+                add009I(),UssarItem(1),LixoItem(1);
             
             }
         
@@ -523,7 +524,7 @@ alert(x + "" + y)
 
             {
 
-                add010I(),Ussar1(),Lixo1();
+                add010I(),UssarItem(1),LixoItem(1);
 
             }
         }
@@ -537,7 +538,7 @@ alert(x + "" + y)
     }
 
 }
-// tundra , floresta , floresta congelada
+// Duna , floresta , floresta congelada
 var perto;
 function Explorar() {
 
@@ -554,42 +555,16 @@ let idExplorar = document.getElementById("idExplorar")
 idExplorar.style.display = "flex"
 
 
-    /*min = Math.ceil(1);
-        max = Math.floor()
-        for ( var i = 0; i < 10; i++ ) {
 
-            var roll = Math.floor(Math.random() * (max - min) + min);
-        };
-
-        if (roll == 1)
-
-        {
-           //-*   perto = "vilarejo"
-        }
-
-        if (roll == 2)
-
-        {
-            perto = "saqueador"
-        }
-
-        if (roll = 3)
-        
-        {
-            perto = "vilarejo e saqueador"
-        }
-*/
 
 
         document.getElementById("ipMsgE").innerHTML = "Você encherga um " + perto;
 
         
-    //document.getElementById("ipMsg").innerHTML = ;
 }
 
 
 
-//        inimigos
 
 
 
@@ -616,7 +591,7 @@ console.log("nome:" + nomeInimigo + "| ip:" + ipInimigo + "| xp:" + xpInimigo + 
 }
 
 function Correr() { 
-    if ((agi + agiBust) > agiInimigo)
+    if ((agi + armaAgilidade + armaduraAgilidade) > agiInimigo)
     {
 
         let idBatle = document.getElementById("idBatle")
@@ -664,7 +639,7 @@ atkF = 0;
         if (crit == 1)
         {
 
-            atkF = (atk+atkBust)*2
+            atkF = (atk + armaAtaque + armaduraAtaque) * 2
         
             alert("critico")
 
@@ -674,7 +649,7 @@ atkF = 0;
         
         {
 
-            atkF = atk + atkBust;
+            atkF = atk + armaAtaque + armaduraAtaque;
 
         }
 
@@ -690,7 +665,7 @@ atkF = 0;
             let idExplorar = document.getElementById("idExplorar")
             idExplorar.style.display = "flex" 
     
-            document.getElementById("ipMsgE").innerHTML = "Você mata o " + nomeInimigo + ", ele deixa cair " + moneydrop + " moedas, você ganha " + xpInimigo;
+            document.getElementById("ipMsgE").innerHTML = "Você mata o " + nomeInimigo + ", ele deixa cair " + moneydrop + " moedas, você ganha " + xpInimigo + "de Xp";
             
             money = money + moneydrop;
             xp = xp + xpInimigo;
@@ -710,7 +685,7 @@ atkF = 0;
 
 function Defender() {
 
-    defAtiva = def;
+    defAtiva = def + armaDefesa + armaduraDefesa;
 
     document.getElementById("ipMsgE").innerHTML = "a";
 
@@ -765,6 +740,27 @@ function MeuTurno() {
 
 }
 
+function Pagina(none, flex, locate)
+{
+
+    let idExplorar = document.getElementById(flex)
+    idExplorar.style.display = "flex"
+    let idJogo = document.getElementById(none)
+    idJogo.style.display = "none"
+
+    Ulocate = locate
+
+    LocateMsg()
+
+}
+
+function LocateMsg() {
+
+    document.getElementById("ipMsg").innerHTML =  "Você se vê numa " + biome; 
+    document.getElementById("ipVilaMsg").innerHTML =  "Você chega a vila. Você vê uma Taverna, Loja e Forja"; //mudar quando fizer o sistema de vila avançado
+    document.getElementById("ipLojaMsg").innerHTML =  "Bem vindo a loja!";
+
+}
 
 function ExplorarVoltar() {
 
@@ -835,6 +831,15 @@ function VilaForja() {
     idVila.style.display = "none"
     let idForja = document.getElementById("idForja")
     idForja.style.display = "flex"
+
+}
+
+function CraftFornaceOpen() {
+
+    let idVila = document.getElementById("idForja")
+    idVila.style.display = "none"
+    let idForja = document.getElementById("idCraftFornace")
+    idForja.style.display = "flex"
 }
 
 function VoltarForja() {
@@ -856,30 +861,22 @@ function VilaTaverna() {
     idForja.style.display = "flex"
 
     Taverna()
+
+    Ulocate = "Taverna"
 }
 
-function VoltarTaverna() {
 
-    let idForja = document.getElementById("idTaverna")
-    idForja.style.display = "none"
-    let idVila = document.getElementById("idVila")
+function VoltarCraftFornace() {
+
+    let idLoja = document.getElementById("idCraftFornace")
+    idLoja.style.display = "none"
+    let idVila = document.getElementById("idForja")
     idVila.style.display = "flex"
-
-
 
 }
 
 //loja
-function LojaVoltar() {
 
-    let idLoja = document.getElementById("idLoja")
-    idLoja.style.display = "none"
-    let idVila = document.getElementById("idVila")
-    idVila.style.display = "flex"
-
-
-
-}
 switchInfo = 0;
 function infOpen() {
 
@@ -1403,6 +1400,7 @@ function Time() {
 
         dias = dias + 1;
 
+        document.getElementById("valorDias").innerHTML = dias;
         
 
     }
@@ -1523,16 +1521,17 @@ function add001I() {
     buffmoney = 0;
     raridadeItem = "Comum"
 
-    iconeItem = "red potion.png";
+    iconeItem = "redPotion.png";
     
-    addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
     addItem()
 
 }
 
+const Item001I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 function add002I() {
-alert("o item não funciona ainda")
     additem = "Botas de couro";
     additemuse = "armadura";
     buffvida = 0;
@@ -1543,13 +1542,16 @@ alert("o item não funciona ainda")
     defBustPot = 0;
     raridadeItem = "Comum"
 
-    iconeItem = "Madeira.png";
+    iconeItem = "semImg.png";
     
-    addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
     addItem()
 
 }
+
+const Item002I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add003I() {
     alert("o item não funciona ainda")
@@ -1560,13 +1562,15 @@ function add003I() {
         buffmoney = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "KitDeAcampamentoSimples.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item003I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
 
 function add004I() {
     
@@ -1580,13 +1584,16 @@ function add004I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item004I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 
 function add005I() {
@@ -1601,13 +1608,14 @@ function add005I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+    const Item005I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
 
 function add006I() {
     
@@ -1623,11 +1631,14 @@ function add006I() {
 
         iconeItem = "espadaDoSol.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item006I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add007I() {
     
@@ -1641,13 +1652,16 @@ function add007I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item007I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 // 008I mapa
 
@@ -1664,14 +1678,16 @@ function add009I() {
         raridadeItem = "Comum"
 
         
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
 
+const Item009I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+ 
 function add010I() {
     
         additem = "Faca Curta";
@@ -1686,11 +1702,14 @@ function add010I() {
 
         iconeItem = "FacaCurta.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item010I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add011I() {
     
@@ -1704,13 +1723,15 @@ function add011I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item011I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
 
 function add012I() {
     
@@ -1724,13 +1745,16 @@ function add012I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item012I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add013I() {
     
@@ -1744,13 +1768,14 @@ function add013I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+    const Item013I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
 
 function add014I() {
     
@@ -1764,13 +1789,15 @@ function add014I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+    const Item014I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add015I() {
     
@@ -1784,13 +1811,16 @@ function add015I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item015I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add016I() {
     
@@ -1804,13 +1834,16 @@ function add016I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+   
+    const Item016I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add017I() {
     
@@ -1826,11 +1859,14 @@ function add017I() {
 
         iconeItem = "Paper.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }
+
+const Item017I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
     
 function add018I() {
     
@@ -1843,18 +1879,22 @@ function add018I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "Madeira.png";
+        iconeItem = "semImg.png";
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
     }  
 
+const Item018I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+    
+
     function add019I() {
     
         additem = "Chifre de Orc";
         additemuse = "material";
+        buffvida = 0;
         buffmana = 0;
         buffmoney = 0;
         atkBustPot = 0;
@@ -1865,11 +1905,14 @@ function add018I() {
         iconeItem = "ChifreDeOrc.png";
 
         
-        addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
 
         addItem()
     
 }
+
+const Item019I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
 
 function add020I() {
     
@@ -1884,11 +1927,224 @@ function add020I() {
 
    iconeItem = "Paper.png"
     
-    addList = [additem, additemuse, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
  
    addItem()
 
 }  
+
+function add021I() {
+    
+    additem = "Placa de Ferro";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "PlacaDeFerro.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item021I = ["Craft",'Barra de Ferro', 1 ,'NaN', 0 ,'NaN', 0]
+
+function add022I() {
+    
+    additem = "Minerio de Ferro";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "MinerioDeFerro.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item022I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
+function add023I() {
+    
+    additem = "Minerio de Cristal";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "MinerioDeCristal.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item023I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
+
+function add024I() {
+    
+    additem = "Placa de Cristal";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "PlacaDeCristal.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item024I = ["Craft", 'Barra de Cristal', 1 ,'NaN', 0 ,'NaN', 0]
+
+function add025I() {
+    
+    additem = "Barra de Ferro";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "BarraDeFerro.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item025I = ["Craft", 'Minerio de Ferro', 2 ,'NaN', 0 ,'NaN', 0]
+
+function add026I() {
+    
+    additem = "Barra de Cristal";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "BarraDeCristal.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item026I = ["Craft", 'Minerio de Cristal', 1 ,'NaN', 0 ,'NaN', 0]
+
+function add027I() {
+    
+    additem = "Barra de Ouro";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "BarraDeOuro.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item027I = ["Craft", 'Minerio de Ouro', 1 ,'NaN', 0 ,'NaN', 0]
+
+function add028I() {
+    
+    additem = "Minerio de Ouro";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "MinerioDeOuro.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item028I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+
+function add029I() {
+    
+    additem = "Barra de Neodinio";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "BarraDeNeodinio.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item029I = ["Craft", 'Minerio de Neodinio', 1 ,'NaN', 0 ,'NaN', 0]
+
+function add030I() {
+    
+    additem = "Minerio de Neodinio";
+    additemuse = "material";
+    buffmana = 0;
+    buffmoney = 0;
+    atkBustPot = 0;
+    agiBustPot = 0;
+    defBustPot = 0;
+    raridadeItem = "Comum"
+
+   iconeItem = "MinerioDeNeodinio.png"
+    
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+ 
+   addItem()
+
+}  
+
+const Item030I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+
+
+
 
 //002I Botas de couro
 
@@ -1920,6 +2176,173 @@ function MontarAlgo() {
 
 function Desmaio() {
 
+    hora = hora + 8;
+
             //desmaio
             console.log("Você desmaia")
+            if(Ulocate == 'Explorar' || Ulocate == 'Jogo' || Ulocate == 'Explorar' || Ulocate == 'Caminhar' )
+            {
+
+                
+            min = Math.ceil(1);
+            max = Math.floor(4);
+
+            for ( var i = 0; i < 10; i++ ) {
+
+            desChance = Math.floor(Math.random() * (max - min) + min);
+        };
+
+
+                if ( desChance == 1 )
+                {
+
+                    //mapa
+                    Pagina(eval("'id" + Ulocate + "'"), 'idJogo', 'Jogo' )
+
+                    document.getElementById("ipMsg").innerHTML =" Você acorda Com um mapa no seu rosto";
+
+                    Energia = 50;
+                    document.getElementById("valorEnergia").innerHTML = Energia;
+
+                }
+
+                if ( desChance == 2 )
+                {
+
+                    //vila
+
+                    min = Math.ceil(1);
+                    max = Math.floor(4);
+
+                    for ( var i = 0; i < 10; i++ ) {
+
+                    vilageL = Math.floor(Math.random() * (max - min) + min);
+
+                    };
+
+                    if ( vilageL == 1 ) {
+
+                        //floresta
+
+                        x = 1;
+                        y = 5;
+
+                        biomeCheck()
+                    }
+
+                    if ( vilageL == 2 ) {
+
+                        //floresta congelada
+
+                        x = 3;
+                        y = 1;
+                        
+                        biomeCheck()
+                    }
+
+                    if ( vilageL == 3 ) {
+
+                        //duna
+
+                        x = 5;
+                        y = 3;
+                        
+                        biomeCheck()
+
+                    }
+                    Pagina(eval("'id" + Ulocate + "'"), 'idVila', 'Vilarejo' )
+
+                    document.getElementById("ipVilaMsg").innerHTML =" Você acorda numa Area de transporte de uma vila";
+
+                    setTimeout(function() { 
+
+                    document.getElementById("ipVilaMsg").innerHTML =  "Você chega a vila. Você vê uma Taverna, Loja e Forja"; //mudar quando fizer o sistema de vila avançado
+
+                    }, 3000);
+
+                    Energia = 50;
+                    document.getElementById("valorEnergia").innerHTML = Energia;
+
+                }
+
+                if ( desChance == 3 )
+                {
+
+                    //padrão
+
+                    Pagina(eval("'id" + Ulocate + "'"), 'idJogo', 'Jogo' )
+
+                    document.getElementById("ipMsg").innerHTML =" Você acorda numa " + biome;
+
+                    Energia = 50;
+                    document.getElementById("valorEnergia").innerHTML = Energia;
+
+                }
+            }
+
+            else
+            {
+
+                //padrão
+
+                Pagina(eval("'id" + Ulocate + "'"), 'idJogo', 'Jogo' )
+
+                document.getElementById("ipMsg").innerHTML =" Você acorda numa " + biome;
+                    
+                Energia = 50;
+                document.getElementById("valorEnergia").innerHTML = Energia;
+
+            }
 }
+
+
+function AddItemId() {
+
+    let addcoisa = campo.value
+
+    eval("add" + addcoisa + "I();");
+
+}
+
+function LocateId(){
+
+    let none = campoNone.value
+    let flex = campoFlex.value
+    let locate = campoL.value
+
+    Pagina(none, flex, locate)
+
+}
+
+function Pagina(none, flex, locate)
+{
+
+    let idExplorar = document.getElementById(flex)
+    idExplorar.style.display = "flex"
+    let idJogo = document.getElementById(none)
+    idJogo.style.display = "none"
+
+    Ulocate = locate
+
+    LocateMsg()
+
+}
+/*
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⣀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⢀⡏⠈⢱⠀⠀⡖⠲⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⢠⠋⠹⡇⠀⡸⢠⠞⠳⠆⠈⡆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⢀⣠⠤⠤⠤⠤⠤⢬⣇⢀⣿⣚⢳⡏⠀⢰⠃⡴⠛⢦⠀⠀⠀⠀⠀⠀
+⠀⡠⣄⢠⠒⣄⠐⢄⠀⠀⣠⠴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣸⡟⢣⣠⣿⣯⣤⡔⠃⠀⠀⠀⠀⠀⠀
+⠘⣇⠈⢻⡀⠸⡄⠈⣆⠞⠁⠀⠀⠀⠀⠀⠀⠀⣶⣶⣄⡀⠀⠙⠿⣿⣿⣻⡿⠋⢹⠟⠉⡗⠂⠀⠀⠀⠀
+⢴⠚⠢⢤⣿⣧⣽⣶⣏⡀⠀⠀⠀⠀⠀⠀⣀⠀⠘⠿⡭⢯⠆⠐⢲⣿⣾⣿⢁⣶⣏⡠⠞⢳⠉⢩⠏⠀⠀
+⠈⡗⠒⣿⡈⣿⡍⣿⣿⣷⠀⣀⣴⣻⣶⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠻⠿⣍⠉⣴⠒⠋⢀⠇⠀⠆⠀
+⢠⠽⠦⠈⣳⣌⣷⣿⠷⠟⠀⠀⠀⠀⠀⠀⠀⠀⣠⢶⡶⢤⣀⠀⢀⡼⠙⣶⣤⠟⠓⠋⠀⠀⠸⡀⠀⢦⠀
+⠘⠂⣤⡔⠛⢯⣙⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⡃⠀⠈⠙⠛⠓⠒⠛⠦⣀⠀⠀⠀⠀⠀⣇⠀⠘⡀
+⠀⠸⢅⣙⠶⢲⠟⠻⢿⡷⣄⣀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠂⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⣳⠀⢀⡏⠀⢠⠇
+⠀⠀⠀⠈⠀⠸⠤⠚⠛⠁⢾⠋⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⢛⣉⠴⠛⠀⢀⡞⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠒⠒⠦⠴⠦⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⢠⠿⣍⡉⠁⠀⠀⣀⡤⠊⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠲⠦⣄⣀⣀⡤⠴⠒⠚⠋⠉⠉⠉⠁⠀⠀⠀⠀
+
+
+HAPPY :D
+*/
