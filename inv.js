@@ -1,16 +1,46 @@
  //  addList = [additem 0 , additemuse 1, buffvida 2, buffmana 3, buffmoney 4, atkBustPot 5, agiBustPot 6, defBustPot 7, raridadeItem 8, iconeItem 9, quantidade 10]
 
- armaduraList = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0 ];
- armaList = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0];
+ armaduraList = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ armorSlot4 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ armorSlot2 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ armorSlot3 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ armorSlot1 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ armorSlot5 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ armorSlot6 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
 
-slot1List = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0 ];
-slot2List = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0 ];
-slot3List = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0 ];
-slot4List = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0 ];
-slot5List = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0 ];
+ 
 
-InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0] ];
+ slot1List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot2List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot3List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot4List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot5List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot6List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot7List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot8List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot9List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot10List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot11List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot12List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot13List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot14List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot15List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot16List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot17List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot18List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot19List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot20List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot21List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot22List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot23List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot24List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot25List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ 
+ //["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"]
+
+InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0], slot6List[0], slot7List[0], slot8List[0], slot9List[0], slot10List[0], slot11List[0], slot12List[0], slot13List[0], slot14List[0], slot15List[0], slot16List[0], slot17List[0], slot18List[0], slot19List[0], slot20List[0], slot21List[0], slot22List[0], slot23List[0], slot24List[0], slot25List[0]]
 const InvListBase = InvList;
+const SlotListBase = slot1List;
 
 var slot1Bau; slot1Bau = 'NaN';
 var slot2Bau; slot2Bau = 'NaN';
@@ -54,6 +84,29 @@ function findFirstTerm(list, term) {
     return -1;  // Retorna -1 se não encontrar o termo
   }
   
+
+function addArmor() {
+
+    InvListAtu()
+    
+    // Encontrando o menor índice com 'NaN'
+
+    // Verificando se a lista "InvList" possui algum 'NaN'
+    if ( armaduraList[0] != 'NaN') {
+    // Se houver 'NaN', atribui os valores da lista "addList" ao slot correspondente
+
+    armaduraList = addList; 
+    
+    } 
+    else {
+    // Se não houver 'NaN', exibe o alerta
+    alert("Sua mochila está cheia");
+    }
+
+    let bit = document.getElementById("SlotArmor1btn");
+    bit.style.backgroundImage = `url(${ addList[9]})`;
+    
+}
 
 
 function addItem() {
@@ -176,9 +229,9 @@ if ( invSlotAddSelect != ( length.InvList + 1 ) )
 
 function InvListAtu() {
 
-    InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0] ];
+    InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0], slot6List[0], slot7List[0], slot8List[0], slot9List[0], slot10List[0] ,slot11List[0], slot12List[0], slot13List[0], slot14List[0], slot15List[0] ,slot16List[0], slot17List[0], slot18List[0], slot19List[0], slot20List[0] ,slot21List[0], slot22List[0], slot23List[0], slot24List[0], slot25List[0]];
 
-    document.getElementById("arma").innerHTML = armaList[0];
+    document.getElementById("arma").innerHTML = armorSlot5[0];
     document.getElementById("armadura").innerHTML = armaduraList[0];
     
 }
@@ -199,6 +252,8 @@ function SlotSelect(itemSelect) {
 
         var bit = document.getElementById("InvInfoUi")
         bit.style.display = "flex";
+        var bit = document.getElementById("InvInfoUiE")
+        bit.style.display = "none";
       }
   
       else 
@@ -206,10 +261,42 @@ function SlotSelect(itemSelect) {
   
           var bit = document.getElementById("InvInfoUi")
           bit.style.display = "none";
+          var bit = document.getElementById("InvInfoUiE")
+          bit.style.display = "none";
   
       }
 
 }
+
+function SlotArmorSelect(itemSelect) {
+    //  addList = [additem 0 , additemuse 1, buffvida 2, buffmana 3, buffmoney 4, atkBustPot 5, agiBustPot 6, defBustPot 7, raridadeItem 8, iconeItem 9, quantidade 10]
+   
+       if ( eval("armorSlot" + itemSelect + "[0]") != 'NaN') {
+           document.getElementById("itemNameE").innerHTML = eval("armorSlot" + itemSelect + "[0];")
+           document.getElementById("itemTypeE").innerHTML = eval("armorSlot" + itemSelect + "[1];")
+           document.getElementById("itemRarityE").innerHTML = eval("armorSlot" + itemSelect + "[8];")
+   
+           itemSelectValue = itemSelect;
+   
+           var bit = document.getElementById("InvInfoUiE")
+           bit.style.display = "flex";
+           var bit = document.getElementById("InvInfoUi")
+           bit.style.display = "none";
+         }
+     
+         else 
+         {
+     
+             var bit = document.getElementById("InvInfoUiE")
+             bit.style.display = "none";
+             var bit = document.getElementById("InvInfoUi")
+             bit.style.display = "none";
+     
+         }
+   
+   }
+
+
 
 function Ussar() {
 UssarItem(itemSelectValue)
@@ -217,7 +304,7 @@ UssarItem(itemSelectValue)
 var bit = document.getElementById("InvInfoUi")
 bit.style.display = "none";
 
-document.getElementById("armadura").innerHTML = armaList[0];
+document.getElementById("armadura").innerHTML = armorSlot5[0];
 document.getElementById("arma").innerHTML = armaduraList[0];
 
 }
@@ -252,36 +339,138 @@ function UssarItem(itemSelect) {
     
                             {
 
+                                //addArmor()
     
                                 
-                                if ( armadura != "" )
+                                if ( armaduraList[0] == 'NaN' )
                                     
                                     {
                                         
-
-                                        let ListComplement = armaduraList;
+                                        /*let ListComplement = armaduraList;
                                         eval("armaduraList = slot" + itemSelect + "List;") // define armaduraList como slotSelect
                                         eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
 
+                                        if ( eval("slot" + itemSelect + "List[11] == 'botas'") )
+
+                                            {
+                                                let bit = document.getElementById("SlotArmor4btn");
+                                                bit.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                                let ListComplement = armorSlot4;
+                                                eval("armorSlot4 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
+                                                eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
+
+                                                alert('aaa')
+
+
+
+                                                
+
+                                            }*/
+
+
+
+                                            {
+                                                /*
+                                                let bit = document.getElementById("SlotArmor4btn");
+                                                bit.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                                let ListComplement = armorSlot4;
+                                                eval("armorSlot4 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
+                                                eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
+*/
+
+                                                if ( eval("slot" + itemSelect + "List[11] == 'botas'") )
+                                                {
+
+
+                                                let ListComplement = armorSlot4;
+                                                eval("armorSlot4 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
+                                                eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
+
+                                                let bit = document.getElementById("SlotArmor4btn");
+                                                bit.style.backgroundImage = `url(${ eval ("armorSlot4[9]")})`;
+
+                                                let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                                bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                                }
+                                                
+
+
+
+                                            }
+
+                                            if ( eval("slot" + itemSelect + "List[11] == 'calças'") )
+                                                {
+
+
+                                                let ListComplement = armorSlot3;
+                                                eval("armorSlot3 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
+                                                eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
+
+                                                let bit = document.getElementById("SlotArmor3btn");
+                                                bit.style.backgroundImage = `url(${ eval ("armorSlot3[9]")})`;
+
+                                                let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                                bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                                }
+                                                
+
+
+
+                                            }
+
+                                            if ( eval("slot" + itemSelect + "List[11] == 'peitoral'") )
+                                                {
+
+
+                                                let ListComplement = armorSlot2;
+                                                eval("armorSlot2 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
+                                                eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
+
+                                                let bit = document.getElementById("SlotArmor2btn");
+                                                bit.style.backgroundImage = `url(${ eval ("armorSlot2[9]")})`;
+
+                                                let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                                bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                                }
+                                                
+                                                if ( eval("slot" + itemSelect + "List[11] == 'cabeça'") )
+                                                    {
+    
+    
+                                                    let ListComplement = armorSlot2;
+                                                    eval("armorSlot1 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
+                                                    eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
+    
+                                                    let bit = document.getElementById("SlotArmor1btn");
+                                                    bit.style.backgroundImage = `url(${ eval ("armorSlot1[9]")})`;
+    
+                                                    let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                                    bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                                    }
+
+
+                                            }
                                     }
     
                                     else 
     
                                     {
     
-                                            //talvez poderia tirar o if armadura != 'NaN' 
+                                            //talvez poderia tirar o if armadura != 'NaN
                                             
-                                            eval("armaduraList = slot" + itemSelect + "List;") // define armaduraList como slotSelect
+                                           /* eval("armaduraList = slot" + itemSelect + "List;") // define armaduraList como slotSelect
 
-                                            ResetSlot( itemSelect )
+                                            ResetSlot( itemSelect )*/
                                             
     
                                     }
                                     
+                                   
                                     document.getElementById("armadura").innerHTML = armadura;
                                     armaduraSlotVar()
                                 
-                                               
+                                    //armaduraList = addList; 
+
                             }
     
                         if( eval("slot" + itemSelect + "List[1] == 'arma'"))
@@ -292,26 +481,37 @@ function UssarItem(itemSelect) {
                                     
 
                                     
-                                    if ( armaList[0] != "" )
+                                    if ( armorSlot5[0] != "" )
     
                                         {   
                                             
 
-                                            let ListComplement = armaList
-                                            eval("armaList = slot" + itemSelect + "List;") // define armaList como slotSelect
+                                            let ListComplement = armorSlot5
+                                            eval("armorSlot5 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
                                             eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a arma list 
 
+                                            let bit = document.getElementById("SlotArma2btn");
+                                            bit.style.backgroundImage = `url(${ eval ("armorSlot5[9]")})`;
+
+                                            let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                            bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
                                         }
+
     
                                         else 
     
                                         {
                                             //talvez poderia tirar o if arma != 'NaN' 
                                             
-                                            eval("armaList = slot" + itemSelect + "List;") // define armaList como slotSelect
+                                            eval("armorSlot5 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
 
                                             ResetSlot( itemSelect )
     
+                                            let bit = document.getElementById("SlotArma2btn");
+                                            bit.style.backgroundImage = `url(${ eval ("armorSlot5[9]")})`;
+
+                                            let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                            bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
                                         }
                                         
                                     document.getElementById("arma").innerHTML = arma;
@@ -320,6 +520,55 @@ function UssarItem(itemSelect) {
                                     
                                 }
     
+                                
+                        if( eval("slot" + itemSelect + "List[1] == 'escudo'"))
+                            
+                            {
+                                
+                            
+                                
+
+                                
+                                if ( armorSlot6[0] != 'NaN' )
+
+                                    {   
+                                        
+
+                                        let ListComplement = armorSlot6
+                                        eval("armorSlot6 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
+                                        eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a arma list 
+
+                                        let bit = document.getElementById("SlotArma1btn");
+                                        bit.style.backgroundImage = `url(${ eval ("armorSlot6[9]")})`;
+
+                                        let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                        bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                    }
+
+
+                                    else 
+
+                                    {
+                                        //talvez poderia tirar o if arma != 'NaN' 
+                                        
+                                        eval("armorSlot6 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
+
+                                        ResetSlot( itemSelect )
+
+          
+                                        let bit = document.getElementById("SlotArma1btn");
+                                        bit.style.backgroundImage = `url(${ eval ("armorSlot6[9]")})`;
+
+                                        let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                        bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                    }
+                                    
+                                document.getElementById("arma").innerHTML = arma;
+                                armaSlotVar()
+                                
+                                
+                            }
+
                                 if( eval("slot" + itemSelect + "List[1] == 'buff'"))
                             
     
@@ -355,18 +604,22 @@ function UssarItem(itemSelect) {
                                             
                                         }
     
-                    }
-    
-            }
-        
-        
-    
-    
+
+
         InvListAtu()
         consoleLogInv()
-        document.getElementById("armadura").innerHTML = armaList[0];
+        document.getElementById("armadura").innerHTML = armorSlot5[0];
         document.getElementById("arma").innerHTML = armaduraList[0];
-}
+
+
+                    }
+    
+            
+        
+        
+    
+    
+
 
 
 
@@ -383,8 +636,8 @@ function LixoItem(itemSelect) {
 
         ResetSlot( itemSelect )
         
-        eval ("let inv = document.getElementById('Slot" + itemSelect + "btn');")
-        inv.style.backgroundImage = 'url("Null.png")';
+       /* eval ("let inv = document.getElementById('Slot" + itemSelect + "btn');")
+        inv.style.backgroundImage = 'url("Null.png")'; */
 
         consoleLogInv()
 
@@ -424,7 +677,7 @@ InvListAtu()
 
 function ResetSlot( slotToReset ) {
 
-    eval ( "slot" + slotToReset + "List = [ 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 0 ];")
+    eval ( "slot" + slotToReset + "List = SlotListBase;")
 
     let bit = document.getElementById("Slot" + slotToReset + "btn");
     bit.style.backgroundImage = `url(${'Null.png'})`;
@@ -443,9 +696,23 @@ function armaduraSlotVar() {
 
 function armaSlotVar() {
 
-    armaDefesa = armaList[7];
-    armaAgilidade = armaList[6];
-    armaAtaque = armaList[5];
+    armaDefesa = armorSlot5[7];
+    armaAgilidade = armorSlot5[6];
+    armaAtaque = armorSlot5[5];
 
 }
  //  addList = [additem 0 , additemuse 1, buffvida 2, buffmana 3, buffmoney 4, atkBustPot 5, agiBustPot 6, defBustPot 7, raridadeItem 8, iconeItem 9, quantidade 10]
+
+/*
+ function SlotArmorSelect(SelectionArmor)
+ {
+
+SelectArmor = SelectionArmor
+
+if ( SelectArmor = 1 
+
+    
+    
+)
+
+}*/

@@ -2,7 +2,88 @@
     box-shadow: inset 0px 0px 0px 0px red;
     height: 32px;
     width: 32px;
+    background-color: black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.mapBoxDiv{
+
+display: flex;
+
+}
+
+
+
+
+
+
+
+
+.floresta {
+
+    background-color: #3D6E70FF;
+    
+
+}
+
+.florestaCongelada {
+
+    background-color: rgb(186, 186, 229);
+    
+
+}
+
+.duna {
+
+    background-color: rgb(232, 219, 168);
+    
+
+}
+
+.mar {
+
+background-color: #4DA6FFFF;
+
+}
+
+.verde {
+
+    background-color: green;
+    
+
+}
+
+.montanha {
+
+    background-color: #7E7E8FFF;
+    
+
+}
+
+.praia {
+
+    background-color: rgb(238, 228, 191);
+    
+
+}
+
+.planicie {
+
+    background-color: #3CA370FF;
+
+}
+
+
+
+
+
+
+
+
+
 
 #x1y1{
     background-color: rgb(68, 154, 7);

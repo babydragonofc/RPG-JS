@@ -1,6 +1,10 @@
+var xAnt;
+var yAnt;
+
 function up()
 {
-
+    xAnt = x;
+    yAnt = y;
 if ( y != 1 )
 
     {
@@ -8,6 +12,10 @@ if ( y != 1 )
     Energia = Energia - 20;
     document.getElementById("valorEnergia").innerHTML = Energia;
 
+    
+
+    y = y - 1;
+    
     if ( Energia <= 0 )
 
         {
@@ -15,8 +23,6 @@ if ( y != 1 )
             Desmaio()
     
         }
-
-    y = y - 1;
 
     }
     else
@@ -27,23 +33,26 @@ if ( y != 1 )
 
 function down()
 {
+    xAnt = x;
+    yAnt = y;
 
-
-if ( y != 5 )
+if ( y != 32 )
     
     {
         Energia = Energia - 20;
         document.getElementById("valorEnergia").innerHTML = Energia;
         
-    if ( Energia <= 0 )
+    
+
+        y = y + 1;
+
+if ( Energia <= 0 )
 
         {
     
             Desmaio()
     
         }
-
-        y = y + 1;
 
     }
     else
@@ -55,12 +64,17 @@ biomeCheck()
 
 function right()
 {
+    xAnt = x;
+    yAnt = y;
 
-if ( x != 5 )
+if ( x != 32 )
 
     {
         Energia = Energia - 20;
         document.getElementById("valorEnergia").innerHTML = Energia;
+
+    
+    x = x + 1;
 
         if ( Energia <= 0 )
 
@@ -69,8 +83,6 @@ if ( x != 5 )
                 Desmaio()
         
             }
-    
-    x = x + 1;
 
     }
     else
@@ -82,21 +94,23 @@ biomeCheck()
 
 function left()
 {
+    xAnt = x;
+    yAnt = y;
 
-    if ( Energia <= 0 )
-
-        {
     
-            Desmaio()
-    
-        }
 
 if ( x != 1 ) {
     Energia = Energia - 20;
     document.getElementById("valorEnergia").innerHTML = Energia;
 
 x = x - 1;
+if ( Energia <= 0 )
 
+        {
+    
+            Desmaio()
+    
+        }
 }
 
 else
@@ -122,7 +136,9 @@ function biomeCheck() {
 
 
 
- 
+    document.getElementById(eval ("'map" + xAnt + "x" + yAnt + "y'")).style.boxShadow = "none";
+    document.getElementById(eval ("'map" + x + "x" + y + "y'")).style.boxShadow = "inset 0px 0px 0px 2px red";
+
 
     min = Math.ceil(1);
     max = Math.floor(3);
@@ -156,7 +172,43 @@ function biomeCheck() {
 
     }
 
+biome = map[y - 1][x - 1];
+perto = mapPerto[y - 1][x- 1];
 
+if(biome == 'mar')
+{
+
+document.getElementById(eval ("'map" + x + "x" + y + "y'")).style.boxShadow = "none";
+Pagina('idCaminhar', 'idJogo', 'Jogo')
+document.getElementById("ipMsg").innerHTML = 'as ondas te devolvem para a costa';
+
+//não pode
+
+x = xAnt;
+y = yAnt;
+biomeCheck()
+
+
+}
+
+if(biome == 'montanha')
+{
+
+document.getElementById(eval ("'map" + x + "x" + y + "y'")).style.boxShadow = "none";
+Pagina('idCaminhar', 'idJogo', 'Jogo')
+document.getElementById("ipMsg").innerHTML = 'Você exita em subir a montanha';
+
+//não pode
+
+x = xAnt;
+y = yAnt;
+biomeCheck()
+
+
+}
+
+PertoVerify()
+/*
         
         if( x == 1 )
 
@@ -500,13 +552,6 @@ terrainType = "F3P1M"
             
                         }
 
-                        if ( biome == "floresta" )
-
-                            {
-                        
-                        
-                        
-                            }
                         
                             if ( biome == "floresta" ) 
                                 
@@ -544,6 +589,8 @@ terrainType = "F3P1M"
                         
                                 }
                         
+*/
+
 
 
                                 testCord = x + "" + y;
@@ -569,37 +616,6 @@ terrainType = "F3P1M"
                                 }
 
                             }
-
-                            if ( perto != "nada") {
-
-                                document.getElementById("CaminharMsg").innerHTML = "Você ve um " + perto;
-
-
-                            }
-
-                            else {
-
-                                if( testAcamp == testCord )
-
-                                    {
-
-                                        document.getElementById("CaminharMsg").innerHTML = "Você ve seu acampamento ";
-
-                                    }
-
-                                    else {
-
-
-                                        document.getElementById("CaminharMsg").innerHTML = "Você não vê nada...";
-
-
-                                    }
-
-
-
-                            }
-
-
 
 }
 
@@ -682,5 +698,35 @@ function colorResete()
     var bit = document.getElementById("x5y5")
     bit.style.boxShadow = "none";
 
+
+}
+
+function PertoVerify()
+{
+
+    if ( perto == 'Vila')
+        {
+        
+            let a = document.getElementById("btnExplorarVilarejo")
+            a.style.display = "block";
+        
+        }
+
+        else
+        {
+
+            let a = document.getElementById("btnExplorarVilarejo")
+            a.style.display = "none";
+
+        }
+
+    
+
+}
+
+function CanInWater()
+{
+
+return false;
 
 }

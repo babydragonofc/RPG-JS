@@ -1,3 +1,11 @@
+/*$( ".holder" ).on( "mousemove", function( event ) {
+    $(".popover").show().css({left:event.pageX, top:event.pageY } )
+})
+$( ".holder" ).on('mouseleave',function(){
+$('.popover').hide()
+})
+*/
+
 var hpMax;
 var manaMax;
 var xpMax;
@@ -94,7 +102,7 @@ document.getElementById("mana").innerHTML =  mana;
 document.getElementById("xp").innerHTML =  xp;
 document.getElementById("xpMax").innerHTML =  xpMax;
 
-
+var UlocateId;
 
 
 // CLASSE
@@ -251,253 +259,9 @@ document.getElementById("ipAGI").innerHTML = "0" + agi ;
         biome = biomeStart;
 */
 
-        min = Math.ceil(1);
-        max = Math.floor(6);
-        for ( var i = 0; i < 10; i++ ) {
 
-            x = Math.floor(Math.random() * (max - min) + min);
-        };
-
-        min = Math.ceil(1);
-        max = Math.floor(6);
-        for ( var i = 0; i < 10; i++ ) {
-
-            y = Math.floor(Math.random() * (max - min) + min);
-        };
-
-alert(x + "" + y)
-        
-        if( x == 1 )
-
-            {
-
-                if ( y == 1)
-
-                    {
-
-                        biome = "floresta";
-
-                    }
-
-                    if ( y == 2)
-
-                        {
-    
-                            biome = "floresta";
-    
-                        }
-
-                        if ( y == 3)
-
-                            {
-        
-                                biome = "floresta";
-        
-                            }
-
-                            if ( y == 4)
-
-                                {
-            
-                                    biome = "floresta";
-            
-                                }
-
-                                if ( y == 5)
-
-                                    {
-                
-                                        biome = "floresta";
-                
-                                    }
-
-        }
-
-        if( x == 2 )
-
-            {
-
-                if ( y == 1)
-
-                    {
-
-                        biome = "floresta";
-
-                    }
-
-                    if ( y == 2)
-
-                        {
-    
-                            biome = "Duna";
-    
-                        }
-
-                        if ( y == 3)
-
-                            {
-        
-                                biome = "Duna";
-        
-                            }
-
-                            if ( y == 4)
-
-                                {
-            
-                                    biome = "floresta";
-            
-                                }
-
-                                if ( y == 5)
-
-                                    {
-                
-                                        biome = "floresta";
-                
-                                    }
-
-            }
-
-            if( x == 3 )
-
-                {
-    
-                    if ( y == 1)
-    
-                        {
-    
-                            biome = "floresta congelada";
-    
-                        }
-    
-                        if ( y == 2)
-    
-                            {
-        
-                                biome = "Duna";
-        
-                            }
-    
-                            if ( y == 3)
-    
-                                {
-            
-                                    biome = "Duna";
-            
-                                }
-    
-                                if ( y == 4)
-    
-                                    {
-                
-                                        biome = "Duna";
-                
-                                    }
-    
-                                    if ( y == 5)
-    
-                                        {
-                    
-                                            biome = "floresta";
-                    
-                                        }
-    
-                }
-
-                if( x == 4 )
-
-                    {
-        
-                        if ( y == 1)
-        
-                            {
-        
-                                biome = "floresta congelada";
-        
-                            }
-        
-                            if ( y == 2)
-        
-                                {
-            
-                                    biome = "floresta congelada";
-            
-                                }
-        
-                                if ( y == 3)
-        
-                                    {
-                
-                                        biome = "Duna";
-                
-                                    }
-        
-                                    if ( y == 4)
-        
-                                        {
-                    
-                                            biome = "Duna";
-                    
-                                        }
-        
-                                        if ( y == 5)
-        
-                                            {
+BiomeCr()
                         
-                                                biome = "floresta";
-                        
-                                            }
-        
-                    }
-
-                    if( x == 5 )
-
-                        {
-            
-                            if ( y == 1)
-            
-                                {
-            
-                                    biome = "floresta congelada";
-            
-                                }
-            
-                                if ( y == 2)
-            
-                                    {
-                
-                                        biome = "floresta congelada";
-                
-                                    }
-            
-                                    if ( y == 3)
-            
-                                        {
-                    
-                                            biome = "Duna";
-                    
-                                        }
-            
-                                        if ( y == 4)
-            
-                                            {
-                        
-                                                biome = "floresta congelada";
-                        
-                                            }
-            
-                                            if ( y == 5)
-            
-                                                {
-                            
-                                                    biome = "floresta congelada";
-                            
-                                                }
-            
-                        }
-
-                        biomeCheck();
 
         //msg
 
@@ -537,7 +301,57 @@ alert(x + "" + y)
 
     }
 
+
+
 }
+
+function BiomeCr()
+{
+
+
+    min = Math.ceil(1);
+    max = Math.floor(maxCoiso + 1);
+    for ( var i = 0; i < 10; i++ ) {
+
+        x = Math.floor(Math.random() * (max - min) + min);
+    };
+
+    min = Math.ceil(1);
+    max = Math.floor(maxCoiso + 1);
+    for ( var i = 0; i < 10; i++ ) {
+
+        y = Math.floor(Math.random() * (max - min) + min);
+    };
+
+
+xAnt = x;
+yAnt = y;
+
+
+biome = map[y - 1][x - 1];
+
+
+
+
+if ( biome == 'mar')
+{
+
+console.log("recriando mapa")
+
+BiomeCr()
+}
+
+else {
+
+console.log("criando mapa")
+console.log('x:    ' + x + ", y:   " + y)
+AddTesteDiv()
+biomeCheck();
+
+
+}
+}
+
 // Duna , floresta , floresta congelada
 var perto;
 function Explorar() {
@@ -749,6 +563,9 @@ function Pagina(none, flex, locate)
     idJogo.style.display = "none"
 
     Ulocate = locate
+    UlocateId = flex;
+
+    console.log(UlocateId)
 
     LocateMsg()
 
@@ -1069,8 +886,7 @@ function Comprar002I() {
                         money = money - 10;
         
                         
-                        let mapa = document.getElementById("mapa")
-                        mapa.style.display = "flex"
+                        add031I()
                 
                     }
                 
@@ -1522,8 +1338,8 @@ function add001I() {
     raridadeItem = "Comum"
 
     iconeItem = "redPotion.png";
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
     addItem()
 
@@ -1543,8 +1359,8 @@ function add002I() {
     raridadeItem = "Comum"
 
     iconeItem = "semImg.png";
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'botas'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
     addItem()
 
@@ -1563,8 +1379,8 @@ function add003I() {
         raridadeItem = "Comum"
 
         iconeItem = "KitDeAcampamentoSimples.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1585,8 +1401,8 @@ function add004I() {
         raridadeItem = "Comum"
 
         iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1609,8 +1425,8 @@ function add005I() {
         raridadeItem = "Raro"
 
         iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1630,8 +1446,8 @@ function add006I() {
         raridadeItem = "Raro"
 
         iconeItem = "espadaDoSol.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1652,9 +1468,9 @@ function add007I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+        iconeItem = "EspadaCurta.png";
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1678,9 +1494,9 @@ function add009I() {
         raridadeItem = "Comum"
 
         
-        iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+        iconeItem = "MachadoCurto.png";
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1701,8 +1517,8 @@ function add010I() {
         raridadeItem = "Comum"
 
         iconeItem = "FacaCurta.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1724,8 +1540,8 @@ function add011I() {
         raridadeItem = "Comum"
 
         iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1745,9 +1561,9 @@ function add012I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+        iconeItem = "MachadoDePrata.png";
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1768,9 +1584,9 @@ function add013I() {
         defBustPot = 0;
         raridadeItem = "Raro"
 
-        iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+        iconeItem = "MarteloMagno.png";
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1790,8 +1606,8 @@ function add014I() {
         raridadeItem = "Comum"
 
         iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1811,9 +1627,9 @@ function add015I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+        iconeItem = "Faquete.png";
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1835,8 +1651,8 @@ function add016I() {
         raridadeItem = "Raro"
 
         iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1858,8 +1674,8 @@ function add017I() {
         raridadeItem = "Comum"
 
         iconeItem = "Paper.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1879,9 +1695,9 @@ function add018I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        iconeItem = "semImg.png";
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+        iconeItem = "Madeira.png";
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1904,8 +1720,8 @@ const Item018I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
 
         iconeItem = "ChifreDeOrc.png";
 
-        
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
 
         addItem()
     
@@ -1926,8 +1742,8 @@ function add020I() {
     raridadeItem = "Raro"
 
    iconeItem = "Paper.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -1945,8 +1761,8 @@ function add021I() {
     raridadeItem = "Comum"
 
    iconeItem = "PlacaDeFerro.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -1966,8 +1782,8 @@ function add022I() {
     raridadeItem = "Comum"
 
    iconeItem = "MinerioDeFerro.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -1987,8 +1803,8 @@ function add023I() {
     raridadeItem = "Comum"
 
    iconeItem = "MinerioDeCristal.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2008,8 +1824,8 @@ function add024I() {
     raridadeItem = "Comum"
 
    iconeItem = "PlacaDeCristal.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2029,8 +1845,8 @@ function add025I() {
     raridadeItem = "Comum"
 
    iconeItem = "BarraDeFerro.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2050,8 +1866,8 @@ function add026I() {
     raridadeItem = "Comum"
 
    iconeItem = "BarraDeCristal.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2071,8 +1887,8 @@ function add027I() {
     raridadeItem = "Comum"
 
    iconeItem = "BarraDeOuro.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2092,8 +1908,8 @@ function add028I() {
     raridadeItem = "Comum"
 
    iconeItem = "MinerioDeOuro.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2113,8 +1929,8 @@ function add029I() {
     raridadeItem = "Comum"
 
    iconeItem = "BarraDeNeodinio.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2134,8 +1950,8 @@ function add030I() {
     raridadeItem = "Comum"
 
    iconeItem = "MinerioDeNeodinio.png"
-    
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1]
+armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
  
    addItem()
 
@@ -2143,9 +1959,126 @@ function add030I() {
 
 const Item030I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
 
+function add031I() {
+    
+    let mapa = document.getElementById("mapa")
+    mapa.style.display = "flex"
+    }  
+    
+    const Item031I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
 
 
+    function add032I() {
+    
 
+        // mi amore <3
+        additem = "Flor Dourada";
+        additemuse = "material";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Lendario"
+    
+       iconeItem = "GoldFlower.png"
+    armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+     
+       addItem()
+    
+    }  
+    
+    const Item032I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+    
+    function add033I() {
+    
+
+        additem = "Peitoral de Aço";
+        additemuse = "armadura";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Comum"
+    
+       iconeItem = "GoldFlower.png"
+    armorType = 'peitoral'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+     
+       addItem()
+       
+    }  
+    
+    const Item033I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
+    function add034I() {
+    
+
+        additem = "Calças de Aço";
+        additemuse = "armadura";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Comum"
+    
+       iconeItem = "GoldFlower.png"
+    armorType = 'calças'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+     
+       addItem()
+       
+    }  
+    
+    const Item034I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
+    function add035I() {
+    
+
+        additem = "Chapeu de palha";
+        additemuse = "armadura";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Comum"
+    
+       iconeItem = "GoldFlower.png"
+        armorType = 'cabeça'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+     
+       addItem()
+       
+    }  
+    
+    const Item035I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
+    function add036I() {
+    
+
+        additem = "Escudo";
+        additemuse = "escudo";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Comum"
+    
+       iconeItem = "GoldFlower.png"
+        armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+     
+       addItem()
+       
+    }  
+    
+    const Item036I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
 //002I Botas de couro
 
 //003I Kit de acampamento simples
@@ -2180,17 +2113,22 @@ function Desmaio() {
 
             //desmaio
             console.log("Você desmaia")
+
             if(Ulocate == 'Explorar' || Ulocate == 'Jogo' || Ulocate == 'Explorar' || Ulocate == 'Caminhar' )
             {
 
-                
+            console.log("Você desmaia na(o) " + Ulocate)
+   
             min = Math.ceil(1);
             max = Math.floor(4);
 
             for ( var i = 0; i < 10; i++ ) {
 
             desChance = Math.floor(Math.random() * (max - min) + min);
+
         };
+
+ console.log(desChance);
 
 
                 if ( desChance == 1 )
@@ -2204,6 +2142,7 @@ function Desmaio() {
                     Energia = 50;
                     document.getElementById("valorEnergia").innerHTML = Energia;
 
+                    add031I()
                 }
 
                 if ( desChance == 2 )
@@ -2224,8 +2163,8 @@ function Desmaio() {
 
                         //floresta
 
-                        x = 1;
-                        y = 5;
+                        x = 24;
+                        y = 21;
 
                         biomeCheck()
                     }
@@ -2234,8 +2173,8 @@ function Desmaio() {
 
                         //floresta congelada
 
-                        x = 3;
-                        y = 1;
+                        x = 22;
+                        y = 18;
                         
                         biomeCheck()
                     }
@@ -2244,13 +2183,19 @@ function Desmaio() {
 
                         //duna
 
-                        x = 5;
-                        y = 3;
+                        x = 11;
+                        y = 15;
                         
+                    
                         biomeCheck()
 
                     }
-                    Pagina(eval("'id" + Ulocate + "'"), 'idVila', 'Vilarejo' )
+
+                    xAnt = x;
+                    yAnt = y;
+            Pagina(eval("'id" + Ulocate + "'"), 'idVila', 'Vila' )
+
+
 
                     document.getElementById("ipVilaMsg").innerHTML =" Você acorda numa Area de transporte de uma vila";
 
@@ -2262,6 +2207,10 @@ function Desmaio() {
 
                     Energia = 50;
                     document.getElementById("valorEnergia").innerHTML = Energia;
+
+
+//padrão
+
 
                 }
 
@@ -2285,7 +2234,7 @@ function Desmaio() {
 
                 //padrão
 
-                Pagina(eval("'id" + Ulocate + "'"), 'idJogo', 'Jogo' )
+                Pagina(UlocateId , 'idJogo', 'Jogo' )
 
                 document.getElementById("ipMsg").innerHTML =" Você acorda numa " + biome;
                     
@@ -2293,6 +2242,8 @@ function Desmaio() {
                 document.getElementById("valorEnergia").innerHTML = Energia;
 
             }
+
+            console.log(desChance)
 }
 
 
@@ -2327,8 +2278,180 @@ function Pagina(none, flex, locate)
     LocateMsg()
 
 }
+
+function Cheat() {
+
+var CheatCodeText = CheatCode.value
+
+if ( CheatCodeText == "Alyson" || CheatCodeText == "Gleyson")
+{
+
+
+
+    let zihaha = document.getElementById("body.div")
+    zihaha.style.backgroundColor = "black"
+
+    //document.getElementsByTagName("*").style.backgroundColor = "red";
+
+}
+
+if ( CheatCodeText == 'Mizinha')
+{
+
+add032I()
+
+}
+}
+
+
+const maxCoiso = 32;
+const map = [
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "floresta", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "floresta", "floresta", "floresta", "floresta", "planicie", "planicie", "planicie", "planicie", "planicie", "floresta", "floresta", "floresta", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "planicie", "planicie", "planicie", "floresta", "floresta", "floresta", "floresta", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "montanha", "montanha", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "montanha", "montanha", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "montanha", "montanha", "montanha", "planicie", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "floresta", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "floresta", "floresta", "floresta", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "mar", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ]
+
+];
+
+const mapPerto = [
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Vila', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Vila', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Vila', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Vila', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+[ 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada', 'Nada' ],
+
+];
+
+// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH É MUITA COISAAAA
+
+var Gay;
+var Sla;
+function AddTeste()
+
+{
+    for (let i = 0; i < maxCoiso; i++) {
+        // linha x
+      
+    var IdDiv = i;
+
+    for (let i = 0; i < maxCoiso; i++) {
+        // Coluna y
+      
+    
+    var ClassDiv = i;
+
+
+    let classeBudega = map[IdDiv][ClassDiv];
+    let mapDivTeste = document.getElementById(IdDiv)
+    const block = document.createElement("div");
+    block.classList.add("mapBox");
+    block.classList.add(classeBudega );
+    idDeCadaBloco = eval("'map" + (ClassDiv  + 1) + "x" + (IdDiv + 1) + "y'");
+    
+
+
+
+    mapDivTeste.appendChild(block);
+
+    block.id = idDeCadaBloco;
+    if ( mapPerto[IdDiv][ClassDiv] != 'Nada' )
+    {
+
+        Gay = mapPerto[IdDiv][ClassDiv];
+        console.log(Gay)
+        let PertoT = eval("'mapPerto" + (ClassDiv  + 1) + "x" + (IdDiv + 1) + "y'");
+        const pertoTitle = document.createElement("p");
+        pertoTitle.id = PertoT;
+        //pertoTitle = mapPerto[IdDiv][ClassDiv] ;
+
+
+        let algumaCoisa = document.getElementById(idDeCadaBloco)
+        algumaCoisa.appendChild(pertoTitle);
+
+        document.getElementById(PertoT).innerHTML = Gay;
+
+
+
+
+    }
+    }
+
+    }
+}
+function AddTesteDiv()
+{
+    for (let i = 0; i < maxCoiso; i++) {
+        // Código a ser repetido
+      
+    var IdDiv = i;
+
+    let mapDivTeste = document.getElementById("mapDiv")
+    const blockDiv = document.createElement("div");
+    blockDiv.classList.add("mapBoxDiv");
+    blockDiv.id = IdDiv;
+    mapDivTeste.appendChild(blockDiv);
+    }
+
+    AddTeste()
+
+}
 /*
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⣀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀W⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⣀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⢀⡏⠈⢱⠀⠀⡖⠲⣀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⢠⠋⠹⡇⠀⡸⢠⠞⠳⠆⠈⡆⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⢀⣠⠤⠤⠤⠤⠤⢬⣇⢀⣿⣚⢳⡏⠀⢰⠃⡴⠛⢦⠀⠀⠀⠀⠀⠀

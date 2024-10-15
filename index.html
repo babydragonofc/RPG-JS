@@ -133,7 +133,7 @@
                     <button class="btn"  id="btnExplorarSaqueadores" onclick="BatleSaquiadores()">Nos Saqueadores</button>
                     <button class="btn"  id="btnExplorarOrc" onclick="BatleOrc()">No Orc</button>
 
-                    <button  class="btnVoltar"  id="btnExplorarVoltar" onclick="Pagina('idJogo','idExplorar','Jogo')">Voltar</button>
+                    <button  class="btnVoltar"  id="btnExplorarVoltar" onclick="Pagina('idExplorar','idJogo','Jogo')">Voltar</button>
                     </div>
 
                 </div>
@@ -265,8 +265,9 @@
                     <button  class="btn"  id="btnVilaTaverna" onclick="VilaTaverna()">Na Taverna</button>
                     <button  class="btn"  id="btnVilaLoja" onclick="Pagina('idVila','idLoja','Loja')">Na Loja</button>
                     <button  class="btn"  id="btnVilaForja" onclick="Pagina('idVila','idForja','Forja')">Na Forja</button>
+                    <button  class="btn"  id="btnVilaForja" onclick="Pagina('idVila','idNews','Quadro')">No Quadro</button>
                     <br><br>
-                    <button  class="btnVoltar"  id="btnVilaVoltar" onclick="Pagina('idVila','idCaminhar','Explorar')">Voltar</button>
+                    <button  class="btnVoltar"  id="btnVilaVoltar" onclick="Pagina('idVila','idExplorar','Explorar')">Voltar</button>
 
                 </div>
 
@@ -277,6 +278,45 @@
 
 
     </div>
+
+    <div class="News" id="idNews" style="display: none;"> 
+
+                
+        <p>Você ve um quadro de noticias</p>
+
+    <div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <p> Você vai: </p>
+        
+        <div >
+
+            <input type="text" id="CheatCode"> <button onclick="Cheat()">Escrever no Quadro</button>
+            <br><br>
+            <button  class="btnVoltar"  id="btnVilaVoltar" onclick="Pagina('idNews','idVila','Vila')">Voltar</button>
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
 
 
 
@@ -643,7 +683,7 @@
             
         <div style="display: flex; align-items: center; flex-direction: column; margin: 10px;">
         
-            <div style="display: flex;">
+            <div style="display: flex;">id="holder"
         
                 <button onclick="AS1x1y()" id="Ax1y1" class="AcampBox"></button>
                 <button onclick="AS2x1y()" id="Ax2y1" class="AcampBox"></button>
@@ -811,62 +851,135 @@
 
                 <img src="ui/barra1.png">
 
-        <div style="display: flex; justify-content: center; gap: 10px; align-items: center; max-height: 64px; margin: 10px; background: url('ui/uiBorder.png') no-repeat center ; background-size: contain; padding: 19px; ">
+        <div style="display: flex; align-items: center; justify-content: center;">
 
-            <div><button class="invBtn" onclick="SlotSelect(1)" id="Slot1btn"></button></div>
-            <div><button class="invBtn" onclick="SlotSelect(2)" id="Slot2btn"></button></div>
-            <div><button class="invBtn" onclick="SlotSelect(3)" id="Slot3btn"></button></div>
-            <div><button class="invBtn" onclick="SlotSelect(4)" id="Slot4btn"></button></div>
-            <div><button class="invBtn" onclick="SlotSelect(5)" id="Slot5btn"></button></div>
+<div style="display: flex; gap: 5px;">
+
+        <div style="display: flex; background-color: rgb(172, 97, 31); height: 400px; align-items: center; padding: 19px; gap: 10px;">
+
+
+            <div style=" margin-top: 82px; margin-bottom: 164px;" ><button class="invBtn" onclick="SlotArmorSelect(6)"  id="SlotArma1btn"> </button></div>
+
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+
+            <div><button class="invBtn" onclick="SlotArmorSelect(1)"  id="SlotArmor1btn"> </button></div>
+            <div><button class="invBtn" onclick="SlotArmorSelect(2)"  id="SlotArmor2btn"> </button></div>
+            <div><button class="invBtn" onclick="SlotArmorSelect(3)"  id="SlotArmor3btn"> </button></div>
+            <div><button class="invBtn" onclick="SlotArmorSelect(4)"  id="SlotArmor4btn"> </button></div>
+    
+            </div>
+
+
+            <div style=" margin-top: 82px; margin-bottom: 164px;"><button class="invBtn" onclick="SlotArmorSelect(5)"  id="SlotArma2btn"> </button></div>
+
+
+        </div>
+
+</div>
+
+        <div style="display: flex; justify-content: center; gap: 10px; align-items: center; margin: 10px; padding: 19px; flex-direction: column; background-color: rgb(172, 97, 31) ;">
             
+            <!-- inv -->
+
+            <div style="display: flex; justify-content: center; gap: 10px;">
+                <div><button class="invBtn" onclick="SlotSelect(1)"  id="Slot1btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(2)"  id="Slot2btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(3)"  id="Slot3btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(4)"  id="Slot4btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(5)"  id="Slot5btn"> </button></div>
+              </div>
+              
+              <div style="display: flex; justify-content: center; gap: 10px;">
+                <div><button class="invBtn" onclick="SlotSelect(6)"  id="Slot6btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(7)"  id="Slot7btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(8)"  id="Slot8btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(9)"  id="Slot9btn"> </button></div>
+                <div><button class="invBtn" onclick="SlotSelect(10)" id="Slot10btn"></button></div>
+              </div>
+              
+              <div style="display: flex; justify-content: center; gap: 10px;">
+                <div><button class="invBtn" onclick="SlotSelect(11)" id="Slot11btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(12)" id="Slot12btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(13)" id="Slot13btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(14)" id="Slot14btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(15)" id="Slot15btn"></button></div>
+              </div>
+              
+              <div style="display: flex; justify-content: center; gap: 10px;">
+                <div><button class="invBtn" onclick="SlotSelect(16)" id="Slot16btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(17)" id="Slot17btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(18)" id="Slot18btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(19)" id="Slot19btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(20)" id="Slot20btn"></button></div>
+              </div>
+              
+              <div style="display: flex; justify-content: center; gap: 10px;">
+                <div><button class="invBtn" onclick="SlotSelect(21)" id="Slot21btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(22)" id="Slot22btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(23)" id="Slot23btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(24)" id="Slot24btn"></button></div>
+                <div><button class="invBtn" onclick="SlotSelect(25)" id="Slot25btn"></button></div>
+              </div>
+              
+        </div>
+
 
 
         </div>
 
                 <img src="ui/barra2.png">
 
-        <div style="display: none; justify-items: center; align-items: center; flex-direction: column; padding-top: 50px;" id="InvInfoUi">
+                <div style="display: none; justify-items: center; align-items: center; flex-direction: column; padding-top: 50px;" id="InvInfoUi">
 
-        <div style=" display: flex;  background: url('ui/uibase.png') no-repeat center; height: 200px; width: 350px;   flex-direction: column; align-items: center; justify-content: space-between;padding: 20px; text-align: center; ">
-
+                    <div style=" display: flex;  background: url('ui/uibase.png') no-repeat center; height: 200px; width: 350px;   flex-direction: column; align-items: center; justify-content: space-between;padding: 20px; text-align: center; ">
             
-            <div style="display: flex; flex-direction: column; align-items: center;">
+                        
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+            
+                        <h3 id="itemName"></h3>
+                        <div style="display: flex;"><p id="itemType"></p> <p>-</p> <p id="itemRarity"></p></div>
+                         
+                        </div>
+            
+            
+            
+                        <div style="display: flex; gap: 10px; justify-items: center; align-items: center;"> <button class="btnInv UseCursor" onclick="Ussar()">Usar</button><button class="btnInv TrashCursor" onclick="Lixo()">Lixo</button> </div>
+            
+            
+                    </div>
+                    
+                    
+                    </div>
 
-            <h3 id="itemName"></h3>
-            <div style="display: flex;"><p id="itemType"></p> <p>-</p> <p id="itemRarity"></p></div>
-             
-            </div>
 
+                    <div style="display: none; justify-items: center; align-items: center; flex-direction: column; padding-top: 50px;" id="InvInfoUiE">
 
-
-            <div style="display: flex; gap: 10px; justify-items: center; align-items: center;"> <button class="btnInv UseCursor" onclick="Ussar()">Usar</button><button class="btnInv TrashCursor" onclick="Lixo()">Lixo</button> </div>
-
-
-        </div>
-        
-        
-        </div>
+                        <div style=" display: flex;  background: url('ui/uibase.png') no-repeat center; height: 200px; width: 350px;   flex-direction: column; align-items: center; justify-content: space-between;padding: 20px; text-align: center; ">
+                
+                            
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                
+                            <h3 id="itemNameE"></h3>
+                            <div style="display: flex;"><p id="itemTypeE"></p> <p>-</p> <p id="itemRarityE"></p></div>
+                             
+                            </div>
+                
+                
+                
+                            <div style="display: flex; gap: 10px; justify-items: center; align-items: center;"> <button class="btnInv UseCursor" onclick="Tirar()">Tirar</button></div>
+                
+                
+                        </div>
+                        
+                        
+                        </div>
 
         </div>
 
 </div>
 
-<div>
-
-        
-        <br><div><p>Você esta vestindo uma </p> <p id="armadura">roupa simples</p></div>
-        <br><div><p>Você esta usando uma </p> <p id="arma"></p></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        <div style="display: flex; justify-content: center; gap: 30px; ">
-
-
-        </div>
-
-</div>
+53
 
 
         
@@ -1132,13 +1245,30 @@
 </div>
 
 </div>
+
+<div id="mapDiv" style="display: flex; flex-direction: column; align-items: center;">
+
+
+</div>
 <div style="display: flex; justify-content: center;">
     <button onclick="add015I()">a</button>
     <button onclick="add019I()">b</button>
+
+
+
     <input id="campo" type="text"> <button onclick="AddItemId()">ADICIONAR</button>
     none:<input id="campoNone" type="text">
     flex:<input id="campoFlex" type="text">
     locate:<input id="campoL" type="text"> <button onclick="LocateId()">Ir</button>
+<br>
+<button onclick="AddTesteDiv()">TesteDiv</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<br></br>
+<div id="holder">
+  <div id="popover">
+    CVC
+  </div>
 </div>
     <script src="game.js"></script>
     <script src="map.js"></script>
