@@ -386,6 +386,8 @@ idExplorar.style.display = "flex"
 
 function Batle() {
 
+Ulocate = 'Batle'
+UlocateId = 'idBatle';
 let idExplorar = document.getElementById("idExplorar")
 idExplorar.style.display = "none"  
 
@@ -1335,6 +1337,9 @@ function add001I() {
     buffvida = 10;
     buffmana = 0;
     buffmoney = 0;
+    atkBustPot = 4;
+    agiBustPot = 0;
+    defBustPot = 0;
     raridadeItem = "Comum"
 
     iconeItem = "redPotion.png";
@@ -1376,6 +1381,9 @@ function add003I() {
         buffvida = 0;
         buffmana = 0;
         buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
         raridadeItem = "Comum"
 
         iconeItem = "KitDeAcampamentoSimples.png";

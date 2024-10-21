@@ -1,42 +1,42 @@
  //  addList = [additem 0 , additemuse 1, buffvida 2, buffmana 3, buffmoney 4, atkBustPot 5, agiBustPot 6, defBustPot 7, raridadeItem 8, iconeItem 9, quantidade 10]
 
- armaduraList = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- armorSlot4 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- armorSlot2 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- armorSlot3 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- armorSlot1 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- armorSlot5 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- armorSlot6 = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ armaduraList = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ armorSlot4 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ armorSlot2 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ armorSlot3 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ armorSlot1 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ armorSlot5 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ armorSlot6 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
 
  
 
- slot1List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot2List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot3List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot4List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot5List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot6List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot7List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot8List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot9List =  ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot10List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot11List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot12List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot13List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot14List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot15List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot16List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot17List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot18List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot19List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot20List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot21List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot22List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot23List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot24List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
- slot25List = ["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"];
+ slot1List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot2List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot3List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot4List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot5List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot6List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot7List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot8List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot9List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot10List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot11List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot12List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot13List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot14List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot15List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot16List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot17List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot18List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot19List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot20List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot21List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot22List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot23List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot24List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot25List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
  
- //["NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "Null.png", 0, "NaN"]
+ //["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"]
 
 InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0], slot6List[0], slot7List[0], slot8List[0], slot9List[0], slot10List[0], slot11List[0], slot12List[0], slot13List[0], slot14List[0], slot15List[0], slot16List[0], slot17List[0], slot18List[0], slot19List[0], slot20List[0], slot21List[0], slot22List[0], slot23List[0], slot24List[0], slot25List[0]]
 const InvListBase = InvList;
@@ -688,19 +688,20 @@ function ResetSlot( slotToReset ) {
 
 function armaduraSlotVar() {
 
-    armaduraDefesa = armaduraList[7];
-    armaduraAgilidade = armaduraList[6];
-    armaduraAtaque = armaduraList[5];
+    armaduraDefesa = armorSlot4[7] + armorSlot2[7] + armorSlot3[7] + armorSlot1[7];
+    armaduraAgilidade = armorSlot4[6] + armorSlot2[6] + armorSlot3[6] + armorSlot1[6];
+    armaduraAtaque = armorSlot4[5] + armorSlot2[5] + armorSlot3[5] + armorSlot1[7];
 
 }
 
 function armaSlotVar() {
 
-    armaDefesa = armorSlot5[7];
-    armaAgilidade = armorSlot5[6];
-    armaAtaque = armorSlot5[5];
+    armaDefesa = armorSlot5[7] + armorSlot6[7];
+    armaAgilidade = armorSlot5[6] + armorSlot6[6];
+    armaAtaque = armorSlot5[5] + armorSlot6[5];
 
 }
+
  //  addList = [additem 0 , additemuse 1, buffvida 2, buffmana 3, buffmoney 4, atkBustPot 5, agiBustPot 6, defBustPot 7, raridadeItem 8, iconeItem 9, quantidade 10]
 
 /*
