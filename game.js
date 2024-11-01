@@ -1,10 +1,54 @@
+/*
+PROJETO POR : BABYDRAGON STUDIOS
+
+BabyDragon : Programação, pixel art, design
+Mago : Pixel art1
+
+
+
+
+DATA :
+
+07 / 09 / 2024
+
+13 : 05
+
+codigo aberto, unico codigo original em : https://github.com/babydragonofc/RPG-JS
+
+*/
+
+
+
 /*$( ".holder" ).on( "mousemove", function( event ) {
     $(".popover").show().css({left:event.pageX, top:event.pageY } )
 })
 $( ".holder" ).on('mouseleave',function(){
 $('.popover').hide()
-})
+})*/
+
+/*
+const div1 = document.querySelector('.div1'); 
+const div2 = document.querySelector('.div2'); 
+
+div1.addEventListener('mousemove', (event) => {
+  div2.style.display = 'block'; 
+  div2.style.position = 'absolute';
+  div2.style.left = event.clientX + 'px'; 
+  div2.style.top = (event.clientY + 100) + 'px'; 
+});
+
+div1.addEventListener('mouseleave', () => {
+  div2.classList.add('fade-out'); // Adiciona a classe fade-out
+  div2.style.opacity = 0; // Define a opacidade para 0 para que a div desapareça
+});
+
+div1.addEventListener('mouseenter', () => {
+  div2.classList.remove('fade-out'); // Remove a classe fade-out
+  div2.style.opacity = 1; // Define a opacidade para 1 para que a div reapareça
+});
 */
+
+
 
 var hpMax;
 var manaMax;
@@ -91,6 +135,8 @@ hp = hpMax;
 xpMax = 100;
 xp = 0;
 
+var level = 0;
+
 money = 0;
 
 var Ulocate;
@@ -109,43 +155,43 @@ var UlocateId;
 
 function ClassG() {
 
-atk = 3
-def = 3
-agi = 2
+atk = 9
+def = 9
+agi = 6
 classe = "Guerreiro"
 
 
 
-document.getElementById("ipFOR").innerHTML = "0" + atk + " + 3 " ;
-document.getElementById("ipDEF").innerHTML = "0" + def ;
-document.getElementById("ipAGI").innerHTML = "0" + agi ;
+document.getElementById("ipFOR").innerHTML = atk + " + 3 " ;
+document.getElementById("ipDEF").innerHTML = def ;
+document.getElementById("ipAGI").innerHTML = agi ;
 
 
 }
 
 function ClassP() {
 
-atk = 1
-def = 5
-agi = 2
+atk = 3
+def = 9
+agi = 6
 classe = "Paladino"
 
-document.getElementById("ipFOR").innerHTML = "0" + atk + " + 2 " ;
-document.getElementById("ipDEF").innerHTML = "0" + def ;
-document.getElementById("ipAGI").innerHTML = "0" + agi ;
+document.getElementById("ipFOR").innerHTML = atk + " + 2 " ;
+document.getElementById("ipDEF").innerHTML = def ;
+document.getElementById("ipAGI").innerHTML = agi ;
 
 }
 
 function ClassA() {
 
-atk = 1
-def = 2
-agi = 5
+atk = 3
+def = 6
+agi = 15
 classe = "Assasino"
 
-document.getElementById("ipFOR").innerHTML = "0" + atk + " + 2 " ;
-document.getElementById("ipDEF").innerHTML = "0" + def ;
-document.getElementById("ipAGI").innerHTML = "0" + agi ;
+document.getElementById("ipFOR").innerHTML = atk + " + 2 " ;
+document.getElementById("ipDEF").innerHTML = def ;
+document.getElementById("ipAGI").innerHTML = agi ;
 
 }
     
@@ -161,9 +207,9 @@ function Start() {
 Energia = 100;
 document.getElementById("valorEnergia").innerHTML = Energia;
 
-document.getElementById("ipFOR").innerHTML = "0" + atk ;
-document.getElementById("ipDEF").innerHTML = "0" + def ;
-document.getElementById("ipAGI").innerHTML = "0" + agi ;
+document.getElementById("ipFOR").innerHTML = atk ;
+document.getElementById("ipDEF").innerHTML = def ;
+document.getElementById("ipAGI").innerHTML = agi ;
 
            Time()
 
@@ -210,54 +256,6 @@ document.getElementById("ipAGI").innerHTML = "0" + agi ;
 
         //definição de bioma
 
-        /*min = Math.ceil(1);
-        max = Math.floor(4);
-        for ( var i = 0; i < 10; i++ ) {
-
-            var roll = Math.floor(Math.random() * (max - min) + min);
-        };
-
-        if ( roll == 1 ) 
-        
-        {
-            biomeStart = "Floresta"
-
-            let idGame = document.getElementById("idGame")
-            idGame.style.backgroundColor = "#64b613"
-
-            let body = document.getElementById("body")
-            body.style.backgroundColor = "#119b0f"
-
-        }
-
-        if ( roll == 2 ) 
-        
-        {
-            biomeStart = "Duna"
-
-            let idGame = document.getElementById("idGame")
-            idGame.style.backgroundColor = "antiquewhite"
-
-            let body = document.getElementById("body")
-            body.style.backgroundColor = "#d4ce9d"
-
-        }
-
-        if ( roll == 3 ) 
-        
-        {
-            biomeStart = "Floresta Congelada"
-
-            let idGame = document.getElementById("idGame")
-            idGame.style.backgroundColor = "#c4e4ff"
-
-            let body = document.getElementById("body")
-            body.style.backgroundColor = "#a8b4e9"
-
-        }
-
-        biome = biomeStart;
-*/
 
 
 BiomeCr()
@@ -333,7 +331,7 @@ biome = map[y - 1][x - 1];
 
 
 
-if ( biome == 'mar')
+if ( biome == 'mar' || biome == 'montanha')
 {
 
 console.log("recriando mapa")
@@ -481,7 +479,7 @@ atkF = 0;
             let idExplorar = document.getElementById("idExplorar")
             idExplorar.style.display = "flex" 
     
-            document.getElementById("ipMsgE").innerHTML = "Você mata o " + nomeInimigo + ", ele deixa cair " + moneydrop + " moedas, você ganha " + xpInimigo + "de Xp";
+            document.getElementById("ipMsgE").innerHTML = "Você mata o " + nomeInimigo + ", ele deixa cair " + moneydrop + " moedas, você ganha " + xpInimigo + " de Xp";
             
             money = money + moneydrop;
             xp = xp + xpInimigo;
@@ -489,6 +487,7 @@ atkF = 0;
             document.getElementById("money").innerHTML =  money;
             document.getElementById("xp").innerHTML =  xp;
 
+            levelUp()
         }
 
         else {
@@ -556,22 +555,23 @@ function MeuTurno() {
 
 }
 
-function Pagina(none, flex, locate)
-{
+var Ulocate;
+var UlocateId;
+function Pagina(none, flex, locate) {
 
-    let idExplorar = document.getElementById(flex)
-    idExplorar.style.display = "flex"
-    let idJogo = document.getElementById(none)
-    idJogo.style.display = "none"
+  let elementoFlex = document.getElementById(flex);
+  elementoFlex.style.display = "flex";
+  let idJogo = document.getElementById(none);
+  idJogo.style.display = "none";
 
-    Ulocate = locate
-    UlocateId = flex;
+  Ulocate = locate;
+  UlocateId = flex;
 
-    console.log(UlocateId)
+  console.log('Voce esta' + UlocateId);
 
-    LocateMsg()
-
+  LocateMsg();
 }
+
 
 function LocateMsg() {
 
@@ -1155,13 +1155,7 @@ btn = 1;
 
 function openInventory() {
     
-    /*
-if(slot1 = "~~")
-{
 
-slot1use = NaN;
-
-}*/
     if ( btn == 1 )
     {
 
@@ -1172,6 +1166,8 @@ slot1use = NaN;
         idG.style.display = "none"
         let idLoja = document.getElementById("idInfo")
         idLoja.style.display = "none"
+        let idLevel = document.getElementById("idLevelUp")
+        idLevel.style.display = "none"
     
 
     }
@@ -1183,6 +1179,7 @@ slot1use = NaN;
         idI.style.display = "none"
         let idG = document.getElementById("idGUIASJOGO")
         idG.style.display = "block"
+        
     
     }
 
@@ -1291,9 +1288,9 @@ function BatleSaquiadores() {
 
     nomeInimigo = "Saquiador";
     ipInimigo = 1;
-    hpInimigo = 10;
+    hpInimigo = 20;
     xpInimigo = 10;
-    atkInimigo = 5;
+    atkInimigo = 10;
     agiInimigo = 3;
     moneydrop = 10;
 
@@ -1310,10 +1307,10 @@ function BatleOrc() {
 
     nomeInimigo = "Orc";
     ipInimigo = 2;
-    hpInimigo = 20;
+    hpInimigo = 60;
     xpInimigo = 30;
-    atkInimigo = 15;
-    agiInimigo = 2;
+    atkInimigo = 20;
+    agiInimigo = 9;
     moneydrop = 30;
 
     document.getElementById("hpInimigoMax").innerHTML =  hpInimigo;
@@ -1334,17 +1331,20 @@ function add001I() {
 
     additem = "Poção";
     additemuse = "buff";
-    buffvida = 10;
+    buffvida = 20;
     buffmana = 0;
     buffmoney = 0;
-    atkBustPot = 4;
+    atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'hp'
     raridadeItem = "Comum"
 
     iconeItem = "redPotion.png";
-armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    armorType = 'NAA'     
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
     addItem()
 
@@ -1361,11 +1361,14 @@ function add002I() {
     atkBustPot = 0;
     agiBustPot = 2;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
     iconeItem = "semImg.png";
 armorType = 'botas'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
     addItem()
 
@@ -1385,10 +1388,14 @@ function add003I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "KitDeAcampamentoSimples.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1407,10 +1414,14 @@ function add004I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "semImg.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1431,10 +1442,14 @@ function add005I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Raro"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "semImg.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1452,10 +1467,14 @@ function add006I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Raro"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "espadaDoSol.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1475,10 +1494,14 @@ function add007I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "EspadaCurta.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1501,10 +1524,14 @@ function add009I() {
         defBustPot = 0;
         raridadeItem = "Comum"
 
-        
+        metaType = 'normal'        
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
         iconeItem = "MachadoCurto.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1523,10 +1550,14 @@ function add010I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "FacaCurta.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1546,10 +1577,14 @@ function add011I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "semImg.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1568,10 +1603,14 @@ function add012I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Raro"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "MachadoDePrata.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1591,10 +1630,14 @@ function add013I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Raro"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "MarteloMagno.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1612,10 +1655,14 @@ function add014I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "semImg.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1634,10 +1681,14 @@ function add015I() {
         agiBustPot = 1;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "Faquete.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1657,10 +1708,14 @@ function add016I() {
         agiBustPot = 1;
         defBustPot = 0;
         raridadeItem = "Raro"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "semImg.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1680,10 +1735,14 @@ function add017I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
 
-        iconeItem = "Paper.png";
+
+        iconeItem = "Pedra.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1702,10 +1761,14 @@ function add018I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
+        metaType = 'normal'
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
 
         iconeItem = "Madeira.png";
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1726,10 +1789,14 @@ const Item018I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
         defBustPot = 0;
         raridadeItem = "Comum"
 
+        metaType = 'normal'        
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
         iconeItem = "ChifreDeOrc.png";
 
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
         addItem()
     
@@ -1747,11 +1814,14 @@ function add020I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Raro"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Raro"
 
    iconeItem = "Paper.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1766,11 +1836,14 @@ function add021I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "PlacaDeFerro.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1787,11 +1860,14 @@ function add022I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "MinerioDeFerro.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1808,11 +1884,14 @@ function add023I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "MinerioDeCristal.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1829,11 +1908,14 @@ function add024I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "PlacaDeCristal.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1850,11 +1932,14 @@ function add025I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "BarraDeFerro.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1871,11 +1956,14 @@ function add026I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "BarraDeCristal.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1892,11 +1980,14 @@ function add027I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "BarraDeOuro.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1913,11 +2004,14 @@ function add028I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "MinerioDeOuro.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1934,11 +2028,14 @@ function add029I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "BarraDeNeodinio.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1955,11 +2052,14 @@ function add030I() {
     atkBustPot = 0;
     agiBustPot = 0;
     defBustPot = 0;
-    raridadeItem = "Comum"
+    metaType = 'normal'        
+    metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+    BustType = 'NiB'
+            raridadeItem = "Comum"
 
    iconeItem = "MinerioDeNeodinio.png"
 armorType = 'NAA'     
-    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+    addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
    addItem()
 
@@ -1979,7 +2079,7 @@ function add031I() {
     function add032I() {
     
 
-        // mi amore <3
+        // <3
         additem = "Flor Dourada";
         additemuse = "material";
         buffmana = 0;
@@ -1988,10 +2088,14 @@ function add031I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Lendario"
-    
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
        iconeItem = "GoldFlower.png"
     armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
        addItem()
     
@@ -2010,10 +2114,14 @@ function add031I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
-    
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
        iconeItem = "GoldFlower.png"
     armorType = 'peitoral'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
        addItem()
        
@@ -2032,10 +2140,14 @@ function add031I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
-    
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
        iconeItem = "GoldFlower.png"
     armorType = 'calças'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
        addItem()
        
@@ -2054,10 +2166,14 @@ function add031I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
-    
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
        iconeItem = "GoldFlower.png"
         armorType = 'cabeça'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
        addItem()
        
@@ -2076,16 +2192,46 @@ function add031I() {
         agiBustPot = 0;
         defBustPot = 0;
         raridadeItem = "Comum"
-    
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
        iconeItem = "GoldFlower.png"
         armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType]
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
        addItem()
        
     }  
     
     const Item036I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
+    function add037I() {
+    
+
+        additem = "Trigo";
+        additemuse = "recurso";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Comum"
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
+       iconeItem = "GoldFlower.png"
+        armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+    
+    const Item037I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
    
 //002I Botas de couro
 
@@ -2273,6 +2419,7 @@ function LocateId(){
 
 }
 
+/*
 function Pagina(none, flex, locate)
 {
 
@@ -2285,7 +2432,7 @@ function Pagina(none, flex, locate)
 
     LocateMsg()
 
-}
+}*/
 
 function Cheat() {
 
@@ -2458,8 +2605,24 @@ function AddTesteDiv()
     AddTeste()
 
 }
+
+const GuiText = document.getElementById("textGUI");
+const GuiTextDiv = document.getElementById("textGuiDiv");
+
+function GuiTextModify(text) { 
+    
+    GuiTextDiv.style.display = 'flex';
+    GuiText.innerHTML = text; 
+
+    setTimeout(function() {
+        GuiTextDiv.style.display = 'none';
+    }, 2500); 
+}
+
+
+
 /*
-⠀⠀⠀⠀⠀⠀⠀W⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⣀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀W⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⣀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⢀⡏⠈⢱⠀⠀⡖⠲⣀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⢠⠋⠹⡇⠀⡸⢠⠞⠳⠆⠈⡆⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⢀⣠⠤⠤⠤⠤⠤⢬⣇⢀⣿⣚⢳⡏⠀⢰⠃⡴⠛⢦⠀⠀⠀⠀⠀⠀

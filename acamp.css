@@ -1,18 +1,97 @@
 
 /* 1 */
+#idAcampPlace {
+
+display: flex;
+justify-content: center;
+
+}
+
+#editDivAcamp {
+
+display: none;
+position: absolute;
+z-index: 2;
+background-color: rgb(141, 70, 39);
+padding: 10px;
+justify-content: flex-start;
+flex-direction:column;
+align-items: stretch;
+gap: 10px;
+
+}
+.acampBox {
+
+text-align: center;
+width: 32px;
+height: 32px;
+border: none;
+transition: 0.5s;
+}
+.florest {
+
+background-color: green;
+
+}
+
+.NaN{
+
+border: none;
+
+}
+
+.UpDiv{
+
+   display: flex;
+   width: 100px;
+   height: 200px;
+   background-color: brown;
+   border: none;
+   transition: 0.3s ease;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+} 
+
+.UpDiv:hover {
+
+    width: 150px;
+    height: 250px;
+    transition: 0.3s ease;
+ 
+} 
+
+
+
 .tree {
 
-    background-image: url(ui/treeDiv.png);
+    background-image: url(treeDiv.png);
+
+}
+
+.cabin {
+
+    background-image: url(AcampDiv.png);
 
 }
 
 .rock {
 
-    background-image: url(ui/rockDiv.png);
+    background-image: url(rockDiv.png);
 
 }
 
+.campfire {
 
+    background-image: url(FogDiv.png);
+
+}
+
+.Ptrigo{
+
+    background-image: url(PNull.png);
+
+}
 #Ax1y1 {
 
 text-align: center;

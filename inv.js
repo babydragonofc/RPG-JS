@@ -1,42 +1,42 @@
  //  addList = [additem 0 , additemuse 1, buffvida 2, buffmana 3, buffmoney 4, atkBustPot 5, agiBustPot 6, defBustPot 7, raridadeItem 8, iconeItem 9, quantidade 10]
 
- armaduraList = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- armorSlot4 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- armorSlot2 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- armorSlot3 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- armorSlot1 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- armorSlot5 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- armorSlot6 = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ armaduraList = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ armorSlot4 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ armorSlot2 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ armorSlot3 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ armorSlot1 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ armorSlot5 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ armorSlot6 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
 
  
 
- slot1List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot2List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot3List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot4List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot5List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot6List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot7List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot8List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot9List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot10List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot11List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot12List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot13List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot14List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot15List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot16List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot17List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot18List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot19List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot20List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot21List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot22List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot23List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot24List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
- slot25List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"];
+ slot1List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot2List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot3List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot4List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot5List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot6List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot7List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot8List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot9List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot10List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot11List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot12List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot13List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot14List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot15List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot16List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot17List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot18List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot19List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot20List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot21List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot22List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot23List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot24List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot25List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
  
- //["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN"]
+ //["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"]
 
 InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0], slot6List[0], slot7List[0], slot8List[0], slot9List[0], slot10List[0], slot11List[0], slot12List[0], slot13List[0], slot14List[0], slot15List[0], slot16List[0], slot17List[0], slot18List[0], slot19List[0], slot20List[0], slot21List[0], slot22List[0], slot23List[0], slot24List[0], slot25List[0]]
 const InvListBase = InvList;
@@ -326,14 +326,9 @@ function UssarItem(itemSelect) {
         if( eval ("slot" + itemSelect  + "List[0] != 'NaN' "))
     
             {
-                
                 if( eval ("slot" + itemSelect + "List[1] != 'NaN'"))
     
                     {
-                           
-
-    
-    
                         if( eval("slot" + itemSelect + "List[1] == 'armadura'"))
                             
     
@@ -346,37 +341,10 @@ function UssarItem(itemSelect) {
                                     
                                     {
                                         
-                                        /*let ListComplement = armaduraList;
-                                        eval("armaduraList = slot" + itemSelect + "List;") // define armaduraList como slotSelect
-                                        eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
-
-                                        if ( eval("slot" + itemSelect + "List[11] == 'botas'") )
-
-                                            {
-                                                let bit = document.getElementById("SlotArmor4btn");
-                                                bit.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
-                                                let ListComplement = armorSlot4;
-                                                eval("armorSlot4 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
-                                                eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
-
-                                                alert('aaa')
-
-
-
-                                                
-
-                                            }*/
-
 
 
                                             {
-                                                /*
-                                                let bit = document.getElementById("SlotArmor4btn");
-                                                bit.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
-                                                let ListComplement = armorSlot4;
-                                                eval("armorSlot4 = slot" + itemSelect + "List;") // define armaduraList como slotSelect
-                                                eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a armadura list 
-*/
+
 
                                                 if ( eval("slot" + itemSelect + "List[11] == 'botas'") )
                                                 {
@@ -570,23 +538,73 @@ function UssarItem(itemSelect) {
                             }
 
                                 if( eval("slot" + itemSelect + "List[1] == 'buff'"))
-                            
     
                                     {
+
+                                        if ("slot" + itemSelect + "List[12] == 'hp'")
+                                            
+                                            {
+
+                                                if (hp < hpMax)
+
+                                                    {
+
+                                                        eval ("hp = slot" + itemSelect + "List[2] + hp ;");  
+                                                        ResetSlot( itemSelect )
+
+                                                        if ( hp >= hpMax)
+                                                            {
     
-                                        eval ("hp = slot" + itemSelect + "List[2] + hp ;");
-                                        eval ("mana = slot" + itemSelect + "List[3] + mana ;");
+                                                                hp = hpMax;
     
-                                        
-                                    
-                                        ResetSlot( itemSelect )
-                                        
-                                       
+                                                            }
+
+                                                    }
+                                                
+                                                else 
+
+                                                {
+
+                                                    GuiTextModify('Sua vida ja esta cheia') 
+
+                                                }
+                                            
+                                            }
+
+                                        if ("slot" + itemSelect + "List[12] == 'mana'")
+                                            
+                                            {
+
+                                                if (mana < manaMax)
+
+                                                    {
+
+                                                        eval ("mana = slot" + itemSelect + "List[3] + mana ;");
+                                                        ResetSlot( itemSelect )
+
+                                                        if ( mana >= manaMax)
+                                                        {
+
+                                                            mana = manaMax
+
+                                                        }
+
+
+                                                    }
+
+                                                else
+
+                                                {
+
+                                                    GuiTextModify('Sua vida ja esta cheia') 
+
+                                                }
+
+                                            }
+
                                         document.getElementById("hp").innerHTML =  hp;
                                         document.getElementById("mana").innerHTML =  mana;
     
-
-
                                     }
     
                                     if( eval("slot" + itemSelect + "List[1] == 'money'"))
