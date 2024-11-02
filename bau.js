@@ -344,7 +344,7 @@ function addItemBau() {
                                             
                                             {
                                         
-                                                alert("Sua mochila esta cheia")
+                                                GuiTextModify('Sua mochila esta cheia') 
                                         
                                             }
                                 
@@ -469,7 +469,7 @@ function addItemBau() {
                                                 
                                                 {
                                             
-                                                    alert("Sua mochila esta cheia")
+                                                    GuiTextModify("Sua mochila esta cheia")
                                             
                                                 }
                                     

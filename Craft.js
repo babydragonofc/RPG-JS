@@ -32,7 +32,8 @@ if ( ItemForCraft[0] != 'NotIsCraft' )
 
         {
             //caso não tenha o item
-            alert("Você não tem os itens necesarios")
+            
+            GuiTextModify('Você não tem os itens necesarios') 
 
         }
 
@@ -61,7 +62,7 @@ if ( ItemForCraft[0] != 'NotIsCraft' )
 
         {
             //caso não tenha o item
-            alert("Você não tem os itens necesarios")
+            GuiTextModify("Você não tem os itens necesarios")
 
         }
 
@@ -90,7 +91,8 @@ if ( ItemForCraft[0] != 'NotIsCraft' )
 
         {
             //caso não tenha o item
-            alert("Você não tem os itens necesarios")
+            
+            GuiTextModify('Você não tem os itens necesariose') 
 
         }
 
@@ -148,7 +150,7 @@ else
 
 {
 
-alert("parece que esse item não é....... Craftavel..... Acho que o dev esta meio louco, ou ele não durmiu bem...")
+GuiTextModify("parece que esse item não é....... Craftavel..... Acho que o dev esta meio louco, ou ele não durmiu bem...")
 
 }
 

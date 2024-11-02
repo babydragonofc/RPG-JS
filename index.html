@@ -17,39 +17,37 @@
 
     <div style="height: 100%; width: 100% ;" id="htmlE"></div>
 
-    <div class="firstUI">
-        <div style="display: flex;"> <button onclick="infOpen()">Informações</button> </div>
-        
-        <div style="display: flex; gap: 5px; align-items: center;">
+        <div class="firstUI">
+            
+                <div style="display: flex; gap: 5px; align-items: center; position: absolute;">
 
-        <img src="ui/PilarMini1.png">
+                    <img src="ui/PilarMini1.png">
 
-        <p>||| DINHEIRO : </p><p id="money">000</p><p> || HP :</p><p id="hp"> 000 </p><p>|| MANA : </p><p id="mana">000</p><p>|| XP : </p><p id="xp">000</p><p>/</p><p id="xpMax">000</p><p>|||</p><p>|| LEVEL : </p><p id="levelId">0</p><p>|||</p>
+                    <p>||| DINHEIRO : </p><p id="money">000</p><p> || HP :</p><p id="hp"> 000 </p><p>|| MANA : </p><p id="mana">000</p><p>|| XP : </p><p id="xp">000</p><p>/</p><p id="xpMax">000</p><p>|||</p><p>|| LEVEL : </p><p id="levelId">0</p><p>|||</p>
 
-        <img src="ui/PilarMini2.png"> 
-        
-        </div>
+                    <img src="ui/PilarMini2.png"> 
+                
+                </div>
 
-          
-        <div style="display: flex;"> <button onclick="a()">10</button> <button onclick="montarAcamp()">vila</button> <button onclick="MissãoCheq()">missão</button> </div>
-    </div>  
+            <div style="display: none;" id="debugDiv2"> <button onclick="a()">10</button> <button onclick="montarAcamp()">vila</button> <button onclick="MissãoCheq()">missão</button> </div>
+
+        </div>  
+
+        <div style="display: flex; justify-content:center;"> <button onclick="infOpen()">Informações</button> </div>
 
 <br>
 <br>
 
 <div class="game" id="idGame" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
 
-
-
     <div style="display: none; justify-content: center;" id="textGuiDiv">
 
         <p class="textGUI" id="textGUI"></p>
 
-
     </div>
 
-
 <br>
+
 <div class="GUIASJOGO" id="idGUIASJOGO" >
 
 <!-- SELETOR DE CLASSE -->
@@ -85,13 +83,15 @@
                         <button class="atuBtn">Atualização</button>
                         
                         <div class="Oi">
-                            <p style="color: white;">VERSÃO : 0.7.1</p>
+                            <p style="color: white;">VERSÃO : 0.8.0</p>
 
                             <div class="grade">
                             
-                                <p class="greenB">+ haba de Atualização adicionadas</p>
-                                <p class="greenB">+ sistema de level Up adicionado</p>
-                                <p class="greenB">+ em breve sistema de acampamento</p>
+                                <p class="greenB">+ Atualização na UI</p>
+                                <p class="greenB">+ Nova loja de armaduras</p>
+                                <p class="greenB">+ Melhoria no combate</p>
+                                <p class="greenB">+ primeiro chefe adicionado</p>
+                                <p class="redB">- Debug removido? </p>
 
                             </div>
                         </div>
@@ -168,6 +168,7 @@
 
                         <button class="btn"  id="btnExplorarSaqueadores" onclick="BatleSaquiadores()">Nos Saqueadores</button>
                         <button class="btn"  id="btnExplorarOrc" onclick="BatleOrc()">No Orc</button>
+                        <button class="btn"  id="btnExplorarRedDragon" onclick="BatleRedDragon()">No Dragão Vermelho</button>
 
                         <button  class="btnVoltar"  id="btnExplorarVoltar" onclick="Pagina('idExplorar','idJogo','Jogo')">Voltar</button>
                         </div>
@@ -274,7 +275,7 @@
     </div>
 
 
-<!--  vilarejo  -->
+<!--  Vilarejo  -->
 
 
     <div class="vila" id="idVila"> 
@@ -306,6 +307,8 @@
                         <button  class="btn"  id="btnVilaLoja" onclick="Pagina('idVila','idLoja','Loja')">Na Loja</button>
                         <button  class="btn"  id="btnVilaForja" onclick="Pagina('idVila','idForja','Forja')">Na Forja</button>
                         <button  class="btn"  id="btnVilaForja" onclick="Pagina('idVila','idNews','Quadro')">No Quadro</button>
+                        <button  class="btn"  id="btnVilaForja" onclick="Pagina('idVila','idForjaArmadura','LojaArmadura')">Na Forja</button>
+
                         <br><br>
                         <button  class="btnVoltar"  id="btnVilaVoltar" onclick="Pagina('idVila','idExplorar','Explorar')">Voltar</button>
 
@@ -408,6 +411,56 @@
 
 <!--LOJA-->
 
+<div class="Loja" id="idForjaArmadura"> 
+
+                
+    <p>Você entra na Forja de armaduras</p>
+
+<div>
+
+    <div>
+         
+    
+        <div>
+            <p>\/ capacete de ferro \/</p>
+            <p>- 50$ -</p>
+        </div>
+        <div>
+            <p>\/ Peitoral de Ferro \/</p>
+            <p>- 100$ -</p>
+        </div>   
+        <div> 
+            <p>\/ Calças de Ferro \/</p>
+            <p>- 50$ -</p>
+        </div>            
+        <div> 
+            <p>\/ Botas de ferro \/</p>
+            <p>- 20$ -</p>
+        </div>
+<br>
+    </div>
+    
+    <p> Comprar : </p>
+    
+    <div >
+
+        <button  class="btn"  id="btnComprar1" onclick="ComprarItem( '038', 'capacete de Ferro', 50)">capacete de ferro</button>
+
+        <button  class="btn"  id="btnComprar2" onclick="ComprarItem( '033', 'Peitoral de Ferro', 100)">Peitoral de Ferro</button>
+        <button  class="btn"  id="btnComprar3" onclick="ComprarItem( '034', 'Calças de Ferro', 50)">Calças de Ferro</button>
+        <button  class="btn"  id="btnComprar3" onclick="ComprarItem( '039', 'Botas de Ferro', 20)">Botas De Ferro</button>
+
+        <br><br>
+        <button  class="btnVoltar"  id="btnLojaVoltar" onclick="Pagina('idLoja','idExplorar','Vila')">Voltar</button>
+
+    </div>
+
+    
+    
+
+</div>
+
+</div>
 
 <div class="Loja" id="idLoja"> 
 
@@ -441,10 +494,10 @@
         
         <div >
 
-            <button  class="btn"  id="btnComprar1" onclick="Comprar001I()">Poção de vida</button>
-            <button  class="btn"  id="btnComprar2" onclick="Comprar002I()">Botas de couro</button>
-            <button  class="btn"  id="btnComprar3" onclick="Comprar003I()">Kit de acampamento simples</button>
-            <button  class="btn"  id="btnComprar3" onclick="Comprar008I()">Mapa</button>
+            <button  class="btn"  id="btnComprar1" onclick="ComprarItem( '001', 'Poção de vida', 5)">Poção de vida</button>
+            <button  class="btn"  id="btnComprar2" onclick="ComprarItem( '002', 'Botas de couro', 10)">Botas de couro</button>
+            <button  class="btn"  id="btnComprar3" onclick="ComprarItem( '003', 'Kit de acampamento simples', 20)">Kit de acampamento simples</button>
+            <button  class="btn"  id="btnComprar3" onclick="ComprarItem( '031', 'Mapa', 5)">Mapa</button>
 
             <br><br>
             <button  class="btnVoltar"  id="btnLojaVoltar" onclick="Pagina('idLoja','idExplorar','Vila')">Voltar</button>
@@ -524,9 +577,9 @@
 
             <button  class="btn"  id="btnAntesForja" onclick="antesForja()"><</button>
 
-            <button  class="btn"  id="btnComprar1" onclick="Comprar004I()">Espada de Prata</button>
-            <button  class="btn"  id="btnComprar2" onclick="Comprar005I()">Espada Longa</button>
-            <button  class="btn"  id="btnComprar3" onclick="Comprar006I()">Espada do Sol</button>
+            <button  class="btn"  id="btnComprar1" onclick="ComprarItem( '004', 'Espada de Prata', 50)">Espada de Prata</button>
+            <button  class="btn"  id="btnComprar2" onclick="ComprarItem( '005', 'Espada Longa', 100)">Espada Longa</button>
+            <button  class="btn"  id="btnComprar3" onclick="ComprarItem( '006', 'Espada do Sol', 200)">Espada do Sol</button>
 
             <button  class="btn"  id="btnDepoisForja" onclick="depoisForja()">></button>
 
@@ -539,9 +592,9 @@
 
             <button  class="btn"  id="btnAntesForja" onclick="antesForja()"><</button>
 
-            <button  class="btn"  id="btnComprar1" onclick="Comprar011I()">Machado de aço</button>
-            <button  class="btn"  id="btnComprar2" onclick="Comprar012I()">Machado Nobre</button>
-            <button  class="btn"  id="btnComprar3" onclick="Comprar013I()">Martelo Subito</button>
+            <button  class="btn"  id="btnComprar1" onclick="ComprarItem( '011', 'Machado de Aço', 50)">Machado de Aço</button>
+            <button  class="btn"  id="btnComprar2" onclick="ComprarItem( '012', 'Machado Nobre', 100)">Machado Nobre</button>
+            <button  class="btn"  id="btnComprar3" onclick="ComprarItem( '013', 'Martelo Subito', 200)">Martelo Subito</button>
 
             <button  class="btn"  id="btnDepoisForja" onclick="depoisForja()">></button>
 
@@ -553,9 +606,9 @@
 
             <button  class="btn"  id="btnAntesForja" onclick="antesForja()"><</button>
 
-            <button  class="btn"  id="btnComprar1" onclick="Comprar014I()">Faca de caça</button>
-            <button  class="btn"  id="btnComprar2" onclick="Comprar015I()">Faquete</button>
-            <button  class="btn"  id="btnComprar3" onclick="Comprar016I()">Faca Magna</button>
+            <button  class="btn"  id="btnComprar1" onclick="ComprarItem( '014', 'Faca de caça', 50)">Faca de caça</button>
+            <button  class="btn"  id="btnComprar2" onclick="ComprarItem( '015', 'Faquete', 100)">Faquete</button>
+            <button  class="btn"  id="btnComprar3" onclick="ComprarItem( '016', 'Faca Magna', 200)">Faca Magna</button>
 
             <button  class="btn"  id="btnDepoisForja" onclick="depoisForja()">></button>
 
@@ -1007,7 +1060,7 @@
 
 </div> 
 
-
+<!--Bau-->
 
 <div class="Bau" id="idBau" style="display: none;"> 
 
@@ -1068,14 +1121,12 @@
 
 </div> 
 
-
-
 </div>  
 
 </div>
 
     <div class="atrUI">
-        <p>FOR : </p><p id="ipFOR">00</p><p> / DEF : </p><p id="ipDEF">00</p><p> / AGI :</p><p id="ipAGI">00</p>
+        <p style="display: flex;">FOR : </p><p id="ipFOR">00</p><p style="display: flex;"> / DEF : </p><p id="ipDEF">00</p><p style="display: flex;"> / AGI :</p><p id="ipAGI">00</p>
     </div>
 
 <br>
@@ -1086,116 +1137,8 @@
 
 </div>
 
-<div style="display: flex; flex-direction: column; align-items: center; margin: 30px;" id="mapa">
-
-<div style="display: flex;">
-    <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 10.png);"></div>
-    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
-    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
-    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border\ 6.png);"></div>
-    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
-    <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border3.png);"></div>
-    <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 9.png);"></div>
-
-</div>
-
-    <div style="display: flex;">
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
-        <div class="mapBox" id="x1y1"></div>
-        <div class="mapBox" id="x2y1"></div>
-        <div class="mapBox" id="x3y1">vila</div>
-        <div class="mapBox" id="x4y1"></div>
-        <div class="mapBox" id="x5y1"></div>
-        <div class="mapBox" style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
-
-
-    </div>
-
-    <div style="display: flex;">
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
-
-        <div class="mapBox" id="x1y2"></div>
-        <div class="mapBox" id="x2y2"></div>
-        <div class="mapBox" id="x3y2"></div>
-        <div class="mapBox" id="x4y2"></div>
-        <div class="mapBox" id="x5y2"></div>
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
-
-    </div>
-
-    <div style="display: flex;">
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border\ 7.png);"></div>
-
-        <div class="mapBox" id="x1y3"></div>
-        <div class="mapBox" id="x2y3"></div>
-        <div class="mapBox" id="x3y3"></div>
-        <div class="mapBox" id="x4y3"></div>
-        <div class="mapBox" id="x5y3">vila</div>
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border\ 8.png);"></div>
-
-
-    </div>
-
-    <div style="display: flex;">
-        
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
-
-        <div class="mapBox" id="x1y4"></div>
-        <div class="mapBox" id="x2y4"></div>
-        <div class="mapBox" id="x3y4"></div>
-        <div class="mapBox" id="x4y4"></div>
-        <div class="mapBox" id="x5y4"></div>
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
-
-
-    </div>
-
-    <div style="display: flex;">
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/borde2.png);"></div>
-
-        <div class="mapBox" id="x1y5">vila</div>
-        <div class="mapBox" id="x2y5"></div>
-        <div class="mapBox" id="x3y5"></div>
-        <div class="mapBox" id="x4y5"></div>
-        <div class="mapBox" id="x5y5"></div>
-
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/border1.png);"></div>
-
-
-    </div>
-
-    <div style="display: flex;">
-        <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 11.png);"></div>
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
-        <div style="background-color: rgb(145, 108, 68); width: 32px; height: 32px; background-image: url(ui/pilar4.png);"></div>
-        <div style="background-color: rgb(128, 82, 52); width: 32px; height: 32px; background-image: url(ui/border\ 12.png);"></div>
-    
-    </div>
-
-
-
-
-
-
-
-
-            
-
-
-
-    </div>
-
-
+<br>
+<br>
 
 </div>
 
@@ -1208,7 +1151,8 @@
 
 
 </div>
-<div style="display: flex; justify-content: center;">
+
+<div style="display: none; justify-content: center;" id="debugDiv">
     <button onclick="add015I()">a</button>
     <button onclick="add019I()">b</button>
 
@@ -1220,20 +1164,8 @@
     locate:<input id="campoL" type="text"> <button onclick="LocateId()">Ir</button>
 <br>
 <button onclick="AddTesteDiv()">TesteDiv</button>
+</div>
 
-<br></br>
-<div class="holder">
-    a
-  <div class="popover">
-    CVC
-  </div>
-</div>
-<div class="holder">
-    a
-  <div class="popover">
-    CVC
-  </div>
-</div>
 
     <script src="acampOBJ.js"></script>
     <script src="game.js"></script>

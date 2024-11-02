@@ -88,7 +88,7 @@ function rT() {
     if (team === "null") {
 
         team = "red";
-        alert("teamRed");
+        GuiTextModify("teamRed");
         let exitTeam = document.getElementById("exitTeam")
         exitTeam.style.borderColor = "red"
         ui.style.borderColor = "red"
@@ -102,7 +102,7 @@ function rT() {
 
     else {
 
-        alert("você ja esta em um time")
+        GuiTextModify("você ja esta em um time")
 
     }
 };
@@ -113,7 +113,7 @@ function bT() {
     if (team === "null") {
 
         team = "blue";
-        alert("teamBlue");
+        GuiTextModify("teamBlue");
         let exitTeam = document.getElementById("exitTeam")
         exitTeam.style.borderColor = "blue"
         ui.style.borderColor = "blue"
@@ -127,7 +127,7 @@ function bT() {
 
     else {
 
-        alert("você ja esta em um time")
+        GuiTextModify("você ja esta em um time")
 
     }
 };
@@ -138,7 +138,7 @@ function yT() {
     if (team === "null") {
 
         team = "yellow";
-        alert("teamYellow");
+        GuiTextModify("teamYellow");
         let exitTeam = document.getElementById("exitTeam")
         exitTeam.style.borderColor = "yellow"
         ui.style.borderColor = "yellow"
@@ -152,7 +152,7 @@ function yT() {
 
     else {
 
-        alert("você ja esta em um time")
+        GuiTextModify("você ja esta em um time")
 
     }
 };
@@ -162,7 +162,7 @@ function sair() {
 if ( team != "null") {
 
     team = "null";
-    alert("você saiu do time")
+    GuiTextModify("você saiu do time")
     let exitTeam = document.getElementById("exitTeam")
     exitTeam.style.borderColor = "white"
     ui.style.borderColor = "white"
@@ -184,7 +184,7 @@ if ( team != "null") {
 
 else {
 
-alert("você não esta em um time")
+GuiTextModify("você não esta em um time")
 
 }
 
@@ -303,7 +303,7 @@ function roletar() {
 
     else {
 
-alert("você não esta em um time!")
+GuiTextModify("você não esta em um time!")
         
     }
 
