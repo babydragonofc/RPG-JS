@@ -621,6 +621,23 @@ function UssarItem(itemSelect) {
 
                                             
                                         }
+
+                                        if( eval("slot" + itemSelect + "List[1] == 'usavel'"))
+                            
+    
+                                            {
+    
+                                                let itemFunction = eval("slot" + itemSelect + "List[12]").func
+                                            
+                                                eval(itemFunction)
+
+                                                ResetSlot( itemSelect )
+                                                
+                                               
+                                                document.getElementById("money").innerHTML =  money;
+    
+                                                
+                                            }
     
 
 

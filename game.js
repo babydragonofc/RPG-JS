@@ -1368,7 +1368,7 @@ function BatleRedDragon() {
     agiInimigo = 10;
     moneydrop = 30;
 
-    itemDrop = 'Coração de Dragão'
+    itemDrop = '040s'
 
     fraseIniI = 'O '
     fraseIniF = ' Bate suas assas em ameaça'
@@ -2345,24 +2345,66 @@ function add031I() {
     
     const Item039I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
    
+    function add040I() {
+    
+
+        additem = "Coração de dragão";
+        additemuse = "usavel";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Raro"
+        metaType = 'Func'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem, func: 'LifeUp()'}
+        BustType = 'NaN'
 
 
-//002I Botas de couro
+       iconeItem = "GoldFlower.png"
+        armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
 
-//003I Kit de acampamento simples
+    function add041I() {
+    
+        //parabens para mim! 2024
+
+        additem = "Chapeu de festa";
+        additemuse = "armadura";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Raro"
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NaN'
+
+
+       iconeItem = "GoldFlower.png"
+        armorType = 'cabeça'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+    
+    const Item040I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
 
 function a() {
     money = money + 10;
     document.getElementById("money").innerHTML =  money;
-
-
-
 }
 
 function vila() {
 
 perto = "vilarejo";
-
 
 }
 
@@ -2370,6 +2412,21 @@ function MontarAlgo() {
 
     console.log("aaaa")
     montarAcamp()
+
+}
+
+function LifeUp() {
+
+hpMax = hpMax + 50
+
+console.log('Vida Maxima Aumentada')
+GuiTextModify('Sua vida Maxima foi aumentada')
+
+hp = hpMax;
+
+document.getElementById("hp").innerHTML =  hp;
+
+
 
 }
 
@@ -2564,12 +2621,20 @@ if ( CheatCodeText == "Alyson" || CheatCodeText == "Gleyson")
 
 }
 
-if ( CheatCodeText == 'Mizinha')
+if ( CheatCodeText == 'panetone salgado')
 {
 
 add032I()
 
 }
+
+if ( CheatCodeText == '0311')
+{
+
+add041I()
+
+}
+
 }
 
 
