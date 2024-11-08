@@ -99,8 +99,8 @@ function addArmor() {
     
     } 
     else {
-    // Se não houver 'NaN', exibe o GuiTextModifya
-    GuiTextModify("Sua mochila está cheia");
+    // Se não houver 'NaN', exibe o alerta
+    alert("Sua mochila está cheia");
     }
 
     let bit = document.getElementById("SlotArmor1btn");
@@ -128,7 +128,7 @@ console.log("adicionando item")
     window["slot" + (menorIndice + 1) + "List"] = addList; 
   } else {
     // Se não houver 'NaN', exibe o alerta
-    GuiTextModify("Sua mochila está cheia");
+    alert("Sua mochila está cheia");
   }
 
   let bit = document.getElementById("Slot" + (menorIndice + 1) + "btn");
@@ -173,8 +173,8 @@ else {
     window["slot" + (menorIndice + 1) + "List"] = addList; 
     } 
     else {
-    // Se não houver 'NaN', exibe o GuiTextModifya
-    GuiTextModify("Sua mochila está cheia");
+    // Se não houver 'NaN', exibe o alerta
+    alert("Sua mochila está cheia");
     }
 
 }
@@ -220,7 +220,7 @@ if ( invSlotAddSelect != ( length.InvList + 1 ) )
     
     {
 
-    GuiTextModify("Sua Mochila esta cheia");
+    alert("Sua Mochila esta cheia");
 
     }
 
@@ -621,23 +621,6 @@ function UssarItem(itemSelect) {
 
                                             
                                         }
-
-                                        if( eval("slot" + itemSelect + "List[1] == 'usavel'"))
-                            
-    
-                                            {
-    
-                                                let itemFunction = eval("slot" + itemSelect + "List[12]").func
-                                            
-                                                eval(itemFunction)
-
-                                                ResetSlot( itemSelect )
-                                                
-                                               
-                                                document.getElementById("money").innerHTML =  money;
-    
-                                                
-                                            }
     
 
 

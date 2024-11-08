@@ -15,8 +15,6 @@ if ( xp >= xpMax )
         
         level++
 
-        GuiTextModify('Você alcançou o nivel ' + level + '!') 
-
         xp = 0
         document.getElementById("xp").innerHTML =  xp;
 

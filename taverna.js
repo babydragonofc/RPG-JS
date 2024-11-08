@@ -13,7 +13,7 @@ ConversaVelhoOcultista = 0;
 
 function Taverna() {
 
-GuiTextModify("a")
+alert("a")
 
     if ( ConversaVelhoOcultista ==  2 ) {
 
@@ -462,7 +462,7 @@ function Missão1Complete()
 
 {
 
-GuiTextModify("FUNCIONOU ZI AHA HA HA")
+alert("FUNCIONOU ZI AHA HA HA")
 
 }
 
@@ -484,7 +484,7 @@ Missão()
 
 else {
 
-GuiTextModify("libere seu inventario antes");
+alert("libere seu inventario antes");
 
 }
 

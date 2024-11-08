@@ -295,7 +295,7 @@ BiomeCr()
 
     {
     
-        GuiTextModify('Selecione uma classe')
+    alert("Você deve escolher uma classe!")
 
     }
 
@@ -399,7 +399,7 @@ let idBatle = document.getElementById("idBatle")
 idBatle.style.display = "flex"
 
 
-document.getElementById("ipInimigo").innerHTML =  fraseIniI + nomeInimigo + fraseIniF;
+document.getElementById("ipInimigo").innerHTML =  nomeInimigo + " te aborda";
 console.log("nome:" + nomeInimigo + "| ip:" + ipInimigo + "| xp:" + xpInimigo + "| atk:" + atkInimigo + "| agi:" + agiInimigo)
 
 }
@@ -455,7 +455,7 @@ atkF = 0;
 
             atkF = (atk + armaAtaque + armaduraAtaque) * 2
         
-            GuiTextModify('Critico') 
+            alert("critico")
 
         }
 
@@ -486,8 +486,6 @@ atkF = 0;
 
             document.getElementById("money").innerHTML =  money;
             document.getElementById("xp").innerHTML =  xp;
-
-            if(itemDrop != 'NaN') { eval('add' + itemDrop  + 'I()') }
 
             levelUp()
         }
@@ -538,7 +536,7 @@ function Turno() {
 
 }
 /*function animator() {
-        GuiTextModify("animator")
+        alert("animator")
     let idGame = document.getElementById("idGame")
     //idGame.style.BoxShadow = " none";
 
@@ -553,7 +551,7 @@ function MeuTurno() {
     let OK = document.getElementById("idTurn")
     OK.style.display = "none" 
 
-    defAtiva = (def + armaDefesa + armaduraDefesa) / 2;
+    defAtiva = 0;
 
 }
 
@@ -753,13 +751,13 @@ if( money >= 5 )
 
     {
 
-        GuiTextModify("Você não tem dinheiro");
+        alert("Você não tem dinheiro");
 
     }
 
     document.getElementById("money").innerHTML =  money;
 
-    }
+}
 
 function Comprar002I() {
 
@@ -777,7 +775,7 @@ function Comprar002I() {
     
         {
     
-            GuiTextModify("Você não tem dinheiro");
+            alert("Você não tem dinheiro");
     
         }
     
@@ -785,7 +783,7 @@ function Comprar002I() {
 
     }
 
-function Comprar003I() {
+    function Comprar003I() {
 
         if( money >= 20 ) 
         
@@ -801,15 +799,15 @@ function Comprar003I() {
         
             {
         
-                GuiTextModify("Você não tem dinheiro");
+                alert("Você não tem dinheiro");
         
             }
         
             document.getElementById("money").innerHTML =  money;
 
-    }
+        }
 
-function Comprar004I() {
+    function Comprar004I() {
 
         if( money >= 50 ) 
             
@@ -825,15 +823,15 @@ function Comprar004I() {
             
             {
             
-                GuiTextModify("Você não tem dinheiro");
+                alert("Você não tem dinheiro");
             
             }
             
             document.getElementById("money").innerHTML =  money;
     
-    }
+            }
 
-function Comprar005I() {
+    function Comprar005I() {
 
         if( money >= 100 ) 
         
@@ -849,15 +847,15 @@ function Comprar005I() {
         
             {
         
-                GuiTextModify("Você não tem dinheiro");
+                alert("Você não tem dinheiro");
         
             }
         
             document.getElementById("money").innerHTML =  money;
 
-    }
+        }
 
-function Comprar006I() {
+        function Comprar006I() {
 
             if( money >= 200 ) 
             
@@ -873,15 +871,15 @@ function Comprar006I() {
             
                 {
             
-                    GuiTextModify("Você não tem dinheiro");
+                    alert("Você não tem dinheiro");
             
                 }
             
                 document.getElementById("money").innerHTML =  money;
     
-    }
+            }
 
-function Comprar008I() {
+            function Comprar008I() {
 
                 if( money >= 10 ) 
                 
@@ -898,13 +896,13 @@ function Comprar008I() {
                 
                     {
                 
-                        GuiTextModify("Você não tem dinheiro");
+                        alert("Você não tem dinheiro");
                 
                     }
                 
                     document.getElementById("money").innerHTML =  money;
         
-    }
+                }
 
 function Comprar011I() {
 
@@ -922,7 +920,7 @@ function Comprar011I() {
     
         {
     
-            GuiTextModify("Você não tem dinheiro");
+            alert("Você não tem dinheiro");
     
         }
     
@@ -946,7 +944,7 @@ function Comprar012I() {
     
         {
     
-            GuiTextModify("Você não tem dinheiro");
+            alert("Você não tem dinheiro");
     
         }
     
@@ -970,7 +968,7 @@ function Comprar013I() {
     
         {
     
-            GuiTextModify("Você não tem dinheiro");
+            alert("Você não tem dinheiro");
     
         }
     
@@ -994,7 +992,7 @@ function Comprar014I() {
     
         {
     
-            GuiTextModify("Você não tem dinheiro");
+            alert("Você não tem dinheiro");
     
         }
     
@@ -1018,7 +1016,7 @@ function Comprar015I() {
     
         {
     
-            GuiTextModify("Você não tem dinheiro");
+            alert("Você não tem dinheiro");
     
         }
     
@@ -1026,7 +1024,7 @@ function Comprar015I() {
 
     }
 
-function Comprar016I() {
+    function Comprar016I() {
 
     if( money >= 200 ) 
     
@@ -1042,7 +1040,7 @@ function Comprar016I() {
     
         {
     
-            GuiTextModify("Você não tem dinheiro");
+            alert("Você não tem dinheiro");
     
         }
     
@@ -1050,32 +1048,7 @@ function Comprar016I() {
 
     }
     
-function ComprarItem( item, nomeItem, preço) {
 
-    if( money >= preço ) 
-    
-        {
-    
-            money = money - preço;
-
-            eval('add' + item + 'I()')
-
-            GuiTextModify('Você comprou um(a)' + nomeItem) 
-    
-        }
-    
-        else
-    
-        {
-    
-            GuiTextModify('Você não tem dinheiro o suficiente') 
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-
-}
 
 
 var page;
@@ -1308,6 +1281,8 @@ function Dormir() {
 
 //inimigos 
 
+//001 Saqueador
+
 function BatleSaquiadores() {
 
 
@@ -1318,11 +1293,6 @@ function BatleSaquiadores() {
     atkInimigo = 10;
     agiInimigo = 3;
     moneydrop = 10;
-
-    itemDrop = 'NaN'
-
-    fraseIniI = ' Um '
-    fraseIniF = ' te aborda'
 
     document.getElementById("hpInimigoMax").innerHTML =  hpInimigo;
     document.getElementById("hpInimigo").innerHTML =  hpInimigo;
@@ -1342,36 +1312,6 @@ function BatleOrc() {
     atkInimigo = 20;
     agiInimigo = 9;
     moneydrop = 30;
-
-    itemDrop = '019'
-
-    fraseIniI = ' O '
-    fraseIniF = ' grune para você'
-
-    document.getElementById("hpInimigoMax").innerHTML =  hpInimigo;
-    document.getElementById("hpInimigo").innerHTML =  hpInimigo;
-    document.getElementById("nomeInimigo").innerHTML =  nomeInimigo;
-
-
-    Batle();
-
-}
-
-function BatleRedDragon() {
-
-
-    nomeInimigo = "Dragão vermelho";
-    ipInimigo = 3;
-    hpInimigo = 100;
-    xpInimigo = 100;
-    atkInimigo = 50;
-    agiInimigo = 10;
-    moneydrop = 30;
-
-    itemDrop = '040s'
-
-    fraseIniI = 'O '
-    fraseIniF = ' Bate suas assas em ameaça'
 
     document.getElementById("hpInimigoMax").innerHTML =  hpInimigo;
     document.getElementById("hpInimigo").innerHTML =  hpInimigo;
@@ -1438,7 +1378,7 @@ const Item002I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
 
 
 function add003I() {
-    GuiTextModify("o item não funciona ainda")
+    alert("o item não funciona ainda")
         additem = "Kit de acampamento simples";
         additemuse = "NaN";
         buffvida = 0;
@@ -2293,118 +2233,22 @@ function add031I() {
     
     const Item037I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
    
-    function add038I() {
-    
+//002I Botas de couro
 
-        additem = "Capacete de Ferro";
-        additemuse = "armadura";
-        buffmana = 0;
-        buffmoney = 0;
-        atkBustPot = 0;
-        agiBustPot = 0;
-        defBustPot = 5;
-        raridadeItem = "Comum"
-        metaType = 'normal'    
-        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
-        BustType = 'NiB'
-
-
-       iconeItem = "GoldFlower.png"
-        armorType = 'cabeça'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
-     
-       addItem()
-       
-    }  
-    
-    const Item038I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
-   
-    function add039I() {
-    
-
-        additem = "Botas de Ferro";
-        additemuse = "armadura";
-        buffmana = 0;
-        buffmoney = 0;
-        atkBustPot = 0;
-        agiBustPot = 0;
-        defBustPot = 5;
-        raridadeItem = "Comum"
-        metaType = 'normal'    
-        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
-        BustType = 'NiB'
-
-
-       iconeItem = "GoldFlower.png"
-        armorType = 'botas'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
-     
-       addItem()
-       
-    }  
-    
-    const Item039I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
-   
-    function add040I() {
-    
-
-        additem = "Coração de dragão";
-        additemuse = "usavel";
-        buffmana = 0;
-        buffmoney = 0;
-        atkBustPot = 0;
-        agiBustPot = 0;
-        defBustPot = 0;
-        raridadeItem = "Raro"
-        metaType = 'Func'    
-        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem, func: 'LifeUp()'}
-        BustType = 'NaN'
-
-
-       iconeItem = "GoldFlower.png"
-        armorType = 'NAA'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
-     
-       addItem()
-       
-    }  
-
-    function add041I() {
-    
-        //parabens para mim! 2024
-
-        additem = "Chapeu de festa";
-        additemuse = "armadura";
-        buffmana = 0;
-        buffmoney = 0;
-        atkBustPot = 0;
-        agiBustPot = 0;
-        defBustPot = 0;
-        raridadeItem = "Raro"
-        metaType = 'normal'    
-        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
-        BustType = 'NaN'
-
-
-       iconeItem = "GoldFlower.png"
-        armorType = 'cabeça'     
-        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
-     
-       addItem()
-       
-    }  
-    
-    const Item040I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
-   
+//003I Kit de acampamento simples
 
 function a() {
     money = money + 10;
     document.getElementById("money").innerHTML =  money;
+
+
+
 }
 
 function vila() {
 
 perto = "vilarejo";
+
 
 }
 
@@ -2412,21 +2256,6 @@ function MontarAlgo() {
 
     console.log("aaaa")
     montarAcamp()
-
-}
-
-function LifeUp() {
-
-hpMax = hpMax + 50
-
-console.log('Vida Maxima Aumentada')
-GuiTextModify('Sua vida Maxima foi aumentada')
-
-hp = hpMax;
-
-document.getElementById("hp").innerHTML =  hp;
-
-
 
 }
 
@@ -2621,20 +2450,12 @@ if ( CheatCodeText == "Alyson" || CheatCodeText == "Gleyson")
 
 }
 
-if ( CheatCodeText == 'panetone salgado')
+if ( CheatCodeText == 'Mizinha')
 {
 
 add032I()
 
 }
-
-if ( CheatCodeText == '0311')
-{
-
-add041I()
-
-}
-
 }
 
 
@@ -2661,7 +2482,7 @@ const map = [
     ["mar", "mar", "mar", "mar", "mar", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "floresta", "floresta", "floresta", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
-    ["mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "Vulcão", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
@@ -2798,12 +2619,7 @@ function GuiTextModify(text) {
     }, 2500); 
 }
 
-function DebugOn() {
 
-    document.getElementById("debugDiv").style.display = 'flex';
-    document.getElementById("debugDiv2").style.display = 'flex';
-
-}
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀W⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⣀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

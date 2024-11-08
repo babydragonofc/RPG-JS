@@ -325,7 +325,7 @@ function AS8x8y() {
 
 
 
-/*  GuiTextModify("x : " + Ax + " | y : " + Ay)
+/*  alert("x : " + Ax + " | y : " + Ay)
   if (pedra1.includes(Ax + "" + Ay))
   {
   
