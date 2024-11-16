@@ -1095,7 +1095,7 @@ function add001I() {
     BustType = 'hp'
     raridadeItem = "Comum"
 
-    iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742008198729808/redPotion.png?ex=6737c5d4&is=67367454&hm=a52deaf92b21cb55defe418689dd1e2dbcd267e55a13499c0b83a4d400adc2c2&";
+    iconeItem = "redPotion.png";
     armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1119,7 +1119,7 @@ function add002I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-    iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919040362479646/BotasDeCouro.png?ex=67386ab4&is=67371934&hm=fa66b0ed8f49b5fb071b5646f5e76fd12dbd49e01a1a04c40b2decdd55a531b9&";
+    iconeItem = "BotasDeCouro.png";
 armorType = 'botas'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1146,7 +1146,7 @@ function add003I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059331223652/KitDeAcampamentoSimples.png?ex=6737c5e1&is=67367461&hm=c9415f3ebd5dfaab3f26a39e2ae33845d3e83e3ef36678d0ec5af3011361a48a&";
+        iconeItem = "KitDeAcampamentoSimples.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1225,7 +1225,7 @@ function add006I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742177027854507/espadaDoSol.png?ex=6737c5fd&is=6736747d&hm=87ffb3db92866ec0e736c81529878e1bd112df70e3d76d11260b82ed03e27bc0&";
+        iconeItem = "espadaDoSol.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1252,7 +1252,7 @@ function add007I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742176666882118/EspadaCurta.png?ex=6737c5fd&is=6736747d&hm=7a275e7433e5d67fddf9f3a1f8a08c3033ad90b369fac7a7c2eb38334ef7ff69&";
+        iconeItem = "EspadaCurta.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1282,7 +1282,7 @@ function add009I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059671097394/MachadoCurto.png?ex=6737c5e1&is=67367461&hm=b199850d92f70f34198298643d8a682b5df2ec1e9d5ed358a6eef03b2b53e659&";
+        iconeItem = "MachadoCurto.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1308,7 +1308,7 @@ function add010I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742177589887006/FacaCurta.png?ex=6737c5fd&is=6736747d&hm=c1d022a6dcc4c7c45e07f6d38b07bb364f2b32992f0e4d687b863a8a97014635&";
+        iconeItem = "FacaCurta.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1361,7 +1361,7 @@ function add012I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059977146449/MachadoDePrata.png?ex=6737c5e1&is=67367461&hm=8df0c1e0ee0bbb357e54cc202789dc0921f66ce9573f58de575c30e79a5cae5a&";
+        iconeItem = "MachadoDePrata.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1388,7 +1388,7 @@ function add013I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742060518473810/MarteloMagno.png?ex=6737c5e1&is=67367461&hm=dee1d52990637db7f859bdcd10333c05a4834c2960e275945f082e0d7b9cb63b&";
+        iconeItem = "MarteloMagno.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1439,7 +1439,7 @@ function add015I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742177849937951/Faquete.png?ex=6737c5fd&is=6736747d&hm=9e46607dde828e15fb7634f6065b29f61c6c0fcd4f68654d564bf29794819626&";
+        iconeItem = "Faquete.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1493,7 +1493,7 @@ function add017I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006747234454/Pedra.png?ex=6737c5d4&is=67367454&hm=9529e2bb65c655cb82d33d2789b6ed58758e2912d3ccd8299b4849ce91c3d7e6&";
+        iconeItem = "Pedra.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1519,7 +1519,7 @@ function add018I() {
         BustType = 'NiB'
 
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742060262494351/Madeira.png?ex=6737c5e1&is=67367461&hm=0c8475695d70088de9700a7cef82ffa50f04742e45a17965cf7902b0775eabbf&";
+        iconeItem = "Madeira.png";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1546,7 +1546,7 @@ const Item018I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
         metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
         BustType = 'NiB'
 
-        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742176427937883/ChifreDeOrc.png?ex=6737c5fc&is=6736747c&hm=5090b6fee3367d4836602b03db45b72dd538f5ecdec30cfc8a015be367267b2a&";
+        iconeItem = "ChifreDeOrc.png";
 
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
@@ -1572,7 +1572,7 @@ function add020I() {
     BustType = 'NiB'
             raridadeItem = "Raro"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006411821077/Paper.png?ex=6737c5d4&is=67367454&hm=f3c3cd90daf48f59fa8cc8a73b4bf775f8dac1da19e53e8fe7b3fb025a022460&"
+   iconeItem = "Paper.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1594,7 +1594,7 @@ function add021I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742007410200666/PlacaDeFerro.png?ex=6737c5d4&is=67367454&hm=33c957454559dbca3c5616fb6629d666b4e23ab1f3f45222a16407c45dbe9080&"
+   iconeItem = "PlacaDeFerro.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1618,7 +1618,7 @@ function add022I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742061021659196/MinerioDeFerro.png?ex=6737c5e1&is=67367461&hm=22d7c697ab68e54f72f3db0fbe346979b19709014ed17a68fbaea476eace8f32&"
+   iconeItem = "MinerioDeFerro.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1642,7 +1642,7 @@ function add023I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742060774068234/MinerioDeCristal.png?ex=6737c5e1&is=67367461&hm=c3b9f40b9a23b780dbf09b981980ae6ce29b164db57c61a60e77d855dbafc2f8&"
+   iconeItem = "MinerioDeCristal.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1666,7 +1666,7 @@ function add024I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742007036903557/PlacaDeCristal.png?ex=6737c5d4&is=67367454&hm=bf254fd56520e0e5cd6eb183b8b0960fe4be85fd8bf62263014417b003568528&"
+   iconeItem = "PlacaDeCristal.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1690,7 +1690,7 @@ function add025I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175492472893/BarraDeFerro.png?ex=6737c5fc&is=6736747c&hm=40ccbfc5dcea5138a46dea732495738f06b84faac549a5a3fc56de869d57c78d&"
+   iconeItem = "BarraDeFerro.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1714,7 +1714,7 @@ function add026I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175215652965/BarraDeCristal.png?ex=6737c5fc&is=6736747c&hm=b3d7f6a857e47597f6a0de90c8343ab920475c69fbc19f17e61c3e44e656cdd4&"
+   iconeItem = "BarraDeCristal.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1738,7 +1738,7 @@ function add027I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742176050581636/BarraDeOuro.png?ex=6737c5fc&is=6736747c&hm=d6c3cf0d9c2a5b09854b1de61af804c10554eccef69b5d4f9176885235238dae&"
+   iconeItem = "BarraDeOuro.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1762,7 +1762,7 @@ function add028I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742061613191248/MinerioDeOuro.png?ex=6737c5e1&is=67367461&hm=92648259b5011ea8800547db3d8fb11aebaade070d45c496805d2aacd68292e8&"
+   iconeItem = "MinerioDeOuro.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1786,7 +1786,7 @@ function add029I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175756845148/BarraDeNeodinio.png?ex=6737c5fc&is=6736747c&hm=d846b6be19076cf947ff97dfceea1944eb7916e443bd25e218dab1aef1937ce4&"
+   iconeItem = "BarraDeNeodinio.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1810,7 +1810,7 @@ function add030I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742061310935110/MinerioDeNeodinio.png?ex=6737c5e1&is=67367461&hm=86c1a68cc94a30c27cc0f56bfb56b38435456d11b16b424d775c74835f6c3abd&"
+   iconeItem = "MinerioDeNeodinio.png"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1846,7 +1846,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059096346644/GoldFlower.png?ex=6737c5e0&is=67367460&hm=49fc2e0e2d37aac87356386d4151105ea6e8a7c34bc72079eac914791e1d29b0&"
+       iconeItem = "GoldFlower.png"
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -1872,7 +1872,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919039985123389/PeitoralDeFerro.png?ex=67386ab4&is=67371934&hm=98a6f6b6b1e24c27c6a3b4a6892f36bc63932ecfaad525ade648bae9bb56283a&"
+       iconeItem = "PeitoralDeFerro.png"
     armorType = 'peitoral'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -1898,7 +1898,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919040857407508/CalcaDeFerro.png?ex=67386ab4&is=67371934&hm=5b0041c82f1f0b977a4ff6c6bbf190fb130f9df84c2ac24ed8e8d2b83d9685ae&"
+       iconeItem = "CalcaDeFerro.png"
     armorType = 'calças'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -1950,7 +1950,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&"
+       iconeItem = "Null.png"
         armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2002,7 +2002,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919039230152734/CapaceteDeFerro.png?ex=67386ab4&is=67371934&hm=92b067d318f521a76a4a167fc505f8f258a8d89840978c8d227b275007b2a496&"
+       iconeItem = "CapaceteDeFerro.png"
         armorType = 'cabeça'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2028,7 +2028,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919040622530653/BotasDeFerro.png?ex=67386ab4&is=67371934&hm=910b370d2ae33d67df10c09a655a4830c9e09c6bcb430e5eac9251d7c86a2d35&"
+       iconeItem = "BotasDeFerro.png"
         armorType = 'botas'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2054,7 +2054,7 @@ function add031I() {
         BustType = 'NaN'
 
 
-       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919039552978964/CoracaoDeDragao.png?ex=67386ab4&is=67371934&hm=264f8a0bb93215d03c5858ca304144304b15fd251bca4e645b255482e1a813b1&"
+       iconeItem = "CoracaoDeDragao.png"
         armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      

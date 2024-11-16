@@ -16,17 +16,16 @@
 <body id="body">
 
     <!--<div style="height: 130Vh;width: 100Vw ;z-index: 5;position: absolute; margin-top: 0;" id="htmlE"></div>-->
-<img src="https://i.pinimg.com/736x/3d/0d/e4/3d0de4ad297a6dd5fc0f41b2d29e6f57.jpg">
     
         <div class="firstUI">
             
                 <div style="display: flex; gap: 5px; align-items: center; position: absolute;">
 
-                    <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734942016901212/PilarMini1.png?ex=6737bf40&is=67366dc0&hm=88ef2ad679b756ecb2cb389e0191410d01aba2fa120dfaf1ed8d33f949829886&">
+                    <img src="ui/PilarMini1.png">
 
                     <p>||| DINHEIRO : </p><p id="money">000</p><p> || HP :</p><p id="hp"> 000 </p><p>|| MANA : </p><p id="mana">000</p><p>|| XP : </p><p id="xp">000</p><p>/</p><p id="xpMax">000</p><p>|||</p><p>|| LEVEL : </p><p id="levelId">0</p><p>|||</p>
 
-                    <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734942474207305/PilarMini2.png?ex=6737bf40&is=67366dc0&hm=69e73749143d3dcf3bb0a1533ade1b6a70df0fd0ccd7b2e45e27e72119e9d6ee&"> 
+                    <img src="ui/PilarMini2.png"> 
                 
                 </div>
 
@@ -60,7 +59,7 @@
 
                         <p style="display: flex; justify-content: center;">\\ ESCOLHA SUA CLASSE //</p>
                         <div style="display: flex; justify-content: center; align-items: center; gap: 20px; ">
-                    <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734942771744799/PilarUi2.png?ex=6737bf40&is=67366dc0&hm=636c4e5d9d1cd7df84eabb6929d18f2552896bfa3bd4d0b8aa14e02de87b95ef&">
+                    <img src="ui/PilarUi2.png">
 
                             <div style=" display: flex; justify-items: center; align-items: center; flex-direction: column; gap: 10px; max-height: 100px; max-width: 200px; min-width: 200px;">
                             <button class="btnC" onclick="ClassG()">Guerreiro</button>
@@ -68,7 +67,7 @@
                             <button class="btnC" onclick="ClassA()">Assasino</button>
                             </div>
 
-                    <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734943035981917/PillarUi.png?ex=6737bf40&is=67366dc0&hm=afd57a17482760edc9a8f51ed733ed8415a087a9923284f0d2ded56de605c07b&">
+                    <img src="ui/PillarUi.png">
                         </div>
                     </div>
         
@@ -587,7 +586,7 @@
             <div class="displayCraft"  id="materialPreview">
 
                 <p id="CriarMsg"></p>
-                <img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&" width="200px" id="craftIMG">
+                <img src="Null.png" width="200px" id="craftIMG">
                 <p id="materias"></p>
                 <button onclick="CraftSelectI()" class="btn BuildCursor">Criar</button>
         
@@ -610,19 +609,19 @@
                 <div style="display: flex; align-items: flex-start; flex-direction: column;">
 
                     <div style="display: flex; justify-content: center;">
-                        <button onclick="CraftSelectT('025', BarraMetal, 'Barra De Ferro')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742175492472893/BarraDeFerro.png?ex=6737c5fc&is=6736747c&hm=40ccbfc5dcea5138a46dea732495738f06b84faac549a5a3fc56de869d57c78d&" width="40px"><p>Barra de ferro</p></button>
+                        <button onclick="CraftSelectT('025', 'BarraDeFerro.png', 'Barra De Ferro')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742175492472893/BarraDeFerro.png?ex=6737c5fc&is=6736747c&hm=40ccbfc5dcea5138a46dea732495738f06b84faac549a5a3fc56de869d57c78d&" width="40px"><p>Barra de ferro</p></button>
                     </div>
 
                     <div style="display: flex; justify-content: center;">
-                        <button onclick="CraftSelectT('026', BarraDeCristal , 'Barra De Cristal')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742175215652965/BarraDeCristal.png?ex=67386ebc&is=67371d3c&hm=4c71956709cf9c69aa104d4670eb3cb616124f2e02bbb00745cfaaf3094e78d6&" width="40px"><p>Barra de Cristal</p></button>
+                        <button onclick="CraftSelectT('026', 'BarraDeCristal.png' , 'Barra De Cristal')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742175215652965/BarraDeCristal.png?ex=67386ebc&is=67371d3c&hm=4c71956709cf9c69aa104d4670eb3cb616124f2e02bbb00745cfaaf3094e78d6&" width="40px"><p>Barra de Cristal</p></button>
                     </div>
 
                     <div style="display: flex; justify-content: center;">
-                        <button onclick="CraftSelectT('027', BarraDeOuro , 'Barra De Ouro')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742176050581636/BarraDeOuro.png?ex=67386ebc&is=67371d3c&hm=91c021b933f685d546a2487a8ded3879655e8f755d52e946d92780f021e118b0&" width="40px"><p>Barra de Ouro</p></button>
+                        <button onclick="CraftSelectT('027', 'BarraDeOuro.png' , 'Barra De Ouro')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742176050581636/BarraDeOuro.png?ex=67386ebc&is=67371d3c&hm=91c021b933f685d546a2487a8ded3879655e8f755d52e946d92780f021e118b0&" width="40px"><p>Barra de Ouro</p></button>
                     </div>
 
                     <div style="display: flex; justify-content: center;">
-                        <button onclick="CraftSelectT('029', BarraDeNeodinio , 'Barra De Neodinio')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742175756845148/BarraDeNeodinio.png?ex=67386ebc&is=67371d3c&hm=4dbdf35fc82ddb3661a15df54928317c8a63e6ddaf726012bc596ed55ba8eed6&" width="40px"><p>Barra de Neodinio</p></button>
+                        <button onclick="CraftSelectT('029', 'BarraDeNeodinio.png' , 'Barra De Neodinio')" style="border: none; background-color: rgb(140, 28, 28); display: flex; gap: 10px ;align-items: center;" ><img src="https://cdn.discordapp.com/attachments/1306741789373239297/1306742175756845148/BarraDeNeodinio.png?ex=67386ebc&is=67371d3c&hm=4dbdf35fc82ddb3661a15df54928317c8a63e6ddaf726012bc596ed55ba8eed6&" width="40px"><p>Barra de Neodinio</p></button>
                     </div>
                 
                 </div>
@@ -696,7 +695,7 @@
 
                         <div style="display: flex; gap: 16px;">
 
-                            <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734940473528380/inv.png?ex=6737bf3f&is=67366dbf&hm=e90b992db4f2b6efbd13cbcdfc3a13e8287110fbcb3edc74aaeba439ab1ae556&">
+                            <img src="ui/inv.png">
 
 
                             <div style="display: flex; align-items: center; flex-direction: column; margin: 10px;" id="idAcampPlace">
@@ -705,7 +704,7 @@
 
                             </div>
 
-                            <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734940947349524/inv2.png?ex=6737bf3f&is=67366dbf&hm=50b41b92c7d27bf0ce8886f1a8435bba0a69e639045eae25de3b50863c876c97&">
+                            <img src="ui/inv2.png">
 
                         </div>
                     
@@ -821,7 +820,7 @@
                 <br>
                 <br>
         
-                        <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734943669452853/barra1.png?ex=6737bf40&is=67366dc0&hm=86eba34fa78b06a4696fcc5f0070cbf6feeead06cb525fc5139c1f91b295764e&">
+                        <img src="ui/barra1.png">
         
                 <div style="display: flex; align-items: center; justify-content: center;">
         
@@ -901,7 +900,7 @@
         
                 </div>
         
-                        <img src="https://cdn.discordapp.com/attachments/1306734639452524607/1306734940196442294/barra2.png?ex=6737bf3f&is=67366dbf&hm=cd6198beb05fc05fd27ae03f6f5a7b46f904f1b9c7718e6291f489f957272182&">
+                        <img src="ui/barra2.png">
         
                         <div style="display: none; justify-items: center; align-items: center; flex-direction: column; padding-top: 50px;" id="InvInfoUi">
         
