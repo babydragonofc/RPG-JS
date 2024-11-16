@@ -8,6 +8,10 @@ var CraftNC1
 var CraftNC2
 var CraftNC3
 
+const BarraMetal = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175492472893/BarraDeFerro.png?ex=6737c5fc&is=6736747c&hm=40ccbfc5dcea5138a46dea732495738f06b84faac549a5a3fc56de869d57c78d&"
+const BarraDeNeodinio = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175756845148/BarraDeNeodinio.png?ex=67386ebc&is=67371d3c&hm=4dbdf35fc82ddb3661a15df54928317c8a63e6ddaf726012bc596ed55ba8eed6&"
+const BarraDeCristal = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175215652965/BarraDeCristal.png?ex=67386ebc&is=67371d3c&hm=4c71956709cf9c69aa104d4670eb3cb616124f2e02bbb00745cfaaf3094e78d6&"
+const BarraDeOuro = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742176050581636/BarraDeOuro.png?ex=67386ebc&is=67371d3c&hm=91c021b933f685d546a2487a8ded3879655e8f755d52e946d92780f021e118b0&"
 
 function CraftSelect(idItemSelect, NameItemSelect , RealNameSelect)
 {
@@ -32,7 +36,8 @@ if ( ItemForCraft[0] != 'NotIsCraft' )
 
         {
             //caso não tenha o item
-            alert("Você não tem os itens necesarios")
+            
+            GuiTextModify('Você não tem os itens necesarios') 
 
         }
 
@@ -61,7 +66,7 @@ if ( ItemForCraft[0] != 'NotIsCraft' )
 
         {
             //caso não tenha o item
-            alert("Você não tem os itens necesarios")
+            GuiTextModify("Você não tem os itens necesarios")
 
         }
 
@@ -90,7 +95,8 @@ if ( ItemForCraft[0] != 'NotIsCraft' )
 
         {
             //caso não tenha o item
-            alert("Você não tem os itens necesarios")
+            
+            GuiTextModify('Você não tem os itens necesariose') 
 
         }
 
@@ -148,7 +154,7 @@ else
 
 {
 
-alert("parece que esse item não é....... Craftavel..... Acho que o dev esta meio louco, ou ele não durmiu bem...")
+GuiTextModify("parece que esse item não é....... Craftavel..... Acho que o dev esta meio louco, ou ele não durmiu bem...")
 
 }
 

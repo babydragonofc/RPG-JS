@@ -204,21 +204,19 @@ function Start() {
     if ( classe != 0 )
 
         {
-Energia = 100;
-document.getElementById("valorEnergia").innerHTML = Energia;
+    Energia = 100;
+    document.getElementById("valorEnergia").innerHTML = Energia;
 
-document.getElementById("ipFOR").innerHTML = atk ;
-document.getElementById("ipDEF").innerHTML = def ;
-document.getElementById("ipAGI").innerHTML = agi ;
+    document.getElementById("ipFOR").innerHTML = atk ;
+    document.getElementById("ipDEF").innerHTML = def ;
+    document.getElementById("ipAGI").innerHTML = agi ;
 
            Time()
 
 
 
-            
         Pagina('idClass','idJogo','Jogo')
-        idJogo.style.paddingTop = "25px"
-        idJogo.style.paddingBottom = "25px"
+
 
         //definição de arma
 
@@ -289,13 +287,16 @@ BiomeCr()
                 add010I(),UssarItem(1),LixoItem(1);
 
             }
+
+            StartHasClick = true;
+
         }
 
     else 
 
     {
     
-    alert("Você deve escolher uma classe!")
+        GuiTextModify('Selecione uma classe')
 
     }
 
@@ -354,12 +355,6 @@ biomeCheck();
 var perto;
 function Explorar() {
 
-/*let idJogo = document.getElementById("idJogo")
-idJogo.style.display = "none"
-
-let idExplore = document.getElementById("idExplorar")
-idJogo.style.display = "flex"*/
-
 let idJogo = document.getElementById("idJogo")
 idJogo.style.display = "none"
 
@@ -389,17 +384,14 @@ UlocateId = 'idBatle';
 let idExplorar = document.getElementById("idExplorar")
 idExplorar.style.display = "none"  
 
-let idTurn = document.getElementById("idTurn")
-idTurn.style.display = "none"  
-
-let idMyTurn = document.getElementById("idMyturn")
+let idMyTurn = document.getElementById("idBatleGui")
 idMyTurn.style.display = "flex"  
 
 let idBatle = document.getElementById("idBatle")
 idBatle.style.display = "flex"
 
 
-document.getElementById("ipInimigo").innerHTML =  nomeInimigo + " te aborda";
+//document.getElementById("ipInimigo").innerHTML =  fraseIniI + nomeInimigo + fraseIniF;
 console.log("nome:" + nomeInimigo + "| ip:" + ipInimigo + "| xp:" + xpInimigo + "| atk:" + atkInimigo + "| agi:" + agiInimigo)
 
 }
@@ -455,7 +447,7 @@ atkF = 0;
 
             atkF = (atk + armaAtaque + armaduraAtaque) * 2
         
-            alert("critico")
+            GuiTextModify('Critico') 
 
         }
 
@@ -467,17 +459,18 @@ atkF = 0;
 
         }
 
+        document.getElementById('inimigoSquare').style.backgroundColor = "red";
+        setTimeout(function() {
+    
+            document.getElementById('inimigoSquare').style.backgroundColor = "gray";
+    
+        }, 500);
+
         hpInimigo = hpInimigo - atkF
 
         if (hpInimigo <= 0)
 
         {
-
-            let idBatle = document.getElementById("idBatle")
-            idBatle.style.display = "none"
-    
-            let idExplorar = document.getElementById("idExplorar")
-            idExplorar.style.display = "flex" 
     
             document.getElementById("ipMsgE").innerHTML = "Você mata o " + nomeInimigo + ", ele deixa cair " + moneydrop + " moedas, você ganha " + xpInimigo + " de Xp";
             
@@ -487,11 +480,25 @@ atkF = 0;
             document.getElementById("money").innerHTML =  money;
             document.getElementById("xp").innerHTML =  xp;
 
+            if(itemDrop != 'NaN') { eval('add' + itemDrop  + 'I()') }
+
+            let idBatle = document.getElementById("idBatle")
+            idBatle.style.display = "none"
+
+            Ulocate = 'Explorar'
+            UlocateId = 'idExplorar';
+            let idExplorar = document.getElementById("idExplorar")
+            idExplorar.style.display = "flex"  
+
             levelUp()
         }
 
         else {
-            Turno()
+            setTimeout(function() {
+    
+                Turno()
+        
+            }, 1000);
         }
         document.getElementById("hpInimigo").innerHTML =  hpInimigo;
         console.log("nome:" + nomeInimigo + "| ip:" + ipInimigo + "| xp:" + xpInimigo + "| atk:" + atkInimigo + "| agi:" + agiInimigo + " | hp:" + hpInimigo)
@@ -518,25 +525,34 @@ function Defender() {
 
 function Turno() {
 
-    let idMyTurn = document.getElementById("idMyturn")
-    idMyTurn.style.display = "none"
-    
-
-    let OK = document.getElementById("idTurn")
-    OK.style.display = "flex"; 
-
-    document.getElementById("ipInimigoMsg").innerHTML = "ele te ataca";
+    GuiTextModify("ele te ataca")
 
     hp = hp - (atkInimigo - defAtiva)
 
     document.getElementById("hp").innerHTML =  hp;
+
+    document.getElementById('displayBtnsBatle').style.display = 'none';
+
+    document.getElementById('playerSquare').style.backgroundColor = "red";
+    setTimeout(function() {
+
+        document.getElementById('playerSquare').style.backgroundColor = "brown";
+
+      }, 500);
+      
+    setTimeout(function() {
+
+        MeuTurno();
+
+      }, 1000);
+
     //var idGame = document.getElementById("idGame")
     //idGame.style.BoxShadow = " inset 0px 0px 165px 13px red";
     //setTimeout(3000,animator());
-
+    
 }
 /*function animator() {
-        alert("animator")
+        GuiTextModify("animator")
     let idGame = document.getElementById("idGame")
     //idGame.style.BoxShadow = " none";
 
@@ -544,14 +560,10 @@ function Turno() {
 
 function MeuTurno() {
 
-    let idMyTurn = document.getElementById("idMyturn")
-    idMyTurn.style.display = "flex"
-    
+    defAtiva = (def + armaDefesa + armaduraDefesa) / 2;
 
-    let OK = document.getElementById("idTurn")
-    OK.style.display = "none" 
+    document.getElementById('displayBtnsBatle').style.display = 'flex';
 
-    defAtiva = 0;
 
 }
 
@@ -581,6 +593,7 @@ function LocateMsg() {
 
 }
 
+/*
 function ExplorarVoltar() {
 
     let idExplorar = document.getElementById("idExplorar")
@@ -626,7 +639,7 @@ function ExplorarCaminhar() {
     let idForja = document.getElementById("idCaminhar")
     idForja.style.display = "flex"
 }
-
+*/
 
 //LOCAIS VILA
 
@@ -730,325 +743,32 @@ function infOpen() {
 
 }
 
-function Comprar001I() {
+function ComprarItem( item, nomeItem, preço) {
 
-/*if (money >= 5) 
-{
+    if( money >= preço ) 
     
-}*/
+        {
+    
+            money = money - preço;
 
-if( money >= 5 ) 
+            eval('add' + item + 'I()')
 
-    {
+            GuiTextModify('Você comprou um(a)' + nomeItem) 
+    
+        }
+    
+        else
+    
+        {
+    
+            GuiTextModify('Você não tem dinheiro o suficiente') 
+    
+        }
+    
+        document.getElementById("money").innerHTML = money;
 
-        money = money - 5;
-
-        add001I()
-
-    }
-
-    else
-
-    {
-
-        alert("Você não tem dinheiro");
-
-    }
-
-    document.getElementById("money").innerHTML =  money;
 
 }
-
-function Comprar002I() {
-
-    if( money >= 10 ) 
-    
-        {
-    
-            money = money - 10;
-
-            add002I()
-    
-        }
-    
-        else
-    
-        {
-    
-            alert("Você não tem dinheiro");
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-    }
-
-    function Comprar003I() {
-
-        if( money >= 20 ) 
-        
-            {
-        
-                money = money - 20;
-
-                add003I()
-        
-            }
-        
-            else
-        
-            {
-        
-                alert("Você não tem dinheiro");
-        
-            }
-        
-            document.getElementById("money").innerHTML =  money;
-
-        }
-
-    function Comprar004I() {
-
-        if( money >= 50 ) 
-            
-            {
-            
-                money = money - 50;
-    
-                add004I()
-            
-            }
-            
-            else
-            
-            {
-            
-                alert("Você não tem dinheiro");
-            
-            }
-            
-            document.getElementById("money").innerHTML =  money;
-    
-            }
-
-    function Comprar005I() {
-
-        if( money >= 100 ) 
-        
-            {
-        
-                money = money - 100;
-
-                add005I()
-        
-            }
-        
-            else
-        
-            {
-        
-                alert("Você não tem dinheiro");
-        
-            }
-        
-            document.getElementById("money").innerHTML =  money;
-
-        }
-
-        function Comprar006I() {
-
-            if( money >= 200 ) 
-            
-                {
-            
-                    money = money - 200;
-    
-                    add006I()
-            
-                }
-            
-                else
-            
-                {
-            
-                    alert("Você não tem dinheiro");
-            
-                }
-            
-                document.getElementById("money").innerHTML =  money;
-    
-            }
-
-            function Comprar008I() {
-
-                if( money >= 10 ) 
-                
-                    {
-                
-                        money = money - 10;
-        
-                        
-                        add031I()
-                
-                    }
-                
-                    else
-                
-                    {
-                
-                        alert("Você não tem dinheiro");
-                
-                    }
-                
-                    document.getElementById("money").innerHTML =  money;
-        
-                }
-
-function Comprar011I() {
-
-    if( money >= 50 ) 
-    
-        {
-    
-            money = money - 50;
-
-            add011I()
-    
-        }
-    
-        else
-    
-        {
-    
-            alert("Você não tem dinheiro");
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-    }
-
-function Comprar012I() {
-
-    if( money >= 100 ) 
-    
-        {
-    
-            money = money - 100;
-
-            add012I()
-    
-        }
-    
-        else
-    
-        {
-    
-            alert("Você não tem dinheiro");
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-    }
-
-function Comprar013I() {
-
-    if( money >= 200 ) 
-    
-        {
-    
-            money = money - 200;
-
-            add013I()
-    
-        }
-    
-        else
-    
-        {
-    
-            alert("Você não tem dinheiro");
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-    }
-
-function Comprar014I() {
-
-    if( money >= 50 ) 
-    
-        {
-    
-            money = money - 50;
-
-            add014I()
-    
-        }
-    
-        else
-    
-        {
-    
-            alert("Você não tem dinheiro");
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-    }
-
-function Comprar015I() {
-
-    if( money >= 100 ) 
-    
-        {
-    
-            money = money - 100;
-
-            add015I()
-    
-        }
-    
-        else
-    
-        {
-    
-            alert("Você não tem dinheiro");
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-    }
-
-    function Comprar016I() {
-
-    if( money >= 200 ) 
-    
-        {
-    
-            money = money - 200;
-
-            add016I()
-    
-        }
-    
-        else
-    
-        {
-    
-            alert("Você não tem dinheiro");
-    
-        }
-    
-        document.getElementById("money").innerHTML = money;
-
-    }
-    
-
 
 
 var page;
@@ -1281,8 +1001,6 @@ function Dormir() {
 
 //inimigos 
 
-//001 Saqueador
-
 function BatleSaquiadores() {
 
 
@@ -1293,6 +1011,11 @@ function BatleSaquiadores() {
     atkInimigo = 10;
     agiInimigo = 3;
     moneydrop = 10;
+
+    itemDrop = 'NaN'
+
+    fraseIniI = ' Um '
+    fraseIniF = ' te aborda'
 
     document.getElementById("hpInimigoMax").innerHTML =  hpInimigo;
     document.getElementById("hpInimigo").innerHTML =  hpInimigo;
@@ -1312,6 +1035,36 @@ function BatleOrc() {
     atkInimigo = 20;
     agiInimigo = 9;
     moneydrop = 30;
+
+    itemDrop = '019'
+
+    fraseIniI = ' O '
+    fraseIniF = ' grune para você'
+
+    document.getElementById("hpInimigoMax").innerHTML =  hpInimigo;
+    document.getElementById("hpInimigo").innerHTML =  hpInimigo;
+    document.getElementById("nomeInimigo").innerHTML =  nomeInimigo;
+
+
+    Batle();
+
+}
+
+function BatleRedDragon() {
+
+
+    nomeInimigo = "Dragão vermelho";
+    ipInimigo = 3;
+    hpInimigo = 100;
+    xpInimigo = 100;
+    atkInimigo = 50;
+    agiInimigo = 10;
+    moneydrop = 30;
+
+    itemDrop = '040s'
+
+    fraseIniI = 'O '
+    fraseIniF = ' Bate suas assas em ameaça'
 
     document.getElementById("hpInimigoMax").innerHTML =  hpInimigo;
     document.getElementById("hpInimigo").innerHTML =  hpInimigo;
@@ -1342,7 +1095,7 @@ function add001I() {
     BustType = 'hp'
     raridadeItem = "Comum"
 
-    iconeItem = "redPotion.png";
+    iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742008198729808/redPotion.png?ex=6737c5d4&is=67367454&hm=a52deaf92b21cb55defe418689dd1e2dbcd267e55a13499c0b83a4d400adc2c2&";
     armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1366,7 +1119,7 @@ function add002I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-    iconeItem = "semImg.png";
+    iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919040362479646/BotasDeCouro.png?ex=67386ab4&is=67371934&hm=fa66b0ed8f49b5fb071b5646f5e76fd12dbd49e01a1a04c40b2decdd55a531b9&";
 armorType = 'botas'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1378,7 +1131,7 @@ const Item002I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
 
 
 function add003I() {
-    alert("o item não funciona ainda")
+    GuiTextModify("o item não funciona ainda")
         additem = "Kit de acampamento simples";
         additemuse = "NaN";
         buffvida = 0;
@@ -1393,7 +1146,7 @@ function add003I() {
         BustType = 'NiB'
 
 
-        iconeItem = "KitDeAcampamentoSimples.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059331223652/KitDeAcampamentoSimples.png?ex=6737c5e1&is=67367461&hm=c9415f3ebd5dfaab3f26a39e2ae33845d3e83e3ef36678d0ec5af3011361a48a&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1472,7 +1225,7 @@ function add006I() {
         BustType = 'NiB'
 
 
-        iconeItem = "espadaDoSol.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742177027854507/espadaDoSol.png?ex=6737c5fd&is=6736747d&hm=87ffb3db92866ec0e736c81529878e1bd112df70e3d76d11260b82ed03e27bc0&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1499,7 +1252,7 @@ function add007I() {
         BustType = 'NiB'
 
 
-        iconeItem = "EspadaCurta.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742176666882118/EspadaCurta.png?ex=6737c5fd&is=6736747d&hm=7a275e7433e5d67fddf9f3a1f8a08c3033ad90b369fac7a7c2eb38334ef7ff69&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1529,7 +1282,7 @@ function add009I() {
         BustType = 'NiB'
 
 
-        iconeItem = "MachadoCurto.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059671097394/MachadoCurto.png?ex=6737c5e1&is=67367461&hm=b199850d92f70f34198298643d8a682b5df2ec1e9d5ed358a6eef03b2b53e659&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1555,7 +1308,7 @@ function add010I() {
         BustType = 'NiB'
 
 
-        iconeItem = "FacaCurta.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742177589887006/FacaCurta.png?ex=6737c5fd&is=6736747d&hm=c1d022a6dcc4c7c45e07f6d38b07bb364f2b32992f0e4d687b863a8a97014635&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1608,7 +1361,7 @@ function add012I() {
         BustType = 'NiB'
 
 
-        iconeItem = "MachadoDePrata.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059977146449/MachadoDePrata.png?ex=6737c5e1&is=67367461&hm=8df0c1e0ee0bbb357e54cc202789dc0921f66ce9573f58de575c30e79a5cae5a&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1635,7 +1388,7 @@ function add013I() {
         BustType = 'NiB'
 
 
-        iconeItem = "MarteloMagno.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742060518473810/MarteloMagno.png?ex=6737c5e1&is=67367461&hm=dee1d52990637db7f859bdcd10333c05a4834c2960e275945f082e0d7b9cb63b&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1686,7 +1439,7 @@ function add015I() {
         BustType = 'NiB'
 
 
-        iconeItem = "Faquete.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742177849937951/Faquete.png?ex=6737c5fd&is=6736747d&hm=9e46607dde828e15fb7634f6065b29f61c6c0fcd4f68654d564bf29794819626&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1740,7 +1493,7 @@ function add017I() {
         BustType = 'NiB'
 
 
-        iconeItem = "Pedra.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006747234454/Pedra.png?ex=6737c5d4&is=67367454&hm=9529e2bb65c655cb82d33d2789b6ed58758e2912d3ccd8299b4849ce91c3d7e6&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1766,7 +1519,7 @@ function add018I() {
         BustType = 'NiB'
 
 
-        iconeItem = "Madeira.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742060262494351/Madeira.png?ex=6737c5e1&is=67367461&hm=0c8475695d70088de9700a7cef82ffa50f04742e45a17965cf7902b0775eabbf&";
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
 
@@ -1793,7 +1546,7 @@ const Item018I = ["NotIsCraft",NaN, 0 ,NaN, 0 ,NaN, 0]
         metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
         BustType = 'NiB'
 
-        iconeItem = "ChifreDeOrc.png";
+        iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742176427937883/ChifreDeOrc.png?ex=6737c5fc&is=6736747c&hm=5090b6fee3367d4836602b03db45b72dd538f5ecdec30cfc8a015be367267b2a&";
 
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
@@ -1819,7 +1572,7 @@ function add020I() {
     BustType = 'NiB'
             raridadeItem = "Raro"
 
-   iconeItem = "Paper.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006411821077/Paper.png?ex=6737c5d4&is=67367454&hm=f3c3cd90daf48f59fa8cc8a73b4bf775f8dac1da19e53e8fe7b3fb025a022460&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1841,7 +1594,7 @@ function add021I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "PlacaDeFerro.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742007410200666/PlacaDeFerro.png?ex=6737c5d4&is=67367454&hm=33c957454559dbca3c5616fb6629d666b4e23ab1f3f45222a16407c45dbe9080&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1865,7 +1618,7 @@ function add022I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "MinerioDeFerro.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742061021659196/MinerioDeFerro.png?ex=6737c5e1&is=67367461&hm=22d7c697ab68e54f72f3db0fbe346979b19709014ed17a68fbaea476eace8f32&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1889,7 +1642,7 @@ function add023I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "MinerioDeCristal.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742060774068234/MinerioDeCristal.png?ex=6737c5e1&is=67367461&hm=c3b9f40b9a23b780dbf09b981980ae6ce29b164db57c61a60e77d855dbafc2f8&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1913,7 +1666,7 @@ function add024I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "PlacaDeCristal.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742007036903557/PlacaDeCristal.png?ex=6737c5d4&is=67367454&hm=bf254fd56520e0e5cd6eb183b8b0960fe4be85fd8bf62263014417b003568528&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1937,7 +1690,7 @@ function add025I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "BarraDeFerro.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175492472893/BarraDeFerro.png?ex=6737c5fc&is=6736747c&hm=40ccbfc5dcea5138a46dea732495738f06b84faac549a5a3fc56de869d57c78d&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1961,7 +1714,7 @@ function add026I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "BarraDeCristal.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175215652965/BarraDeCristal.png?ex=6737c5fc&is=6736747c&hm=b3d7f6a857e47597f6a0de90c8343ab920475c69fbc19f17e61c3e44e656cdd4&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -1985,7 +1738,7 @@ function add027I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "BarraDeOuro.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742176050581636/BarraDeOuro.png?ex=6737c5fc&is=6736747c&hm=d6c3cf0d9c2a5b09854b1de61af804c10554eccef69b5d4f9176885235238dae&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -2009,7 +1762,7 @@ function add028I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "MinerioDeOuro.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742061613191248/MinerioDeOuro.png?ex=6737c5e1&is=67367461&hm=92648259b5011ea8800547db3d8fb11aebaade070d45c496805d2aacd68292e8&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -2033,7 +1786,7 @@ function add029I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "BarraDeNeodinio.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742175756845148/BarraDeNeodinio.png?ex=6737c5fc&is=6736747c&hm=d846b6be19076cf947ff97dfceea1944eb7916e443bd25e218dab1aef1937ce4&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -2057,7 +1810,7 @@ function add030I() {
     BustType = 'NiB'
             raridadeItem = "Comum"
 
-   iconeItem = "MinerioDeNeodinio.png"
+   iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742061310935110/MinerioDeNeodinio.png?ex=6737c5e1&is=67367461&hm=86c1a68cc94a30c27cc0f56bfb56b38435456d11b16b424d775c74835f6c3abd&"
 armorType = 'NAA'     
     addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
  
@@ -2093,7 +1846,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "GoldFlower.png"
+       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742059096346644/GoldFlower.png?ex=6737c5e0&is=67367460&hm=49fc2e0e2d37aac87356386d4151105ea6e8a7c34bc72079eac914791e1d29b0&"
     armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2119,7 +1872,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "GoldFlower.png"
+       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919039985123389/PeitoralDeFerro.png?ex=67386ab4&is=67371934&hm=98a6f6b6b1e24c27c6a3b4a6892f36bc63932ecfaad525ade648bae9bb56283a&"
     armorType = 'peitoral'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2145,7 +1898,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "GoldFlower.png"
+       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919040857407508/CalcaDeFerro.png?ex=67386ab4&is=67371934&hm=5b0041c82f1f0b977a4ff6c6bbf190fb130f9df84c2ac24ed8e8d2b83d9685ae&"
     armorType = 'calças'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2171,7 +1924,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "GoldFlower.png"
+       iconeItem = "semImg.png"
         armorType = 'cabeça'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2197,7 +1950,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "GoldFlower.png"
+       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&"
         armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2223,7 +1976,7 @@ function add031I() {
         BustType = 'NiB'
 
 
-       iconeItem = "GoldFlower.png"
+       iconeItem = "semImg.png"
         armorType = 'NAA'     
         addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
      
@@ -2233,22 +1986,168 @@ function add031I() {
     
     const Item037I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
    
-//002I Botas de couro
+    function add038I() {
+    
 
-//003I Kit de acampamento simples
+        additem = "Capacete de Ferro";
+        additemuse = "armadura";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 5;
+        raridadeItem = "Comum"
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
+       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919039230152734/CapaceteDeFerro.png?ex=67386ab4&is=67371934&hm=92b067d318f521a76a4a167fc505f8f258a8d89840978c8d227b275007b2a496&"
+        armorType = 'cabeça'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+    
+    const Item038I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
+    function add039I() {
+    
+
+        additem = "Botas de Ferro";
+        additemuse = "armadura";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 5;
+        raridadeItem = "Comum"
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NiB'
+
+
+       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919040622530653/BotasDeFerro.png?ex=67386ab4&is=67371934&hm=910b370d2ae33d67df10c09a655a4830c9e09c6bcb430e5eac9251d7c86a2d35&"
+        armorType = 'botas'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+    
+    const Item039I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+   
+    function add040I() {
+    
+
+        additem = "Coração de dragão";
+        additemuse = "usavel";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Raro"
+        metaType = 'Func'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem, func: 'LifeUp()'}
+        BustType = 'NaN'
+
+
+       iconeItem = "https://cdn.discordapp.com/attachments/1306741789373239297/1306919039552978964/CoracaoDeDragao.png?ex=67386ab4&is=67371934&hm=264f8a0bb93215d03c5858ca304144304b15fd251bca4e645b255482e1a813b1&"
+        armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+
+    function add041I() {
+    
+        //parabens para mim! 2024
+
+        additem = "Chapeu de festa";
+        additemuse = "armadura";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Raro"
+        metaType = 'normal'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem}
+        BustType = 'NaN'
+
+
+       iconeItem = "semImg.png"
+        armorType = 'cabeça'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+    
+    const Item040I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+
+    function add042I() {
+
+        additem = "Semente";
+        additemuse = "Acamp";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Raro"
+        metaType = 'Acamp'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem, quantia:1, obj:'plantaçãoTrigo'}
+        BustType = 'NaN'
+
+
+       iconeItem = "semImg.png"
+        armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+    
+    const Item042I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+
+    function add043I() {
+
+        additem = "Semente c";
+        additemuse = "Acamp";
+        buffmana = 0;
+        buffmoney = 0;
+        atkBustPot = 0;
+        agiBustPot = 0;
+        defBustPot = 0;
+        raridadeItem = "Raro"
+        metaType = 'Acamp'    
+        metaItem = {idMeta:metaType, /*id:idItem,*/ nome:additem, quantia:1, obj:'plantaçãoTrigo'}
+        BustType = 'NaN'
+
+
+       iconeItem = "semImg.png"
+        armorType = 'NAA'     
+        addList = [additem, additemuse, buffvida, buffmana, buffmoney, atkBustPot, agiBustPot, defBustPot, raridadeItem, iconeItem, 1, armorType , metaItem, BustType] 
+     
+       addItem()
+       
+    }  
+    
+    const Item043I = ["NotIsCraft", 'NaN', 0 ,'NaN', 0 ,'NaN', 0]
+
 
 function a() {
     money = money + 10;
     document.getElementById("money").innerHTML =  money;
-
-
-
 }
 
 function vila() {
 
 perto = "vilarejo";
-
 
 }
 
@@ -2256,6 +2155,21 @@ function MontarAlgo() {
 
     console.log("aaaa")
     montarAcamp()
+
+}
+
+function LifeUp() {
+
+hpMax = hpMax + 50
+
+console.log('Vida Maxima Aumentada')
+GuiTextModify('Sua vida Maxima foi aumentada')
+
+hp = hpMax;
+
+document.getElementById("hp").innerHTML =  hp;
+
+
 
 }
 
@@ -2450,12 +2364,20 @@ if ( CheatCodeText == "Alyson" || CheatCodeText == "Gleyson")
 
 }
 
-if ( CheatCodeText == 'Mizinha')
+if ( CheatCodeText == 'panetone salgado')
 {
 
 add032I()
 
 }
+
+if ( CheatCodeText == '0311')
+{
+
+add041I()
+
+}
+
 }
 
 
@@ -2482,7 +2404,7 @@ const map = [
     ["mar", "mar", "mar", "mar", "mar", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "floresta", "floresta", "floresta", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
-    ["mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
+    ["mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "Vulcão", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "mar", "mar", "planicie", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
     ["mar", "mar", "mar", "mar", "mar", "mar", "mar", "planicie", "montanha", "montanha", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "planicie", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar", "mar" ],
@@ -2536,75 +2458,48 @@ const mapPerto = [
 
 var Gay;
 var Sla;
-function AddTeste()
+function AddTeste() {
+  for (let i = 0; i < maxCoiso; i++) {
+    for (let j = 0; j < maxCoiso; j++) {
+      let classeBudega = map[i][j];
+      let mapDivTeste = document.getElementById(i); // Get the div based on the outer loop's i
 
-{
-    for (let i = 0; i < maxCoiso; i++) {
-        // linha x
-      
-    var IdDiv = i;
+      const block = document.createElement("div");
+      block.classList.add("mapBox");
+      block.classList.add(classeBudega);
 
-    for (let i = 0; i < maxCoiso; i++) {
-        // Coluna y
-      
-    
-    var ClassDiv = i;
+      // Create a unique ID using both i and j
+      idDeCadaBloco = `map${j + 1}x${i + 1}y`; 
+      block.id = idDeCadaBloco;
 
+      mapDivTeste.appendChild(block);
 
-    let classeBudega = map[IdDiv][ClassDiv];
-    let mapDivTeste = document.getElementById(IdDiv)
-    const block = document.createElement("div");
-    block.classList.add("mapBox");
-    block.classList.add(classeBudega );
-    idDeCadaBloco = eval("'map" + (ClassDiv  + 1) + "x" + (IdDiv + 1) + "y'");
-    
-
-
-
-    mapDivTeste.appendChild(block);
-
-    block.id = idDeCadaBloco;
-    if ( mapPerto[IdDiv][ClassDiv] != 'Nada' )
-    {
-
-        Gay = mapPerto[IdDiv][ClassDiv];
-        console.log(Gay)
-        let PertoT = eval("'mapPerto" + (ClassDiv  + 1) + "x" + (IdDiv + 1) + "y'");
+      if (mapPerto[i][j] !== 'Nada') {
+        let Gay = mapPerto[i][j];
+        let PertoT = `mapPerto${j + 1}x${i + 1}y`;
         const pertoTitle = document.createElement("p");
         pertoTitle.id = PertoT;
-        //pertoTitle = mapPerto[IdDiv][ClassDiv] ;
 
-
-        let algumaCoisa = document.getElementById(idDeCadaBloco)
-        algumaCoisa.appendChild(pertoTitle);
+        block.appendChild(pertoTitle); // Append to the newly created block
 
         document.getElementById(PertoT).innerHTML = Gay;
-
-
-
-
+      }
     }
-    }
-
-    }
+  }
 }
-function AddTesteDiv()
-{
-    for (let i = 0; i < maxCoiso; i++) {
-        // Código a ser repetido
-      
-    var IdDiv = i;
 
-    let mapDivTeste = document.getElementById("mapDiv")
+function AddTesteDiv() {
+  let mapDivTeste = document.getElementById("mapDiv");
+  for (let i = 0; i < maxCoiso; i++) {
     const blockDiv = document.createElement("div");
     blockDiv.classList.add("mapBoxDiv");
-    blockDiv.id = IdDiv;
+    blockDiv.id = i; // Unique ID for the div
     mapDivTeste.appendChild(blockDiv);
-    }
-
-    AddTeste()
-
+  }
+  AddTeste();
 }
+
+
 
 const GuiText = document.getElementById("textGUI");
 const GuiTextDiv = document.getElementById("textGuiDiv");
@@ -2619,7 +2514,30 @@ function GuiTextModify(text) {
     }, 2500); 
 }
 
+const BigGuiDiv = document.getElementById("BigGuiDiv");
+const BigGuiTitle = document.getElementById("BigGuiTitle");
+const BigGuiPar = document.getElementById("BigGuiPar");
 
+function BigGuiTextModify(title, par, backGroundColor) { 
+    
+    BigGuiDiv.style.display = 'flex';
+    BigGuiTitle.innerHTML = title; 
+    BigGuiPar.innerHTML = par; 
+
+    setTimeout(function() {
+
+        BigGuiDiv.style.display = 'none';
+
+    }, 2500); 
+}
+
+function DebugOn() {
+
+    document.getElementById("debugDiv").style.display = 'flex';
+    document.getElementById("debugDiv2").style.display = 'flex';
+    document.getElementById("debugDiv3").style.display = 'flex';
+
+}
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀W⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⣀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -2640,3 +2558,59 @@ function GuiTextModify(text) {
 
 HAPPY :D
 */
+
+// ok br la
+
+var GuiaPage = 0;
+
+var StartHasClick = false
+var CanClickGuidePage = true
+
+const guiaFalas = ['Seja bem vindo ao mundo de <b>Chaos Odyssey</b>', 'Você podera aqui explorar o mundo, desbravar masmorras, cozinhar, e muito  mais', 'De inicio escolha sua clase', 'no botão de explorar você podera explorar os seus arredores']
+const guiaFalasFunc = [null, null, ' CanClickGuidePageFunc(StartHasClick)']
+
+function CanClickGuidePageFunc(varFor) { if(varFor) { CanClickGuidePage = true; } else { CanClickGuidePage = false; } }
+
+
+function GuiaP() {
+
+    eval(guiaFalasFunc[GuiaPage])
+
+
+
+    if (CanClickGuidePage) {
+
+        GuiaPage++
+
+        GuiaBook()
+
+    }
+}
+
+function GuiaOpen() {
+
+
+
+}
+
+function GuiaBook() {
+
+    console.log(guiaFalas[GuiaPage])
+
+    document.getElementById('TextHelpGame').innerHTML =  guiaFalas[GuiaPage];
+
+    if (guiaFalasFunc != null)
+    {
+
+
+        eval(guiaFalasFunc[GuiaPage])
+        console.log(guiaFalasFunc[GuiaPage])
+
+    }
+
+}
+
+// ;-;
+//quero expreçar meu desgosto por dois bugs extremamente bestas que eu encontrei no jogo
+
+

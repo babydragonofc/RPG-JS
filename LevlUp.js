@@ -2,7 +2,7 @@ const TelaLevelUp = document.getElementById('idLevelUp')
 
 function levelUp() {
 
-    //xp = xpMax
+   // xp = xpMax
 if ( xp >= xpMax )
 
     {
@@ -15,6 +15,9 @@ if ( xp >= xpMax )
         
         level++
 
+
+        BigGuiTextModify('NOVO NIVEL ALCANÇADO!', ('Level ' + level), 'backGroundColor')
+        
         xp = 0
         document.getElementById("xp").innerHTML =  xp;
 
@@ -78,4 +81,10 @@ idG.style.display = "flex"
 
 TelaLevelUp.style.display = "none"
  
+}
+
+function AlliciaLove() {
+
+document.getElementById('displayBtnsBatle').style.display = 'none';
+
 }

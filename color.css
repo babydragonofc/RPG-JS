@@ -19,7 +19,7 @@ body {
     border-bottom: rgb(77, 76, 86) 10px solid;
     border-left: none;
     border-right: none;
-    padding: 5px;
+    padding: 35px 5px 35px  5px;
     color: rgb(26, 27, 29);
     font-size: 110%;
     align-items: center;
@@ -31,6 +31,7 @@ body {
 
     display: flex;
     justify-content: center;
+    gap: 5px;
 
 }
 
@@ -500,7 +501,7 @@ font-weight: 600;
     display: flex; align-items: center; 
     justify-content: center;
 
-    background: url("Null.png") no-repeat center;
+    background: url("https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&") no-repeat center;
     background-size: 100% ;
     padding: 5px;
 }
@@ -589,33 +590,62 @@ cursor: url('/cursor/HamerCursor.png'), auto;
 
 }
 
-.craftDiv{
+    .acampDiv{
 
-    background-color: brown; 
-    width: 200px;
-    height: 300px; 
-    padding: 20px; 
-    justify-content: flex-end; 
-    overflow-y: scroll;
-    border: rgb(154, 17, 17) 5px solid;
-
-}
-
-    .craftDiv::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-        background-color: maroon;
+        display: flex;
+        margin: 5px;
+        background-color: brown;
+        width: 200px;
+        height: 80px;
+        /* height: 00px; */
+        overflow-x: scroll;
+        border: rgb(154, 17, 17) 5px solid;
+        align-items: center;
+        gap: 10px;
+        flex-direction: row;
     }
+    
+        .acampDiv::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background-color: maroon;
+        }
+    
+        .acampDiv::-webkit-scrollbar-thumb {
+    
+            background-color: rgb(109, 1, 1);
+    
+        }
 
-    .craftDiv::-webkit-scrollbar-thumb {
+        .craftDiv{
 
-        background-color: rgb(109, 1, 1);
-
-    }
-
-    .craftDiv div {
-    margin-top: 10px;
-    }
+            background-color: brown; 
+            
+            height: 300px; 
+            padding: 20px; 
+            justify-content: flex-end; 
+            overflow-y: scroll;
+            border: rgb(154, 17, 17) 5px solid;
+            gap: 100px;
+            max-width: 700px;
+        
+        }
+        
+        .craftDiv::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background-color: maroon;
+            }
+        
+            .craftDiv::-webkit-scrollbar-thumb {
+        
+                background-color: rgb(109, 1, 1);
+        
+            }
+        
+            .craftDiv div {
+            margin-top: 10px;
+            }
 
     .Craft {
 
@@ -623,7 +653,7 @@ cursor: url('/cursor/HamerCursor.png'), auto;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: flex-end;
-
+        gap: 100px;
     }
 
     .displayCraft {
@@ -632,7 +662,7 @@ cursor: url('/cursor/HamerCursor.png'), auto;
         display: none; 
         flex-direction: column; 
         align-items: center;
-
+        width: 339.600px;
 
     }
 
@@ -690,6 +720,8 @@ cursor: url('/cursor/HamerCursor.png'), auto;
         background-color: rgb(54, 29, 5);
         border-radius: 5px;
         padding: 5px;
+        flex-direction: column;
+
       }
 
       .Oi {
@@ -721,10 +753,45 @@ cursor: url('/cursor/HamerCursor.png'), auto;
 .textGUI {
 
     display: flex;
-    position: absolute;
+    position: fixed;
     z-index: 3;
     background-color: brown;
     color: white;
     padding: 2px;
+    transition: 3s cubic-bezier(0.65, 0.05, 0.36, 1);
 
+}
+
+
+.marginNone {
+
+margin: 0;
+
+}
+
+#playerSquare {
+
+    transition: ease-out 0.1s;
+
+}
+
+@keyframes atkColorBlur {
+    
+    0% {
+
+        background-color: red;
+
+    }
+
+    25% {
+
+
+
+    }
+
+    100% {
+
+        background-color: brown;
+
+    }
 }

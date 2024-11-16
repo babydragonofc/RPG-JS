@@ -344,7 +344,7 @@ function addItemBau() {
                                             
                                             {
                                         
-                                                alert("Sua mochila esta cheia")
+                                                GuiTextModify('Sua mochila esta cheia') 
                                         
                                             }
                                 
@@ -365,11 +365,7 @@ function addItemBau() {
             console.log("slot 1" + slot1 + slot1use + "| slot 2" + slot2 + slot2use + "| slot 3" + slot3 + slot3use + "| slot 4" + slot4 + slot4use + "| slot 5" + slot5 + slot5use );
         }
         
-    
-    
-    
-    
-    
+
     
         function addItemPBau() {
 
@@ -469,7 +465,7 @@ function addItemBau() {
                                                 
                                                 {
                                             
-                                                    alert("Sua mochila esta cheia")
+                                                    GuiTextModify("Sua mochila esta cheia")
                                             
                                                 }
                                     

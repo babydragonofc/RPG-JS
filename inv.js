@@ -1,42 +1,42 @@
  //  addList = [additem 0 , additemuse 1, buffvida 2, buffmana 3, buffmoney 4, atkBustPot 5, agiBustPot 6, defBustPot 7, raridadeItem 8, iconeItem 9, quantidade 10]
 
- armaduraList = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- armorSlot4 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- armorSlot2 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- armorSlot3 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- armorSlot1 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- armorSlot5 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- armorSlot6 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ armaduraList = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ armorSlot4 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ armorSlot2 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ armorSlot3 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ armorSlot1 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ armorSlot5 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ armorSlot6 =   ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
 
  
 
- slot1List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot2List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot3List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot4List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot5List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot6List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot7List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot8List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot9List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot10List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot11List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot12List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot13List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot14List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot15List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot16List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot17List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot18List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot19List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot20List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot21List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot22List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot23List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot24List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
- slot25List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"];
+ slot1List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot2List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot3List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot4List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot5List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot6List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot7List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot8List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot9List =  ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot10List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot11List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot12List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot13List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot14List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot15List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot16List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot17List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot18List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot19List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot20List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot21List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot22List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot23List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot24List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
+ slot25List = ["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"];
  
- //["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "Null.png", 0, "NaN", "NaN"]
+ //["NaN", "NaN", 0, 0, 0, 0, 0, 0, "NaN", "https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&", 0, "NaN", "NaN"]
 
 InvList = [slot1List[0], slot2List[0], slot3List[0], slot4List[0], slot5List[0], slot6List[0], slot7List[0], slot8List[0], slot9List[0], slot10List[0], slot11List[0], slot12List[0], slot13List[0], slot14List[0], slot15List[0], slot16List[0], slot17List[0], slot18List[0], slot19List[0], slot20List[0], slot21List[0], slot22List[0], slot23List[0], slot24List[0], slot25List[0]]
 const InvListBase = InvList;
@@ -99,8 +99,8 @@ function addArmor() {
     
     } 
     else {
-    // Se não houver 'NaN', exibe o alerta
-    alert("Sua mochila está cheia");
+    // Se não houver 'NaN', exibe o GuiTextModifya
+    GuiTextModify("Sua mochila está cheia");
     }
 
     let bit = document.getElementById("SlotArmor1btn");
@@ -128,7 +128,7 @@ console.log("adicionando item")
     window["slot" + (menorIndice + 1) + "List"] = addList; 
   } else {
     // Se não houver 'NaN', exibe o alerta
-    alert("Sua mochila está cheia");
+    GuiTextModify("Sua mochila está cheia");
   }
 
   let bit = document.getElementById("Slot" + (menorIndice + 1) + "btn");
@@ -173,8 +173,8 @@ else {
     window["slot" + (menorIndice + 1) + "List"] = addList; 
     } 
     else {
-    // Se não houver 'NaN', exibe o alerta
-    alert("Sua mochila está cheia");
+    // Se não houver 'NaN', exibe o GuiTextModifya
+    GuiTextModify("Sua mochila está cheia");
     }
 
 }
@@ -220,7 +220,7 @@ if ( invSlotAddSelect != ( length.InvList + 1 ) )
     
     {
 
-    alert("Sua Mochila esta cheia");
+    GuiTextModify("Sua Mochila esta cheia");
 
     }
 
@@ -486,141 +486,166 @@ function UssarItem(itemSelect) {
                                     armaSlotVar()
                                     
                                     
-                                }
-    
-                                
-                        if( eval("slot" + itemSelect + "List[1] == 'escudo'"))
-                            
-                            {
-                                
-                            
-                                
-
-                                
-                                if ( armorSlot6[0] != 'NaN' )
-
-                                    {   
-                                        
-
-                                        let ListComplement = armorSlot6
-                                        eval("armorSlot6 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
-                                        eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a arma list 
-
-                                        let bit = document.getElementById("SlotArma1btn");
-                                        bit.style.backgroundImage = `url(${ eval ("armorSlot6[9]")})`;
-
-                                        let bitA = document.getElementById("Slot" + itemSelect + "btn");
-                                        bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
-                                    }
-
-
-                                    else 
-
-                                    {
-                                        //talvez poderia tirar o if arma != 'NaN' 
-                                        
-                                        eval("armorSlot6 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
-
-                                        ResetSlot( itemSelect )
-
-          
-                                        let bit = document.getElementById("SlotArma1btn");
-                                        bit.style.backgroundImage = `url(${ eval ("armorSlot6[9]")})`;
-
-                                        let bitA = document.getElementById("Slot" + itemSelect + "btn");
-                                        bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
-                                    }
-                                    
-                                document.getElementById("arma").innerHTML = arma;
-                                armaSlotVar()
-                                
-                                
                             }
+                               
+                            if( eval("slot" + itemSelect + "List[1] == 'escudo'"))
+                                
+                                {
+                                    
+                                
+                                    
 
-                                if( eval("slot" + itemSelect + "List[1] == 'buff'"))
-    
-                                    {
+                                    
+                                    if ( armorSlot6[0] != 'NaN' )
 
-                                        if ("slot" + itemSelect + "List[12] == 'hp'")
+                                        {   
                                             
-                                            {
 
-                                                if (hp < hpMax)
+                                            let ListComplement = armorSlot6
+                                            eval("armorSlot6 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
+                                            eval("slot" + itemSelect + "List = ListComplement") // devine slot select como ListComplement tal qual é igual a arma list 
+
+                                            let bit = document.getElementById("SlotArma1btn");
+                                            bit.style.backgroundImage = `url(${ eval ("armorSlot6[9]")})`;
+
+                                            let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                            bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                        }
+
+
+                                        else 
+
+                                        {
+                                            //talvez poderia tirar o if arma != 'NaN' 
+                                            
+                                            eval("armorSlot6 = slot" + itemSelect + "List;") // define armorSlot5 como slotSelect
+
+                                            ResetSlot( itemSelect )
+
+            
+                                            let bit = document.getElementById("SlotArma1btn");
+                                            bit.style.backgroundImage = `url(${ eval ("armorSlot6[9]")})`;
+
+                                            let bitA = document.getElementById("Slot" + itemSelect + "btn");
+                                            bitA.style.backgroundImage = `url(${ eval ("slot" + itemSelect + "List[9]")})`;
+                                        }
+                                        
+                                    document.getElementById("arma").innerHTML = arma;
+                                    armaSlotVar()
+                                    
+                                    
+                                }
+
+                                    if( eval("slot" + itemSelect + "List[1] == 'buff'"))
+        
+                                        {
+
+                                            if ("slot" + itemSelect + "List[12] == 'hp'")
+                                                
+                                                {
+
+                                                    if (hp < hpMax)
+
+                                                        {
+
+                                                            eval ("hp = slot" + itemSelect + "List[2] + hp ;");  
+                                                            ResetSlot( itemSelect )
+
+                                                            if ( hp >= hpMax)
+                                                                {
+        
+                                                                    hp = hpMax;
+        
+                                                                }
+
+                                                        }
+                                                    
+                                                    else 
 
                                                     {
 
-                                                        eval ("hp = slot" + itemSelect + "List[2] + hp ;");  
-                                                        ResetSlot( itemSelect )
-
-                                                        if ( hp >= hpMax)
-                                                            {
-    
-                                                                hp = hpMax;
-    
-                                                            }
+                                                        GuiTextModify('Sua vida ja esta cheia') 
 
                                                     }
                                                 
-                                                else 
+                                                }
 
+                                            if ("slot" + itemSelect + "List[12] == 'mana'")
+                                                
                                                 {
 
-                                                    GuiTextModify('Sua vida ja esta cheia') 
+                                                    if (mana < manaMax)
 
-                                                }
-                                            
-                                            }
-
-                                        if ("slot" + itemSelect + "List[12] == 'mana'")
-                                            
-                                            {
-
-                                                if (mana < manaMax)
-
-                                                    {
-
-                                                        eval ("mana = slot" + itemSelect + "List[3] + mana ;");
-                                                        ResetSlot( itemSelect )
-
-                                                        if ( mana >= manaMax)
                                                         {
 
-                                                            mana = manaMax
+                                                            eval ("mana = slot" + itemSelect + "List[3] + mana ;");
+                                                            ResetSlot( itemSelect )
+
+                                                            if ( mana >= manaMax)
+                                                            {
+
+                                                                mana = manaMax
+
+                                                            }
+
 
                                                         }
 
+                                                    else
+
+                                                    {
+
+                                                        GuiTextModify('Sua vida ja esta cheia') 
 
                                                     }
 
-                                                else
-
-                                                {
-
-                                                    GuiTextModify('Sua vida ja esta cheia') 
-
                                                 }
 
+                                            document.getElementById("hp").innerHTML =  hp;
+                                            document.getElementById("mana").innerHTML =  mana;
+        
+                                        }
+        
+                                        if( eval("slot" + itemSelect + "List[1] == 'money'"))
+                                
+        
+                                            {
+
+                                                eval ("money = slot" + itemSelect + "List[4] + money ;");
+            
+                                                ResetSlot( itemSelect )
+                                                
+                                            
+                                                document.getElementById("money").innerHTML =  money;
+
+                                                
                                             }
 
-                                        document.getElementById("hp").innerHTML =  hp;
-                                        document.getElementById("mana").innerHTML =  mana;
-    
-                                    }
-    
-                                    if( eval("slot" + itemSelect + "List[1] == 'money'"))
-                            
-    
-                                        {
-
-                                            eval ("money = slot" + itemSelect + "List[4] + money ;");
+                                            if( eval("slot" + itemSelect + "List[1] == 'usavel'"))
+                                
         
-                                            ResetSlot( itemSelect )
-                                            
-                                           
-                                            document.getElementById("money").innerHTML =  money;
+                                                {
+        
+                                                    let itemFunction = eval("slot" + itemSelect + "List[12]").func
+                                                
+                                                    eval(itemFunction)
 
-                                            
-                                        }
+                                                    ResetSlot( itemSelect )
+                                                    
+                                                
+                                                    document.getElementById("money").innerHTML =  money;
+        
+                                                    
+                                                }
+
+                                                if( eval("slot" + itemSelect + "List[1] == 'Acamp'"))
+                                
+                                                    {
+            
+                                                        AddObjAcampInv(eval("slot" + itemSelect + "List"))
+                                                        ResetSlot(itemSelect)
+
+                                                    }
     
 
 
@@ -655,7 +680,7 @@ function LixoItem(itemSelect) {
         ResetSlot( itemSelect )
         
        /* eval ("let inv = document.getElementById('Slot" + itemSelect + "btn');")
-        inv.style.backgroundImage = 'url("Null.png")'; */
+        inv.style.backgroundImage = 'url("https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&")'; */
 
         consoleLogInv()
 
@@ -698,7 +723,7 @@ function ResetSlot( slotToReset ) {
     eval ( "slot" + slotToReset + "List = SlotListBase;")
 
     let bit = document.getElementById("Slot" + slotToReset + "btn");
-    bit.style.backgroundImage = `url(${'Null.png'})`;
+    bit.style.backgroundImage = `url(${'https://cdn.discordapp.com/attachments/1306741789373239297/1306742006155837510/Null.png?ex=6737c5d4&is=67367454&hm=83f3222d398414179be106dd9953958ac3b74790b7c9a29a4933e2c2aec04e8d&'})`;
 
   
     InvListAtu()
